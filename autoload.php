@@ -13,9 +13,9 @@ namespace Reel;
 
 defined('ABSPATH') || exit;
 
-$composer = __DIR__ . '/vendor/autoload.php';
-if (is_readable($composer)) {
-    require_once $composer;
+$reel_composer = __DIR__ . '/vendor/autoload.php';
+if (is_readable($reel_composer)) {
+    require_once $reel_composer;
     return;
 }
 

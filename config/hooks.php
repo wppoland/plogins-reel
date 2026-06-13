@@ -18,12 +18,11 @@ use Reel\Service\ReelService;
 
 defined('ABSPATH') || exit;
 
-$hooks = [
-    ReelService::class,
-];
-
-if (is_admin()) {
-    $hooks[] = Settings::class;
-}
-
-return $hooks;
+return is_admin()
+    ? [
+        ReelService::class,
+        Settings::class,
+    ]
+    : [
+        ReelService::class,
+    ];

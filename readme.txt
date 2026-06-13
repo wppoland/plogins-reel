@@ -1,8 +1,8 @@
-=== Reel ===
+=== Reel - Gallery and Video for WooCommerce ===
 Contributors: wppoland
 Tags: woocommerce, product gallery, image zoom, lightbox, product video
 Requires at least: 6.5
-Tested up to: 6.8
+Tested up to: 7.0
 Requires PHP: 8.1
 Stable tag: 0.1.0
 License: GPLv2 or later

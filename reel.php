@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Reel
+ * Plugin Name:       Reel - Gallery and Video for WooCommerce
  * Plugin URI:        https://plogins.com/reel/
  * Description:        Hover zoom, lightbox and featured video for the WooCommerce product gallery — reserved space, no jQuery
  * Version:           0.1.0
