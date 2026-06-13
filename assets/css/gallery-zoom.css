@@ -1,0 +1,59 @@
+/* Reel — gallery hover-zoom + lightbox. Self-contained, no jQuery, no CLS:
+   the lightbox is a fixed overlay that starts hidden, so it never reserves or
+   shifts layout. The zoom transform stays inside the clipped gallery frame. */
+
+.woocommerce-product-gallery__image {
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.reel-gallery-zoomable {
+    transition: transform .22s ease;
+    cursor: zoom-in;
+}
+
+.reel-gallery-lightbox-trigger {
+    cursor: zoom-in;
+}
+
+.woocommerce-product-gallery__image:hover .reel-gallery-zoomable {
+    transform: scale(var(--reel-gallery-zoom-scale, 1.45));
+}
+
+.reel-gallery-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .82);
+    display: grid;
+    place-items: center;
+    z-index: 9999;
+}
+
+/* `display: grid` above otherwise wins over the UA `[hidden] { display: none }`
+   (author origin beats UA), leaving the lightbox permanently visible. Force-hide
+   the closed state so it shows only while open and a theme cannot trap it. */
+.reel-gallery-lightbox[hidden] {
+    display: none !important;
+}
+
+.reel-gallery-lightbox img {
+    max-width: min(92vw, 1200px);
+    max-height: 88vh;
+    border-radius: 14px;
+}
+
+.reel-gallery-lightbox__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 34px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+body.reel-gallery-lightbox-open {
+    overflow: hidden;
+}

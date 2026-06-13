@@ -1,0 +1,37 @@
+/* Reel — featured product video. Responsive 16:9 frame reserves its space via
+   aspect-ratio, so the embed/video loads without layout shift (no CLS). */
+
+.reel-featured-video {
+    margin-top: 16px;
+}
+
+.reel-featured-video__title {
+    margin-bottom: 12px;
+}
+
+.reel-featured-video__intro {
+    margin-bottom: 12px;
+}
+
+.reel-featured-video__embed {
+    position: relative;
+    aspect-ratio: 16 / 9;
+}
+
+.reel-featured-video__embed iframe,
+.reel-featured-video__embed video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    border: 0;
+    border-radius: 14px;
+}
+
+/* WordPress wraps oEmbeds/video shortcodes; normalise them to fill the frame. */
+.reel-featured-video__embed .wp-video,
+.reel-featured-video__embed .mejs-container,
+.reel-featured-video__embed > * {
+    width: 100% !important;
+    max-width: 100%;
+}
