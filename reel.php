@@ -32,10 +32,9 @@ define('REEL_URL', plugin_dir_url(__FILE__));
 
 require_once __DIR__ . '/autoload.php';
 
-// Load translations from the bundled languages/ directory (Domain Path).
-add_action('init', static function (): void {
-    load_plugin_textdomain('reel', false, dirname(plugin_basename(__FILE__)) . '/languages');
-});
+// Translations: WordPress.org auto-loads them from the plugin slug since WP 4.6,
+// so no load_plugin_textdomain() call is needed. Domain Path (/languages) and
+// the bundled languages/reel.pot template support translators and self-hosting.
 
 // Add a "Settings" link on the plugins list row.
 add_filter('plugin_action_links_' . plugin_basename(__FILE__), static function (array $links): array {
