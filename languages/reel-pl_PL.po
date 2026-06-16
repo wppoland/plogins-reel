@@ -4,17 +4,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: reel 0.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/reel\n"
+"POT-Creation-Date: 2026-06-16T20:25:13+00:00\n"
+"PO-Revision-Date: 2026-06-15 00:00+0000\n"
 "Last-Translator: WPPoland <hello@wppoland.com>\n"
 "Language-Team: Polish <hello@wppoland.com>\n"
 "Language: pl_PL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-14T14:34:24+00:00\n"
-"PO-Revision-Date: 2026-06-15 00:00+0000\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: reel\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
+"|| n%100>14) ? 1 : 2);\n"
 
 #. Plugin Name of the plugin
 #: reel.php
@@ -28,8 +29,12 @@ msgstr "https://plogins.com/reel/"
 
 #. Description of the plugin
 #: reel.php
-msgid "Hover zoom, lightbox and featured video for the WooCommerce product gallery — reserved space, no jQuery"
-msgstr "Powiększenie po najechaniu, lightbox i wyróżnione wideo dla galerii produktów WooCommerce — zarezerwowana przestrzeń, bez jQuery"
+msgid ""
+"Hover zoom, lightbox and featured video for the WooCommerce product gallery "
+"— reserved space, no jQuery"
+msgstr ""
+"Powiększenie po najechaniu, lightbox i wyróżnione wideo dla galerii "
+"produktów WooCommerce — zarezerwowana przestrzeń, bez jQuery"
 
 #. Author of the plugin
 #: reel.php
@@ -62,8 +67,13 @@ msgid "Reel"
 msgstr "Reel"
 
 #: src/Admin/Settings.php:142
-msgid "Hover zoom, an accessible lightbox and a featured product video for your WooCommerce gallery — tuned for speed, with no layout shift and no jQuery."
-msgstr "Powiększenie po najechaniu, dostępny lightbox i wyróżnione wideo produktu dla Twojej galerii WooCommerce — dopracowane pod kątem szybkości, bez przesunięć układu i bez jQuery."
+msgid ""
+"Hover zoom, an accessible lightbox and a featured product video for your "
+"WooCommerce gallery — tuned for speed, with no layout shift and no jQuery."
+msgstr ""
+"Powiększenie po najechaniu, dostępny lightbox i wyróżnione wideo produktu "
+"dla Twojej galerii WooCommerce — dopracowane pod kątem szybkości, bez "
+"przesunięć układu i bez jQuery."
 
 #: src/Admin/Settings.php:145
 msgid "No CLS"
@@ -82,16 +92,26 @@ msgid "Gallery zoom & lightbox"
 msgstr "Powiększenie galerii i lightbox"
 
 #: src/Admin/Settings.php:160
-msgid "How shoppers explore your product images: magnify on hover and open them full-screen."
-msgstr "Jak klienci przeglądają zdjęcia Twoich produktów: powiększają po najechaniu i otwierają na pełnym ekranie."
+msgid ""
+"How shoppers explore your product images: magnify on hover and open them "
+"full-screen."
+msgstr ""
+"Jak klienci przeglądają zdjęcia Twoich produktów: powiększają po najechaniu "
+"i otwierają na pełnym ekranie."
 
 #: src/Admin/Settings.php:167
 msgid "Hover zoom"
 msgstr "Powiększenie po najechaniu"
 
 #: src/Admin/Settings.php:168
-msgid "When a shopper hovers a gallery image, it magnifies in place to reveal detail — great for textures, labels and fine print. The zoom stays inside the image frame, so nothing on the page moves."
-msgstr "Gdy klient najedzie na zdjęcie z galerii, powiększa się ono w miejscu, ujawniając szczegóły — świetne dla tekstur, etykiet i drobnego druku. Powiększenie pozostaje w ramce zdjęcia, więc nic na stronie się nie przesuwa."
+msgid ""
+"When a shopper hovers a gallery image, it magnifies in place to reveal "
+"detail — great for textures, labels and fine print. The zoom stays inside "
+"the image frame, so nothing on the page moves."
+msgstr ""
+"Gdy klient najedzie na zdjęcie z galerii, powiększa się ono w miejscu, "
+"ujawniając szczegóły — świetne dla tekstur, etykiet i drobnego druku. "
+"Powiększenie pozostaje w ramce zdjęcia, więc nic na stronie się nie przesuwa."
 
 #: src/Admin/Settings.php:171
 msgid "Magnify the image on hover"
@@ -102,8 +122,12 @@ msgid "Zoom strength"
 msgstr "Siła powiększenia"
 
 #: src/Admin/Settings.php:178
-msgid "How much the image grows on hover. 1.2× is subtle; 2× is dramatic. Around 1.4–1.6× reads well for most stores."
-msgstr "O ile zdjęcie powiększa się po najechaniu. 1,2× jest subtelne; 2× jest wyraziste. Około 1,4–1,6× sprawdza się dobrze w większości sklepów."
+msgid ""
+"How much the image grows on hover. 1.2× is subtle; 2× is dramatic. Around "
+"1.4–1.6× reads well for most stores."
+msgstr ""
+"O ile zdjęcie powiększa się po najechaniu. 1,2× jest subtelne; 2× jest "
+"wyraziste. Około 1,4–1,6× sprawdza się dobrze w większości sklepów."
 
 #: src/Admin/Settings.php:185
 msgid "Magnification factor on hover, from 1.0× (off) to 3.0×."
@@ -114,8 +138,14 @@ msgid "Disable zoom on touch"
 msgstr "Wyłącz powiększenie na ekranach dotykowych"
 
 #: src/Admin/Settings.php:191
-msgid "Phones and tablets have no real hover, so the zoom can feel unpredictable. Keep this on to skip it on touch devices and rely on the lightbox there instead."
-msgstr "Telefony i tablety nie mają prawdziwego najechania, więc powiększenie może działać nieprzewidywalnie. Pozostaw to włączone, aby je pominąć na urządzeniach dotykowych i polegać tam na lightboxie."
+msgid ""
+"Phones and tablets have no real hover, so the zoom can feel unpredictable. "
+"Keep this on to skip it on touch devices and rely on the lightbox there "
+"instead."
+msgstr ""
+"Telefony i tablety nie mają prawdziwego najechania, więc powiększenie może "
+"działać nieprzewidywalnie. Pozostaw to włączone, aby je pominąć na "
+"urządzeniach dotykowych i polegać tam na lightboxie."
 
 #: src/Admin/Settings.php:194
 msgid "Skip hover zoom on touch devices"
@@ -126,8 +156,14 @@ msgid "Lightbox"
 msgstr "Lightbox"
 
 #: src/Admin/Settings.php:201
-msgid "Clicking a gallery image opens it full-screen over a dimmed backdrop. Fully keyboard-operable: open with Enter/Space, close with Escape, and focus returns to where it was."
-msgstr "Kliknięcie zdjęcia z galerii otwiera je na pełnym ekranie na przyciemnionym tle. W pełni obsługiwane klawiaturą: otwieranie klawiszem Enter/Spacja, zamykanie klawiszem Escape, a fokus wraca tam, gdzie był."
+msgid ""
+"Clicking a gallery image opens it full-screen over a dimmed backdrop. Fully "
+"keyboard-operable: open with Enter/Space, close with Escape, and focus "
+"returns to where it was."
+msgstr ""
+"Kliknięcie zdjęcia z galerii otwiera je na pełnym ekranie na przyciemnionym "
+"tle. W pełni obsługiwane klawiaturą: otwieranie klawiszem Enter/Spacja, "
+"zamykanie klawiszem Escape, a fokus wraca tam, gdzie był."
 
 #: src/Admin/Settings.php:204
 msgid "Open images full-screen on click"
@@ -138,8 +174,12 @@ msgid "Close on backdrop click"
 msgstr "Zamknij po kliknięciu tła"
 
 #: src/Admin/Settings.php:211
-msgid "Let shoppers dismiss the lightbox by clicking the dark area around the image, in addition to the close button and Escape key."
-msgstr "Pozwól klientom zamykać lightbox przez kliknięcie ciemnego obszaru wokół zdjęcia, oprócz przycisku zamykania i klawisza Escape."
+msgid ""
+"Let shoppers dismiss the lightbox by clicking the dark area around the "
+"image, in addition to the close button and Escape key."
+msgstr ""
+"Pozwól klientom zamykać lightbox przez kliknięcie ciemnego obszaru wokół "
+"zdjęcia, oprócz przycisku zamykania i klawisza Escape."
 
 #: src/Admin/Settings.php:214
 msgid "Click outside the image to close"
@@ -150,8 +190,13 @@ msgid "Image caption"
 msgstr "Podpis zdjęcia"
 
 #: src/Admin/Settings.php:221
-msgid "Show each image's alt text as a caption inside the lightbox. Helpful when your images have descriptive alt text; leave off if they don't."
-msgstr "Pokaż tekst alternatywny każdego zdjęcia jako podpis wewnątrz lightboxa. Przydatne, gdy Twoje zdjęcia mają opisowy tekst alternatywny; pozostaw wyłączone, jeśli go nie mają."
+msgid ""
+"Show each image's alt text as a caption inside the lightbox. Helpful when "
+"your images have descriptive alt text; leave off if they don't."
+msgstr ""
+"Pokaż tekst alternatywny każdego zdjęcia jako podpis wewnątrz lightboxa. "
+"Przydatne, gdy Twoje zdjęcia mają opisowy tekst alternatywny; pozostaw "
+"wyłączone, jeśli go nie mają."
 
 #: src/Admin/Settings.php:224
 msgid "Show the image alt text as a caption"
@@ -162,17 +207,25 @@ msgid "Open-image label"
 msgstr "Etykieta otwierania zdjęcia"
 
 #: src/Admin/Settings.php:231
-msgid "The accessible label screen readers announce for each gallery image, e.g. \"Open image in full screen\". Leave empty to use the built-in default."
-msgstr "Dostępna etykieta, którą czytniki ekranu odczytują dla każdego zdjęcia z galerii, np. „Otwórz zdjęcie na pełnym ekranie”. Pozostaw puste, aby użyć wbudowanej wartości domyślnej."
+msgid ""
+"The accessible label screen readers announce for each gallery image, e.g. "
+"\"Open image in full screen\". Leave empty to use the built-in default."
+msgstr ""
+"Dostępna etykieta, którą czytniki ekranu odczytują dla każdego zdjęcia z "
+"galerii, np. „Otwórz zdjęcie na pełnym ekranie”. Pozostaw puste, aby użyć "
+"wbudowanej wartości domyślnej."
 
-#: src/Admin/Settings.php:234
-#: src/Service/ReelService.php:55
+#: src/Admin/Settings.php:234 src/Service/ReelService.php:52
 msgid "Open image in full screen"
 msgstr "Otwórz zdjęcie na pełnym ekranie"
 
 #: src/Admin/Settings.php:236
-msgid "Accessible label for the open-in-lightbox control. Leave empty for the default."
-msgstr "Dostępna etykieta dla elementu otwierającego lightbox. Pozostaw puste, aby użyć domyślnej."
+msgid ""
+"Accessible label for the open-in-lightbox control. Leave empty for the "
+"default."
+msgstr ""
+"Dostępna etykieta dla elementu otwierającego lightbox. Pozostaw puste, aby "
+"użyć domyślnej."
 
 #: src/Admin/Settings.php:246
 msgid "Featured video"
@@ -181,16 +234,25 @@ msgstr "Wyróżnione wideo"
 #. translators: %s: the product meta field name.
 #: src/Admin/Settings.php:251
 #, php-format
-msgid "Add a video to any product by setting its %s meta field to a self-hosted MP4/WebM file or a YouTube/Vimeo link."
-msgstr "Dodaj wideo do dowolnego produktu, ustawiając jego pole metadanych %s na samodzielnie hostowany plik MP4/WebM lub link do YouTube/Vimeo."
+msgid ""
+"Add a video to any product by setting its %s meta field to a self-hosted MP4/"
+"WebM file or a YouTube/Vimeo link."
+msgstr ""
+"Dodaj wideo do dowolnego produktu, ustawiając jego pole metadanych %s na "
+"samodzielnie hostowany plik MP4/WebM lub link do YouTube/Vimeo."
 
 #: src/Admin/Settings.php:263
 msgid "Show featured video"
 msgstr "Pokaż wyróżnione wideo"
 
 #: src/Admin/Settings.php:264
-msgid "Master switch for the product video. When on, products that have a video URL show it on their single product page in the position you choose below."
-msgstr "Główny przełącznik wideo produktu. Gdy włączony, produkty mające adres URL wideo wyświetlają je na swojej stronie pojedynczego produktu w pozycji wybranej poniżej."
+msgid ""
+"Master switch for the product video. When on, products that have a video URL "
+"show it on their single product page in the position you choose below."
+msgstr ""
+"Główny przełącznik wideo produktu. Gdy włączony, produkty mające adres URL "
+"wideo wyświetlają je na swojej stronie pojedynczego produktu w pozycji "
+"wybranej poniżej."
 
 #: src/Admin/Settings.php:267
 msgid "Display the product video on the product page"
@@ -201,8 +263,13 @@ msgid "Position"
 msgstr "Pozycja"
 
 #: src/Admin/Settings.php:274
-msgid "Where the video appears: directly under the image gallery, or above the title/price summary column. Pick whichever fits your theme best."
-msgstr "Gdzie pojawia się wideo: bezpośrednio pod galerią zdjęć lub nad kolumną podsumowania z tytułem/ceną. Wybierz to, co najlepiej pasuje do Twojego motywu."
+msgid ""
+"Where the video appears: directly under the image gallery, or above the "
+"title/price summary column. Pick whichever fits your theme best."
+msgstr ""
+"Gdzie pojawia się wideo: bezpośrednio pod galerią zdjęć lub nad kolumną "
+"podsumowania z tytułem/ceną. Wybierz to, co najlepiej pasuje do Twojego "
+"motywu."
 
 #: src/Admin/Settings.php:278
 msgid "After the gallery"
@@ -217,8 +284,14 @@ msgid "Autoplay"
 msgstr "Automatyczne odtwarzanie"
 
 #: src/Admin/Settings.php:287
-msgid "Start the video automatically on page load. Browsers only allow this when the video is muted, so sound stays off until the shopper turns it on. Use sparingly — it can be distracting."
-msgstr "Uruchamiaj wideo automatycznie po wczytaniu strony. Przeglądarki pozwalają na to tylko, gdy wideo jest wyciszone, więc dźwięk pozostaje wyłączony, dopóki klient go nie włączy. Używaj oszczędnie — może rozpraszać."
+msgid ""
+"Start the video automatically on page load. Browsers only allow this when "
+"the video is muted, so sound stays off until the shopper turns it on. Use "
+"sparingly — it can be distracting."
+msgstr ""
+"Uruchamiaj wideo automatycznie po wczytaniu strony. Przeglądarki pozwalają "
+"na to tylko, gdy wideo jest wyciszone, więc dźwięk pozostaje wyłączony, "
+"dopóki klient go nie włączy. Używaj oszczędnie — może rozpraszać."
 
 #: src/Admin/Settings.php:290
 msgid "Play automatically (muted)"
@@ -229,8 +302,12 @@ msgid "Show heading"
 msgstr "Pokaż nagłówek"
 
 #: src/Admin/Settings.php:297
-msgid "Display a heading above the video. Turn off for a cleaner, heading-free embed."
-msgstr "Wyświetlaj nagłówek nad wideo. Wyłącz, aby uzyskać czystsze osadzenie bez nagłówka."
+msgid ""
+"Display a heading above the video. Turn off for a cleaner, heading-free "
+"embed."
+msgstr ""
+"Wyświetlaj nagłówek nad wideo. Wyłącz, aby uzyskać czystsze osadzenie bez "
+"nagłówka."
 
 #: src/Admin/Settings.php:300
 msgid "Show a heading above the video"
@@ -241,12 +318,15 @@ msgid "Default heading"
 msgstr "Domyślny nagłówek"
 
 #: src/Admin/Settings.php:307
-msgid "The heading used when a product has no video heading of its own. Leave empty to use the built-in \"Product video\" text."
-msgstr "Nagłówek używany, gdy produkt nie ma własnego nagłówka wideo. Pozostaw puste, aby użyć wbudowanego tekstu „Wideo produktu”."
+msgid ""
+"The heading used when a product has no video heading of its own. Leave empty "
+"to use the built-in \"Product video\" text."
+msgstr ""
+"Nagłówek używany, gdy produkt nie ma własnego nagłówka wideo. Pozostaw "
+"puste, aby użyć wbudowanego tekstu „Wideo produktu”."
 
-#: src/Admin/Settings.php:310
-#: src/Service/ReelService.php:72
-#: src/Service/ReelService.php:233
+#: src/Admin/Settings.php:310 src/Service/ReelService.php:69
+#: src/Service/ReelService.php:262
 msgid "Product video"
 msgstr "Wideo produktu"
 
@@ -255,8 +335,12 @@ msgid "Intro text"
 msgstr "Tekst wprowadzający"
 
 #: src/Admin/Settings.php:317
-msgid "An optional short paragraph shown under the heading, e.g. \"See it in action.\" Leave empty to hide it."
-msgstr "Opcjonalny krótki akapit wyświetlany pod nagłówkiem, np. „Zobacz w akcji”. Pozostaw puste, aby go ukryć."
+msgid ""
+"An optional short paragraph shown under the heading, e.g. \"See it in action."
+"\" Leave empty to hide it."
+msgstr ""
+"Opcjonalny krótki akapit wyświetlany pod nagłówkiem, np. „Zobacz w akcji”. "
+"Pozostaw puste, aby go ukryć."
 
 #: src/Admin/Settings.php:320
 msgid "See this product in action…"
@@ -267,30 +351,40 @@ msgid "Place it anywhere"
 msgstr "Umieść je w dowolnym miejscu"
 
 #: src/Admin/Settings.php:332
-msgid "Beyond the automatic gallery position, drop the current product's video wherever you like."
-msgstr "Poza automatyczną pozycją w galerii, umieść wideo bieżącego produktu tam, gdzie chcesz."
+msgid ""
+"Beyond the automatic gallery position, drop the current product's video "
+"wherever you like."
+msgstr ""
+"Poza automatyczną pozycją w galerii, umieść wideo bieżącego produktu tam, "
+"gdzie chcesz."
 
 #: src/Admin/Settings.php:337
 msgid "Shortcode"
 msgstr "Shortcode"
 
 #: src/Admin/Settings.php:341
-msgid "Paste into any product description or page. Optional attributes: id=\"123\" to target a specific product, and title=\"hide\" to drop the heading."
-msgstr "Wklej w dowolny opis produktu lub stronę. Atrybuty opcjonalne: id=\"123\", aby wskazać konkretny produkt, oraz title=\"hide\", aby pominąć nagłówek."
+msgid ""
+"Paste into any product description or page. Optional attributes: id=\"123\" "
+"to target a specific product, and title=\"hide\" to drop the heading."
+msgstr ""
+"Wklej w dowolny opis produktu lub stronę. Atrybuty opcjonalne: id=\"123\", "
+"aby wskazać konkretny produkt, oraz title=\"hide\", aby pominąć nagłówek."
 
 #: src/Admin/Settings.php:344
 msgid "Block"
 msgstr "Blok"
 
-#: src/Admin/Settings.php:346
-#: src/Frontend/VideoShortcode.php:70
+#: src/Admin/Settings.php:346 src/Frontend/VideoShortcode.php:70
 #: src/Frontend/VideoShortcode.php:118
 msgid "Reel: Featured video"
 msgstr "Reel: Wyróżnione wideo"
 
 #: src/Admin/Settings.php:348
-msgid "Search for it in the block inserter. Renders the same video as the shortcode."
-msgstr "Wyszukaj go w narzędziu wstawiania bloków. Renderuje to samo wideo co shortcode."
+msgid ""
+"Search for it in the block inserter. Renders the same video as the shortcode."
+msgstr ""
+"Wyszukaj go w narzędziu wstawiania bloków. Renderuje to samo wideo co "
+"shortcode."
 
 #: src/Admin/Settings.php:355
 msgid "Save changes"
@@ -301,8 +395,16 @@ msgid "Show the current product's featured video (Reel)."
 msgstr "Pokaż wyróżnione wideo bieżącego produktu (Reel)."
 
 #: src/Frontend/VideoShortcode.php:119
-msgid "This shows the current product's video on the storefront. Set a video URL in the product's _reel_video_url meta field, then view the product page."
-msgstr "To pokazuje wideo bieżącego produktu w sklepie. Ustaw adres URL wideo w polu metadanych produktu _reel_video_url, a następnie wyświetl stronę produktu."
+msgid ""
+"This shows the current product's video on the storefront. Set a video URL in "
+"the product's _reel_video_url meta field, then view the product page."
+msgstr ""
+"To pokazuje wideo bieżącego produktu w sklepie. Ustaw adres URL wideo w polu "
+"metadanych produktu _reel_video_url, a następnie wyświetl stronę produktu."
+
+#: templates/featured-video.php:27
+msgid "Now playing"
+msgstr ""
 
 #: templates/lightbox.php:22
 msgid "Product image viewer"
