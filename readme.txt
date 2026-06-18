@@ -46,6 +46,15 @@ same 16:9 frame.
 Source and issue tracker: https://github.com/wppoland/reel — the plugin is
 developed in the open, so bug reports and pull requests are welcome there.
 
+= Documentation and links =
+
+* **Documentation** - https://plogins.com/reel/docs/
+* **Plugin page** - https://plogins.com/reel/
+* **Source code** - https://github.com/wppoland/reel
+* **Bug reports and feature requests** - https://github.com/wppoland/reel/issues
+* **Discussions and questions** - https://github.com/wppoland/reel/discussions
+
+
 = Features =
 
 * Gallery image hover zoom with a configurable scale.
