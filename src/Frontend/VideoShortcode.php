@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Plogins\Reel\Frontend;
+namespace Reel\Frontend;
 
 defined('ABSPATH') || exit;
 
-use Plogins\Reel\Contract\HasHooks;
-use Plogins\Reel\Service\ReelService;
+use Reel\Contract\HasHooks;
+use Reel\Service\ReelService;
 
 /**
  * Registers the `[reel_video]` shortcode and a matching dynamic block
@@ -146,7 +146,7 @@ final class VideoShortcode implements HasHooks
                 'reel-featured-video',
                 REEL_URL . 'assets/css/featured-video.css',
                 [],
-                \Plogins\Reel\VERSION,
+                \Reel\VERSION,
             );
         }
 
