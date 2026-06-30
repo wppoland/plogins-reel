@@ -20,7 +20,7 @@
 
 declare(strict_types=1);
 
-namespace Plogins\Reel;
+namespace Reel;
 
 defined('ABSPATH') || exit;
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Plogins\Reel\Service;
+namespace Reel\Service;
 
-use Plogins\Reel\Contract\HasHooks;
+use Reel\Contract\HasHooks;
 use WPPoland\StorefrontKit\Media\FeaturedVideoEngine;
 use WPPoland\StorefrontKit\Media\GalleryZoomEngine;
 
@@ -47,7 +47,7 @@ final class ReelService implements HasHooks
                 'reel-gallery-zoom',
                 REEL_URL . 'assets/css/gallery-zoom.css',
                 REEL_URL . 'assets/js/gallery-zoom.js',
-                \Plogins\Reel\VERSION,
+                \Reel\VERSION,
                 'lightbox',
                 ['trigger' => __('Open image in full screen', 'plogins-reel')],
                 fn (): bool => $this->zoomEnabled(),
@@ -63,7 +63,7 @@ final class ReelService implements HasHooks
             $this->video = new FeaturedVideoEngine(
                 'reel-featured-video',
                 REEL_URL . 'assets/css/featured-video.css',
-                \Plogins\Reel\VERSION,
+                \Reel\VERSION,
                 'featured-video',
                 ['url' => self::META_VIDEO_URL, 'title' => self::META_VIDEO_TITLE],
                 ['title' => __('Product video', 'plogins-reel')],

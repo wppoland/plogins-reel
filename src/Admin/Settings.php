@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Plogins\Reel\Admin;
+namespace Reel\Admin;
 
 defined('ABSPATH') || exit;
 
-use Plogins\Reel\Contract\HasHooks;
+use Reel\Contract\HasHooks;
 
 /**
  * Admin settings page registered as a top-level "Reel" menu.
@@ -41,14 +41,14 @@ final class Settings implements HasHooks
             'reel-admin',
             REEL_URL . 'assets/css/admin.css',
             [],
-            \Plogins\Reel\VERSION,
+            \Reel\VERSION,
         );
 
         wp_enqueue_script(
             'reel-admin',
             REEL_URL . 'assets/js/admin.js',
             [],
-            \Plogins\Reel\VERSION,
+            \Reel\VERSION,
             ['strategy' => 'defer', 'in_footer' => true],
         );
     }
