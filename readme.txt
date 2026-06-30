@@ -22,8 +22,8 @@ Reel upgrades the WooCommerce single product gallery with product image zoom, an
   button so focus can't slip behind the overlay, Escape closes it, and focus
   returns to the image you opened. It's a fixed overlay that starts hidden, so it
   reserves no space until used.
-* **Featured video.** Show a per-product video — a self-hosted MP4/WebM file or a
-  YouTube/Vimeo (oEmbed) URL — after the gallery or before the product summary.
+* **Featured video.** Show a per-product video, a self-hosted MP4/WebM file or a
+  YouTube/Vimeo (oEmbed) URL, after the gallery or before the product summary.
   The video sits in a 16:9 frame sized with `aspect-ratio`, so its space is held
   before it loads.
 
@@ -43,7 +43,7 @@ shortcode (it takes `id` and `title` attributes) or the **Reel: Featured video**
 block into any product content. Both render the current product's video in the
 same 16:9 frame.
 
-Source and issue tracker: https://github.com/wppoland/reel — the plugin is
+Source and issue tracker: https://github.com/wppoland/reel, the plugin is
 developed in the open, so bug reports and pull requests are welcome there.
 
 = Documentation and links =
