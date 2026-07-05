@@ -15,7 +15,6 @@ declare(strict_types=1);
 
 use Reel\Admin\Settings;
 use Reel\Frontend\VideoShortcode;
-use Reel\Service\ElementorWidgets;
 use Reel\Service\ReelService;
 
 defined('ABSPATH') || exit;
@@ -24,11 +23,9 @@ return is_admin()
     ? [
         ReelService::class,
         VideoShortcode::class,
-        ElementorWidgets::class,
         Settings::class,
     ]
     : [
         ReelService::class,
         VideoShortcode::class,
-        ElementorWidgets::class,
     ];
