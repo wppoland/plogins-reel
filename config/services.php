@@ -12,6 +12,7 @@ use Reel\Admin\Settings;
 use Reel\Container;
 use Reel\Frontend\VideoShortcode;
 use Reel\Migrator;
+use Reel\Service\ElementorWidgets;
 use Reel\Service\ReelService;
 
 defined('ABSPATH') || exit;
@@ -26,6 +27,9 @@ return static function (Container $c): void {
         VideoShortcode::class,
         static fn (Container $c): VideoShortcode => new VideoShortcode($c->get(ReelService::class)),
     );
+
+    // Elementor integration (self-guards on the elementor/widgets/register hook).
+    $c->singleton(ElementorWidgets::class, static fn (): ElementorWidgets => new ElementorWidgets());
 
     // Admin (only needed in wp-admin context).
     if (is_admin()) {
