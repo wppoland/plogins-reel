@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Build a clean, installable plogins-reel zip for wp.org, honouring .distignore.
+# Boots via the PSR-4 fallback in autoload.php, so /vendor is not shipped.
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+OUT_DIR="${1:-/tmp/plogins-reel-build}"
+STAGE="${OUT_DIR}/plogins-reel"
+
+rm -rf "${OUT_DIR}"
+mkdir -p "${STAGE}"
+
+rsync -a --exclude-from="${ROOT_DIR}/.distignore" \
+    --exclude '.git' --exclude 'node_modules' --exclude 'vendor' \
+    --exclude '.DS_Store' \
+    "${ROOT_DIR}/" "${STAGE}/"
+
+find "${STAGE}" -name '.DS_Store' -delete
+
+rm -f /tmp/plogins-reel.zip
+( cd "${OUT_DIR}" && zip -rqX /tmp/plogins-reel.zip plogins-reel -x '*.DS_Store' )
+echo "✓ Built /tmp/plogins-reel.zip from ${STAGE}"
