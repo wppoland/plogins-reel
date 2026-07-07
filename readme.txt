@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, gallery slider
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 0.2.1
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -131,6 +131,9 @@ Reel makes no API calls or analytics requests of its own; the zoom, lightbox and
 The one exception is when you set a product's video URL to a YouTube, Vimeo or other oEmbed link. In that case WordPress core's own `wp_oembed_get()` fetches the embed markup from that provider, sending the video URL to the provider you chose so it can return the player; Reel caches the result in a transient to avoid repeat requests. No request is made for self-hosted (MP4/WebM) videos. Use of those providers is governed by their own terms and privacy policies, e.g. YouTube (https://www.youtube.com/t/terms, https://policies.google.com/privacy) and Vimeo (https://vimeo.com/terms, https://vimeo.com/privacy).
 
 == Changelog ==
+
+= 1.0.1 =
+* First stable release.
 
 = 0.2.1 =
 * Renamed to Plogins Reel for WooCommerce for a more distinctive plugin name.
