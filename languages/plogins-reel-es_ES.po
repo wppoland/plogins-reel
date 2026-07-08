@@ -1,0 +1,419 @@
+# Copyright (C) 2026 WPPoland
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plogins Reel for WooCommerce 0.2.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/plogins-reel\n"
+"POT-Creation-Date: 2026-06-16T20:25:13+00:00\n"
+"PO-Revision-Date: 2026-06-16T20:25:13+00:00\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: plogins-reel\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Plugin Name of the plugin
+#: plogins-reel.php
+msgid "Reel - Gallery and Video for WooCommerce"
+msgstr "Reel - Galería y vídeo para WooCommerce"
+
+#. Plugin URI of the plugin
+#: plogins-reel.php
+msgid "https://plogins.com/reel/"
+msgstr "https://plogins.com/es/reel/"
+
+#. Description of the plugin
+#: plogins-reel.php
+msgid ""
+"Hover zoom, lightbox and featured video for the WooCommerce product gallery,"
+" reserved space, no jQuery"
+msgstr ""
+"Zoom flotante, caja de luz y video destacado para la galería de productos "
+"WooCommerce, espacio reservado, sin jQuery"
+
+#. Author of the plugin
+#: plogins-reel.php
+msgid "WPPoland"
+msgstr "WPPoland"
+
+#. Author URI of the plugin
+#: plogins-reel.php
+msgid "https://plogins.com/"
+msgstr "https://plogins.com/"
+
+#: plogins-reel.php:44
+msgid "Settings"
+msgstr "Ajustes"
+
+#: plogins-reel.php:64
+msgid "Reel requires WooCommerce to be active."
+msgstr "Reel requiere que WooCommerce esté activo."
+
+#: src/Admin/Settings.php:69
+msgid "More information"
+msgstr "Más información"
+
+#: src/Admin/Settings.php:76
+msgid "Reel Settings"
+msgstr "Configuración de Reel"
+
+#: src/Admin/Settings.php:77
+msgid "Reel"
+msgstr "Reel"
+
+#: src/Admin/Settings.php:142
+msgid ""
+"Hover zoom, an accessible lightbox and a featured product video for your "
+"WooCommerce gallery, tuned for speed, with no layout shift and no jQuery."
+msgstr ""
+"Zoom flotante, una caja de luz accesible y un video de producto destacado "
+"para su galería WooCommerce, optimizado para la velocidad, sin cambios de "
+"diseño y sin jQuery."
+
+#: src/Admin/Settings.php:145
+msgid "No CLS"
+msgstr "Sin CLS"
+
+#: src/Admin/Settings.php:146
+msgid "No jQuery"
+msgstr "Sin jQuery"
+
+#: src/Admin/Settings.php:147
+msgid "Accessible"
+msgstr "Accesible"
+
+#: src/Admin/Settings.php:159
+msgid "Gallery zoom & lightbox"
+msgstr "Zoom de galería y caja de luz"
+
+#: src/Admin/Settings.php:160
+msgid ""
+"How shoppers explore your product images: magnify on hover and open them "
+"full-screen."
+msgstr ""
+"Cómo exploran los compradores las imágenes de sus productos: amplíelas al "
+"pasar el mouse y ábralas en pantalla completa."
+
+#: src/Admin/Settings.php:167
+msgid "Hover zoom"
+msgstr "zoom al pasar el cursor"
+
+#: src/Admin/Settings.php:168
+msgid ""
+"When a shopper hovers a gallery image, it magnifies in place to reveal "
+"detail, great for textures, labels and fine print. The zoom stays inside the"
+" image frame, so nothing on the page moves."
+msgstr ""
+"Cuando un comprador pasa el cursor por una imagen de la galería, se amplía "
+"para revelar detalles, lo que es ideal para texturas, etiquetas y letra "
+"pequeña. El zoom permanece dentro del marco de la imagen, por lo que nada en"
+" la página se mueve."
+
+#: src/Admin/Settings.php:171
+msgid "Magnify the image on hover"
+msgstr "Ampliar la imagen al pasar el mouse"
+
+#: src/Admin/Settings.php:177
+msgid "Zoom strength"
+msgstr "Fuerza del zoom"
+
+#: src/Admin/Settings.php:178
+msgid ""
+"How much the image grows on hover. 1.2× is subtle; 2× is dramatic. Around "
+"1.4–1.6× reads well for most stores."
+msgstr ""
+"Cuánto crece la imagen al pasar el mouse. 1,2× es sutil; 2× es dramático. "
+"Alrededor de 1,4 a 1,6 × se lee bien en la mayoría de las tiendas."
+
+#: src/Admin/Settings.php:185
+msgid "Magnification factor on hover, from 1.0× (off) to 3.0×."
+msgstr "Factor de ampliación al pasar el mouse, de 1,0× (apagado) a 3,0×."
+
+#: src/Admin/Settings.php:190
+msgid "Disable zoom on touch"
+msgstr "Desactivar el zoom al tocar"
+
+#: src/Admin/Settings.php:191
+msgid ""
+"Phones and tablets have no real hover, so the zoom can feel unpredictable. "
+"Keep this on to skip it on touch devices and rely on the lightbox there "
+"instead."
+msgstr ""
+"Los teléfonos y tabletas no tienen un desplazamiento real, por lo que el "
+"zoom puede parecer impredecible. Manténgalo activado para omitirlo en "
+"dispositivos táctiles y, en su lugar, confíe en la caja de luz allí."
+
+#: src/Admin/Settings.php:194
+msgid "Skip hover zoom on touch devices"
+msgstr "Omitir el zoom al pasar el mouse en dispositivos táctiles"
+
+#: src/Admin/Settings.php:200
+msgid "Lightbox"
+msgstr "Caja de luz"
+
+#: src/Admin/Settings.php:201
+msgid ""
+"Clicking a gallery image opens it full-screen over a dimmed backdrop. Fully "
+"keyboard-operable: open with Enter/Space, close with Escape, and focus "
+"returns to where it was."
+msgstr ""
+"Al hacer clic en una imagen de la galería, se abre en pantalla completa "
+"sobre un fondo atenuado. Totalmente operable con el teclado: ábralo con "
+"Intro/Espacio, cierre con Escape y el foco vuelve a donde estaba."
+
+#: src/Admin/Settings.php:204
+msgid "Open images full-screen on click"
+msgstr "Abrir imágenes en pantalla completa al hacer clic"
+
+#: src/Admin/Settings.php:210
+msgid "Close on backdrop click"
+msgstr "Cerrar al hacer clic en el fondo"
+
+#: src/Admin/Settings.php:211
+msgid ""
+"Let shoppers dismiss the lightbox by clicking the dark area around the "
+"image, in addition to the close button and Escape key."
+msgstr ""
+"Permita que los compradores cierren la caja de luz haciendo clic en el área "
+"oscura alrededor de la imagen, además del botón de cerrar y la tecla Escape."
+
+#: src/Admin/Settings.php:214
+msgid "Click outside the image to close"
+msgstr "Haga clic fuera de la imagen para cerrar"
+
+#: src/Admin/Settings.php:220
+msgid "Image caption"
+msgstr "Título de la imagen"
+
+#: src/Admin/Settings.php:221
+msgid ""
+"Show each image's alt text as a caption inside the lightbox. Helpful when "
+"your images have descriptive alt text; leave off if they don't."
+msgstr ""
+"Muestra el texto alternativo de cada imagen como título dentro de la caja de"
+" luz. Útil cuando tus imágenes tienen texto alternativo descriptivo; déjalo "
+"si no lo hacen."
+
+#: src/Admin/Settings.php:224
+msgid "Show the image alt text as a caption"
+msgstr "Mostrar el texto alternativo de la imagen como título"
+
+#: src/Admin/Settings.php:230
+msgid "Open-image label"
+msgstr "Etiqueta de imagen abierta"
+
+#: src/Admin/Settings.php:231
+msgid ""
+"The accessible label screen readers announce for each gallery image, e.g. "
+"\"Open image in full screen\". Leave empty to use the built-in default."
+msgstr ""
+"Los lectores de pantalla de etiquetas accesibles anuncian para cada imagen "
+"de la galería, p. \"Abrir imagen en pantalla completa\". Déjelo vacío para "
+"usar el valor predeterminado integrado."
+
+#: src/Admin/Settings.php:234 src/Service/ReelService.php:52
+msgid "Open image in full screen"
+msgstr "Abrir imagen en pantalla completa"
+
+#: src/Admin/Settings.php:236
+msgid ""
+"Accessible label for the open-in-lightbox control. Leave empty for the "
+"default."
+msgstr ""
+"Etiqueta accesible para el control de apertura en caja de luz. Déjelo vacío "
+"por defecto."
+
+#: src/Admin/Settings.php:246
+msgid "Featured video"
+msgstr "Vídeo destacado"
+
+#. translators: %s: the product meta field name.
+#: src/Admin/Settings.php:251
+#, php-format
+msgid ""
+"Add a video to any product by setting its %s meta field to a self-hosted "
+"MP4/WebM file or a YouTube/Vimeo link."
+msgstr ""
+"Añade un video a cualquier producto configurando su metacampo %s en un "
+"archivo MP4/WebM autohospedado o un enlace de YouTube/Vimeo."
+
+#: src/Admin/Settings.php:263
+msgid "Show featured video"
+msgstr "Mostrar vídeo destacado"
+
+#: src/Admin/Settings.php:264
+msgid ""
+"Master switch for the product video. When on, products that have a video URL"
+" show it on their single product page in the position you choose below."
+msgstr ""
+"Interruptor maestro para el vídeo del producto. Cuando está activado, los "
+"productos que tienen una URL de vídeo la muestran en la página de su único "
+"producto en la posición que elija a continuación."
+
+#: src/Admin/Settings.php:267
+msgid "Display the product video on the product page"
+msgstr "Mostrar el vídeo del producto en la página del producto."
+
+#: src/Admin/Settings.php:273
+msgid "Position"
+msgstr "Posición"
+
+#: src/Admin/Settings.php:274
+msgid ""
+"Where the video appears: directly under the image gallery, or above the "
+"title/price summary column. Pick whichever fits your theme best."
+msgstr ""
+"Dónde aparece el vídeo: directamente debajo de la galería de imágenes o "
+"encima de la columna de resumen de título/precio. Elija el que mejor se "
+"adapte a su tema."
+
+#: src/Admin/Settings.php:278
+msgid "After the gallery"
+msgstr "despues de la galeria"
+
+#: src/Admin/Settings.php:279
+msgid "Before the summary"
+msgstr "antes del resumen"
+
+#: src/Admin/Settings.php:286
+msgid "Autoplay"
+msgstr "Reproducción automática"
+
+#: src/Admin/Settings.php:287
+msgid ""
+"Start the video automatically on page load. Browsers only allow this when "
+"the video is muted, so sound stays off until the shopper turns it on. Use "
+"sparingly, it can be distracting."
+msgstr ""
+"Inicie el vídeo automáticamente al cargar la página. Los navegadores sólo "
+"permiten esto cuando el vídeo está silenciado, por lo que el sonido "
+"permanece apagado hasta que el comprador lo enciende. Úselo con moderación, "
+"puede distraer."
+
+#: src/Admin/Settings.php:290
+msgid "Play automatically (muted)"
+msgstr "Reproducir automáticamente (silenciado)"
+
+#: src/Admin/Settings.php:296
+msgid "Show heading"
+msgstr "Mostrar encabezado"
+
+#: src/Admin/Settings.php:297
+msgid ""
+"Display a heading above the video. Turn off for a cleaner, heading-free "
+"embed."
+msgstr ""
+"Muestra un título encima del vídeo. Apáguelo para obtener una incrustación "
+"más limpia y sin encabezados."
+
+#: src/Admin/Settings.php:300
+msgid "Show a heading above the video"
+msgstr "Mostrar un título encima del vídeo"
+
+#: src/Admin/Settings.php:306
+msgid "Default heading"
+msgstr "Título predeterminado"
+
+#: src/Admin/Settings.php:307
+msgid ""
+"The heading used when a product has no video heading of its own. Leave empty"
+" to use the built-in \"Product video\" text."
+msgstr ""
+"El título utilizado cuando un producto no tiene un título de vídeo propio. "
+"Déjelo vacío para utilizar el texto integrado \"Video del producto\"."
+
+#: src/Admin/Settings.php:310 src/Service/ReelService.php:69
+#: src/Service/ReelService.php:262
+msgid "Product video"
+msgstr "Vídeo del producto"
+
+#: src/Admin/Settings.php:316
+msgid "Intro text"
+msgstr "Texto de introducción"
+
+#: src/Admin/Settings.php:317
+msgid ""
+"An optional short paragraph shown under the heading, e.g. \"See it in "
+"action.\" Leave empty to hide it."
+msgstr ""
+"Un breve párrafo opcional que se muestra debajo del título, p. \"Véalo en "
+"acción\". Déjelo vacío para ocultarlo."
+
+#: src/Admin/Settings.php:320
+msgid "See this product in action…"
+msgstr "Vea este producto en acción..."
+
+#: src/Admin/Settings.php:331
+msgid "Place it anywhere"
+msgstr "Colócalo en cualquier lugar"
+
+#: src/Admin/Settings.php:332
+msgid ""
+"Beyond the automatic gallery position, drop the current product's video "
+"wherever you like."
+msgstr ""
+"Más allá de la posición automática de la galería, suelte el vídeo del "
+"producto actual donde desee."
+
+#: src/Admin/Settings.php:337
+msgid "Shortcode"
+msgstr "Código corto"
+
+#: src/Admin/Settings.php:341
+msgid ""
+"Paste into any product description or page. Optional attributes: id=\"123\" "
+"to target a specific product, and title=\"hide\" to drop the heading."
+msgstr ""
+"Péguelo en cualquier descripción o página del producto. Atributos "
+"opcionales: id=\"123\" para apuntar a un producto específico y "
+"title=\"hide\" para eliminar el encabezado."
+
+#: src/Admin/Settings.php:344
+msgid "Block"
+msgstr "Bloque"
+
+#: src/Admin/Settings.php:346 src/Frontend/VideoShortcode.php:70
+#: src/Frontend/VideoShortcode.php:118
+msgid "Reel: Featured video"
+msgstr "Reel: Vídeo destacado"
+
+#: src/Admin/Settings.php:348
+msgid ""
+"Search for it in the block inserter. Renders the same video as the "
+"shortcode."
+msgstr ""
+"Búscalo en el insertador de bloques. Representa el mismo video que el código"
+" corto."
+
+#: src/Admin/Settings.php:355
+msgid "Save changes"
+msgstr "Guardar cambios"
+
+#: src/Frontend/VideoShortcode.php:73
+msgid "Show the current product's featured video (Reel)."
+msgstr "Mostrar el vídeo destacado del producto actual (Reel)."
+
+#: src/Frontend/VideoShortcode.php:119
+msgid ""
+"This shows the current product's video on the storefront. Set a video URL in"
+" the product's _reel_video_url meta field, then view the product page."
+msgstr ""
+"Esto muestra el vídeo del producto actual en el escaparate. Establezca una "
+"URL de video en el metacampo _reel_video_url del producto y luego vea la "
+"página del producto."
+
+#: templates/featured-video.php:27
+msgid "Now playing"
+msgstr "Reproduciendo ahora"
+
+#: templates/lightbox.php:22
+msgid "Product image viewer"
+msgstr "Visor de imágenes del producto"
+
+#: templates/lightbox.php:29
+msgid "Close image viewer"
+msgstr "Cerrar visor de imágenes"
