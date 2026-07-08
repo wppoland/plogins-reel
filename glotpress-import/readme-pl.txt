@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, gallery slider
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.2
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,15 +14,15 @@ WooCommerce product gallery upgrades: image zoom, gallery lightbox, gallery slid
 
 Reel upgrades the WooCommerce single product gallery with product image zoom, an accessible gallery lightbox and a featured product video:
 
-* **Hover zoom.** Gallery images magnify on hover at a zoom scale you set (1.0× to
+* <strong>Hover zoom.</strong> Gallery images magnify on hover at a zoom scale you set (1.0× to
   3.0×). The transform is clipped to the gallery frame, so the rest of the page
-  stays put.
-* **Accessible lightbox.** Click, or press Enter/Space, on any gallery image to
+stays put.
+* <strong>Accessible lightbox.</strong> Click, or press Enter/Space, on any gallery image to
   open it full screen. The lightbox is keyboard-operable: Tab stays on the close
   button so focus can't slip behind the overlay, Escape closes it, and focus
   returns to the image you opened. It's a fixed overlay that starts hidden, so it
   reserves no space until used.
-* **Featured video.** Show a per-product video, a self-hosted MP4/WebM file or a
+* <strong>Featured video.</strong> Show a per-product video, a self-hosted MP4/WebM file or a
   YouTube/Vimeo (oEmbed) URL, after the gallery or before the product summary.
   The video sits in a 16:9 frame sized with `aspect-ratio`, so its space is held
   before it loads.
@@ -31,7 +31,7 @@ The markup is built in PHP and progressively enhanced by one vanilla-JavaScript
 file (no jQuery), deferred and loaded in the footer. Scripts and styles only
 enqueue on the single product page.
 
-Settings live under a top-level **Reel** admin menu. Each of the three features
+Settings live under a top-level <strong>Reel</strong> admin menu. Each of the three features
 has its own on/off switch; you can also set the zoom scale and skip it on touch
 devices, show an alt-text caption in the lightbox, relabel the open-image control
 for screen readers, and choose the video's position, autoplay, heading and intro
@@ -39,7 +39,7 @@ text. The per-product video URL comes from the `_reel_video_url` product meta
 field, with an optional `_reel_video_title` for that product's heading.
 
 To place the video somewhere other than the gallery area, drop the `[reel_video]`
-shortcode (it takes `id` and `title` attributes) or the **Reel: Featured video**
+shortcode (it takes `id` and `title` attributes) or the <strong>Reel: Featured video</strong>
 block into any product content. Both render the current product's video in the
 same 16:9 frame.
 
@@ -48,10 +48,10 @@ developed in the open, so bug reports and pull requests are welcome there.
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/reel/docs/
-* **Plugin page** - https://plogins.com/reel/
-* **Source code** - https://github.com/wppoland/plogins-reel
-* **Bug reports and feature requests** - https://github.com/wppoland/plogins-reel/issues
+* <strong>Documentation</strong> - https://plogins.com/pl/reel/docs/
+* <strong>Plugin page</strong> - https://plogins.com/pl/reel/
+* <strong>Source code</strong> - https://github.com/wppoland/plogins-reel
+* <strong>Bug reports and feature requests</strong> - https://github.com/wppoland/plogins-reel/issues
 
 
 = Features =
@@ -75,7 +75,7 @@ developed in the open, so bug reports and pull requests are welcome there.
 
 1. Upload the plugin to `/wp-content/plugins/plogins-reel`, or install via Plugins → Add New.
 2. Activate it. WooCommerce must be active.
-3. Go to the **Reel** menu and enable the features you want.
+3. Go to the <strong>Reel</strong> menu and enable the features you want.
 4. For a product video, set the video URL in the product's `_reel_video_url` meta.
 
 == Frequently Asked Questions ==
@@ -126,35 +126,28 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 
 == External Services ==
 
-Reel makes no API calls or analytics requests of its own; the zoom, lightbox and self-hosted video features run entirely on your site, and the only data Reel stores is the `reel_settings` and `reel_db_version` options plus each product's `_reel_video_url` and `_reel_video_title` meta.
+Reel nie wykonuje własnych wywołań API ani żądań analitycznych; funkcje zoomu, lightboxa i wideo hostowane na własnym serwerze działają całkowicie w Twojej witrynie, a jedyne dane, jakie Reel przechowuje, to opcje `reel_settings` i `reel_db_version` oraz meta `_reel_video_url` i `_reel_video_title` każdego produktu.
 
-The one exception is when you set a product's video URL to a YouTube, Vimeo or other oEmbed link. In that case WordPress core's own `wp_oembed_get()` fetches the embed markup from that provider, sending the video URL to the provider you chose so it can return the player; Reel caches the result in a transient to avoid repeat requests. No request is made for self-hosted (MP4/WebM) videos. Use of those providers is governed by their own terms and privacy policies, e.g. YouTube (https://www.youtube.com/t/terms, https://policies.google.com/privacy) and Vimeo (https://vimeo.com/terms, https://vimeo.com/privacy).
-
-== Translations ==
-
-Plogins Reel includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-reel`, so WordPress.org language packs can also override or extend these bundled translations.
+Jedynym wyjątkiem jest ustawienie adresu URL filmu produktu na link do YouTube, Vimeo lub innego łącza oEmbed. W takim przypadku funkcja `wp_oembed_get()' rdzenia WordPressa pobiera znaczniki do umieszczenia na stronie od tego dostawcy, wysyłając adres URL wideo do wybranego dostawcy, aby mógł zwrócić odtwarzacz; Reel buforuje wynik w trybie przejściowym, aby uniknąć powtarzających się żądań. Nie składa się żadnych próśb o filmy wideo hostowane samodzielnie (MP4/WebM). Korzystanie z usług tych dostawców podlega ich własnym warunkom i politykom prywatności, m.in. YouTube (https://www.youtube.com/t/terms, https://policies.google.com/privacy) i Vimeo (https://vimeo.com/terms, https://vimeo.com/privacy).
 
 == Changelog ==
 
-= 1.0.2 =
-* Added bundled Polish, German and Spanish translations for the plugin interface.
-
 = 1.0.1 =
-* First stable release.
+* Pierwsza stabilna wersja.
 
 = 0.2.1 =
-* Renamed to Plogins Reel for WooCommerce for a more distinctive plugin name.
+* Zmieniono nazwę na Plogins Reel dla WooCommerce, aby uzyskać bardziej charakterystyczną nazwę wtyczki.
 
 = 0.2.0 =
-* Redesigned settings screen: card layout, toggle switches, inline help tooltips and a live zoom-strength control.
-* Polished storefront styling: themeable CSS custom properties, fluid sizing, dark-mode support and reduced-motion guards.
-* Accessibility: named lightbox dialog, role=tooltip help, visible focus styles and full keyboard operability.
-* Robustness: graceful empty/placeholder states, a no-layout-shift video skeleton and hardened event handling.
-* Add `[reel_video]` shortcode and a "Reel: Featured video" block to place the featured video anywhere.
-* Add lightbox caption (from image alt text) and an option to skip hover zoom on touch devices.
-* Add settings for the open-in-lightbox label, a default video heading and an optional intro paragraph.
-* Add a "Settings" link on the plugins list and an uninstall routine that removes plugin options.
-* Bundle a translation template (languages/reel.pot) and a Polish translation.
+* Przeprojektowany ekran ustawień: układ kart, przełączniki, podpowiedzi wbudowanej pomocy i kontrola siły powiększenia na żywo.
+* Dopracowana stylistyka witryny sklepowej: niestandardowe właściwości CSS z motywem, płynne dopasowywanie rozmiaru, obsługa trybu ciemnego i osłony o zmniejszonym ruchu.
+* Dostępność: nazwane okno dialogowe Lightbox, pomoc dotycząca roli = podpowiedzi, widoczne style fokusu i pełna funkcjonalność klawiatury.
+* Solidność: eleganckie stany puste/zastępcze, szkielet wideo bez zmiany układu i ulepszona obsługa zdarzeń.
+* Dodaj krótki kod `[reel_video]` i blok „Reel: Polecane wideo”, aby umieścić polecany film w dowolnym miejscu.
+* Dodaj podpis lightbox (z tekstu alternatywnego obrazu) i opcję pominięcia powiększania po najechaniu myszką na urządzeniach dotykowych.
+* Dodaj ustawienia etykiety open-in-lightbox, domyślnego nagłówka wideo i opcjonalnego akapitu wprowadzającego.
+* Dodaj link „Ustawienia” do listy wtyczek i procedurę odinstalowywania, która usuwa opcje wtyczek.
+* Połącz szablon tłumaczenia (języki/reel.pot) i tłumaczenie na język polski.
 
 = 0.1.0 =
-* Initial release: gallery hover zoom, accessible lightbox and featured product video.
+* Pierwsza wersja: powiększenie galerii po najechaniu myszką, dostępny lightbox i polecany film o produkcie.

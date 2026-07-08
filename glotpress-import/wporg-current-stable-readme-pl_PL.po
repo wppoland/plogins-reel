@@ -1,0 +1,31 @@
+# wp.org Stable Readme translation (pl_PL)
+msgid ""
+msgstr ""
+"Project-Id-Version: reel Stable Readme\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: plogins-i18n\n"
+
+msgid "* <strong>Documentation</strong> - https://plogins.com/reel/docs/\n* <strong>Plugin page</strong> - https://plogins.com/reel/\n* <strong>Source code</strong> - https://github.com/wppoland/plogins-reel\n* <strong>Bug reports and feature requests</strong> - https://github.com/wppoland/plogins-reel/issues"
+msgstr "* <strong>Documentation</strong> - https://plogins.com/pl/reel/docs/\n* <strong>Plugin page</strong> - https://plogins.com/pl/reel/\n* <strong>Source code</strong> - https://github.com/wppoland/plogins-reel\n* <strong>Bug reports and feature requests</strong> - https://github.com/wppoland/plogins-reel/issues"
+
+msgid "Reel makes no API calls or analytics requests of its own; the zoom, lightbox and self-hosted video features run entirely on your site, and the only data Reel stores is the `reel_settings` and `reel_db_version` options plus each product's `_reel_video_url` and `_reel_video_title` meta."
+msgstr "Reel nie wykonuje własnych wywołań API ani żądań analitycznych; funkcje zoomu, lightboxa i wideo hostowane na własnym serwerze działają całkowicie w Twojej witrynie, a jedyne dane, jakie Reel przechowuje, to opcje `reel_settings` i `reel_db_version` oraz meta `_reel_video_url` i `_reel_video_title` każdego produktu."
+
+msgid "The one exception is when you set a product's video URL to a YouTube, Vimeo or other oEmbed link. In that case WordPress core's own `wp_oembed_get()` fetches the embed markup from that provider, sending the video URL to the provider you chose so it can return the player; Reel caches the result in a transient to avoid repeat requests. No request is made for self-hosted (MP4/WebM) videos. Use of those providers is governed by their own terms and privacy policies, e.g. YouTube (https://www.youtube.com/t/terms, https://policies.google.com/privacy) and Vimeo (https://vimeo.com/terms, https://vimeo.com/privacy)."
+msgstr "Jedynym wyjątkiem jest ustawienie adresu URL filmu produktu na link do YouTube, Vimeo lub innego łącza oEmbed. W takim przypadku funkcja `wp_oembed_get()' rdzenia WordPressa pobiera znaczniki do umieszczenia na stronie od tego dostawcy, wysyłając adres URL wideo do wybranego dostawcy, aby mógł zwrócić odtwarzacz; Reel buforuje wynik w trybie przejściowym, aby uniknąć powtarzających się żądań. Nie składa się żadnych próśb o filmy wideo hostowane samodzielnie (MP4/WebM). Korzystanie z usług tych dostawców podlega ich własnym warunkom i politykom prywatności, m.in. YouTube (https://www.youtube.com/t/terms, https://policies.google.com/privacy) i Vimeo (https://vimeo.com/terms, https://vimeo.com/privacy)."
+
+msgid "* First stable release."
+msgstr "* Pierwsza stabilna wersja."
+
+msgid "* Renamed to Plogins Reel for WooCommerce for a more distinctive plugin name."
+msgstr "* Zmieniono nazwę na Plogins Reel dla WooCommerce, aby uzyskać bardziej charakterystyczną nazwę wtyczki."
+
+msgid "* Redesigned settings screen: card layout, toggle switches, inline help tooltips and a live zoom-strength control.\n* Polished storefront styling: themeable CSS custom properties, fluid sizing, dark-mode support and reduced-motion guards.\n* Accessibility: named lightbox dialog, role=tooltip help, visible focus styles and full keyboard operability.\n* Robustness: graceful empty/placeholder states, a no-layout-shift video skeleton and hardened event handling.\n* Add `[reel_video]` shortcode and a \"Reel: Featured video\" block to place the featured video anywhere.\n* Add lightbox caption (from image alt text) and an option to skip hover zoom on touch devices.\n* Add settings for the open-in-lightbox label, a default video heading and an optional intro paragraph.\n* Add a \"Settings\" link on the plugins list and an uninstall routine that removes plugin options.\n* Bundle a translation template (languages/reel.pot) and a Polish translation."
+msgstr "* Przeprojektowany ekran ustawień: układ kart, przełączniki, podpowiedzi wbudowanej pomocy i kontrola siły powiększenia na żywo.\n* Dopracowana stylistyka witryny sklepowej: niestandardowe właściwości CSS z motywem, płynne dopasowywanie rozmiaru, obsługa trybu ciemnego i osłony o zmniejszonym ruchu.\n* Dostępność: nazwane okno dialogowe Lightbox, pomoc dotycząca roli = podpowiedzi, widoczne style fokusu i pełna funkcjonalność klawiatury.\n* Solidność: eleganckie stany puste/zastępcze, szkielet wideo bez zmiany układu i ulepszona obsługa zdarzeń.\n* Dodaj krótki kod `[reel_video]` i blok „Reel: Polecane wideo”, aby umieścić polecany film w dowolnym miejscu.\n* Dodaj podpis lightbox (z tekstu alternatywnego obrazu) i opcję pominięcia powiększania po najechaniu myszką na urządzeniach dotykowych.\n* Dodaj ustawienia etykiety open-in-lightbox, domyślnego nagłówka wideo i opcjonalnego akapitu wprowadzającego.\n* Dodaj link „Ustawienia” do listy wtyczek i procedurę odinstalowywania, która usuwa opcje wtyczek.\n* Połącz szablon tłumaczenia (języki/reel.pot) i tłumaczenie na język polski."
+
+msgid "* Initial release: gallery hover zoom, accessible lightbox and featured product video."
+msgstr "* Pierwsza wersja: powiększenie galerii po najechaniu myszką, dostępny lightbox i polecany film o produkcie."
+
