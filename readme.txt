@@ -71,6 +71,18 @@ developed in the open, so bug reports and pull requests are welcome there.
 * Translation-ready: bundled .pot template plus a Polish (pl_PL) translation.
 * HPOS and cart/checkout blocks compatible.
 
+== Plogins Reel PRO ==
+
+The free edition upgrades the WooCommerce gallery: zoom, lightbox, slider controls and self-hosted video. **Plogins Reel PRO** adds richer video and per-variation media:
+
+* **External video embeds** - YouTube, Vimeo or a direct .mp4/.webm URL per product, shown in the gallery
+* **Per-variation gallery** - a distinct image and video set that swaps in when the shopper selects a variation
+* **Video autoplay rules** - control when and how product videos autoplay
+
+Everything in the free edition stays free and open. Plogins Reel PRO starts at 19 EUR per year (PLN shown at checkout).
+
+Compare editions and pricing: https://plogins.com/plogins-reel-pro/pricing/
+
 == Installation ==
 
 1. Upload the plugin to `/wp-content/plugins/plogins-reel`, or install via Plugins → Add New.
