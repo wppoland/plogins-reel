@@ -370,26 +370,6 @@
 }
 
 /* Dark mode follows the OS preference. */
-@media (prefers-color-scheme: dark) {
-    .reel-admin {
-        --reel-border: #3c434a;
-        --reel-card-bg: #1d2327;
-        --reel-muted: #a7aaad;
-        --reel-ink: #e0e0e2;
-        --reel-help-bg: #2c3338;
-        --reel-good: #6ee7b7;
-        --reel-good-bg: rgba(26, 127, 83, 0.18);
-        /* Lift the amber on the dark card so accents stay vivid and AA
-           (#f0b25e = 8.50:1 on the #1d2327 card surface). */
-        --reel-accent: #f0b25e;
-        --reel-accent-ink: #1d2327;
-    }
-
-    .reel-toggle__track {
-        background: #50575e;
-    }
-}
-
 /* Honour reduced-motion: drop all transitions. */
 @media (prefers-reduced-motion: reduce) {
     .reel-admin *,
