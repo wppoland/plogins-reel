@@ -1,4 +1,4 @@
-=== Plogins Reel - Product Gallery Zoom & Video for WooCommerce ===
+=== Reel - Product Gallery Zoom & Video for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, product gallery, product video, image zoom, gallery slider
 Requires at least: 6.5
