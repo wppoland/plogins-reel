@@ -1,10 +1,10 @@
-=== Reel - Product Gallery Zoom & Video for WooCommerce ===
+=== Plogins Reel - Product Gallery Zoom & Video for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, product gallery, product video, image zoom, gallery slider
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -147,6 +147,9 @@ The one exception is when you set a product's video URL to a YouTube, Vimeo or o
 Plogins Reel includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-reel`, so WordPress.org language packs can also override or extend these bundled translations.
 
 == Changelog ==
+
+= 1.0.5 =
+* Restored the distinctive display name: Plogins Reel - Product Gallery Zoom & Video for WooCommerce.
 
 = 1.0.4 =
 * Fixed low-contrast admin headings under an OS dark-mode preference.
