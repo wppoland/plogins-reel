@@ -1,6 +1,6 @@
 === Plogins Reel - Product Gallery Zoom & Video for WooCommerce ===
 Contributors: motylanogha
-Tags: woocommerce, product gallery, product video, image zoom, gallery slider
+Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
@@ -8,7 +8,7 @@ Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-WooCommerce product gallery upgrades: image zoom, gallery lightbox, gallery slider controls and product video. No jQuery.
+WooCommerce product gallery upgrades: image zoom, gallery lightbox and product video. No jQuery.
 
 == Description ==
 
@@ -73,7 +73,7 @@ developed in the open, so bug reports and pull requests are welcome there.
 
 == Plogins Reel PRO ==
 
-The free edition upgrades the WooCommerce gallery: zoom, lightbox, slider controls and self-hosted video. **Plogins Reel PRO** adds richer video and per-variation media:
+The free edition upgrades the WooCommerce gallery: zoom, lightbox and self-hosted video. **Plogins Reel PRO** adds richer video and per-variation media:
 
 * **External video embeds** - YouTube, Vimeo or a direct .mp4/.webm URL per product, shown in the gallery
 * **Per-variation gallery** - a distinct image and video set that swaps in when the shopper selects a variation
