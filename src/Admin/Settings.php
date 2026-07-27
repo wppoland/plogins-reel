@@ -20,11 +20,19 @@ final class Settings implements HasHooks
     private const OPTION = 'reel_settings';
     private const PAGE   = 'reel-settings';
 
+    private ?ProUpsell $proUpsell = null;
+
+    private function proUpsell(): ProUpsell
+    {
+        return $this->proUpsell ??= new ProUpsell();
+    }
+
     public function registerHooks(): void
     {
         add_action('admin_menu', [$this, 'addMenuPage']);
         add_action('admin_init', [$this, 'registerSettings']);
         add_action('admin_enqueue_scripts', [$this, 'enqueueAssets']);
+        $this->proUpsell()->registerHooks();
     }
 
     /**
@@ -133,6 +141,8 @@ final class Settings implements HasHooks
         ];
         ?>
         <div class="wrap reel-admin">
+            <?php $this->proUpsell()->banner(); ?>
+
             <div class="reel-admin__hero">
                 <span class="reel-admin__hero-icon" aria-hidden="true">
                     <span class="dashicons dashicons-format-video"></span>
@@ -355,6 +365,8 @@ final class Settings implements HasHooks
                     <?php submit_button(__('Save changes', 'plogins-reel')); ?>
                 </div>
             </form>
+
+            <?php $this->proUpsell()->cards(); ?>
         </div>
         <?php
     }
