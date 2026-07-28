@@ -111,7 +111,7 @@ msgstr ""
 #: src/Admin/Settings.php:178
 msgid ""
 "How much the image grows on hover. 1.2× is subtle; 2× is dramatic. Around "
-"1.4–1.6× reads well for most stores."
+"1.4-1.6× reads well for most stores."
 msgstr ""
 
 #: src/Admin/Settings.php:185

@@ -124,7 +124,7 @@ msgstr "Fuerza del zoom"
 #: src/Admin/Settings.php:178
 msgid ""
 "How much the image grows on hover. 1.2× is subtle; 2× is dramatic. Around "
-"1.4–1.6× reads well for most stores."
+"1.4-1.6× reads well for most stores."
 msgstr ""
 "Cuánto crece la imagen al pasar el mouse. 1,2× es sutil; 2× es dramático. "
 "Alrededor de 1,4 a 1,6 × se lee bien en la mayoría de las tiendas."

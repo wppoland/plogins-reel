@@ -185,7 +185,7 @@ final class Settings implements HasHooks
                             <div class="reel-field">
                                 <span class="reel-field__label">
                                     <label for="reel-zoom-scale"><?php esc_html_e('Zoom strength', 'plogins-reel'); ?></label>
-                                    <?php echo wp_kses($this->help(__('How much the image grows on hover. 1.2× is subtle; 2× is dramatic. Around 1.4–1.6× reads well for most stores.', 'plogins-reel'), 'reel-help-scale'), $help_kses); ?>
+                                    <?php echo wp_kses($this->help(__('How much the image grows on hover. 1.2× is subtle; 2× is dramatic. Around 1.4-1.6× reads well for most stores.', 'plogins-reel'), 'reel-help-scale'), $help_kses); ?>
                                 </span>
                                 <div class="reel-field__control reel-admin__range">
                                     <input type="range" min="1" max="3" step="0.05" value="<?php echo esc_attr((string) $s['zoom_scale']); ?>" data-reel-zoom-range aria-hidden="true" tabindex="-1" />

@@ -16,7 +16,7 @@ use Reel\Service\ReelService;
  *
  * Both render the SAME engine-built markup the gallery position uses (so this is
  * a placement option for the FREE featured video, not a second feature). The
- * video URL/title still come from the existing product meta — no new editor UI
+ * video URL/title still come from the existing product meta, no new editor UI
  * here (per-product video URL admin field is reserved for Reel Pro).
  */
 final class VideoShortcode implements HasHooks
@@ -35,7 +35,7 @@ final class VideoShortcode implements HasHooks
     }
 
     /**
-     * `[reel_video]` — render the featured video.
+     * `[reel_video]`, render the featured video.
      *
      * @param array<string, string>|string $atts Shortcode attributes:
      *        `id` (product ID; defaults to the current product) and

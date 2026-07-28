@@ -1,4 +1,4 @@
-/* Reel — gallery hover-zoom + accessible lightbox.
+/* Reel, gallery hover-zoom + accessible lightbox.
    Self-contained, no jQuery, no CLS: the lightbox is a fixed overlay that starts
    hidden, so it never reserves or shifts layout. The zoom transform stays inside
    the clipped gallery frame. Themeable via custom properties; honours dark mode
@@ -14,7 +14,7 @@
     --reel-backdrop: rgba(0, 0, 0, 0.82);
     --reel-overlay-ink: #fff;
     /* Shared accent with the player frame: projector amber. Used here only as a
-       quiet focus/hover cue so both surfaces read as one plugin — no bold move
+       quiet focus/hover cue so both surfaces read as one plugin, no bold move
        on the gallery; the player frame owns the moment. */
     --reel-beam: #e8a23a;
     --reel-z: 9999;

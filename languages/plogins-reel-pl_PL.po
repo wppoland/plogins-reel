@@ -124,10 +124,10 @@ msgstr "Siła powiększenia"
 #: src/Admin/Settings.php:178
 msgid ""
 "How much the image grows on hover. 1.2× is subtle; 2× is dramatic. Around "
-"1.4–1.6× reads well for most stores."
+"1.4-1.6× reads well for most stores."
 msgstr ""
 "O ile zdjęcie powiększa się po najechaniu. 1,2× jest subtelne; 2× jest "
-"wyraziste. Około 1,4–1,6× sprawdza się dobrze w większości sklepów."
+"wyraziste. Około 1,4-1,6× sprawdza się dobrze w większości sklepów."
 
 #: src/Admin/Settings.php:185
 msgid "Magnification factor on hover, from 1.0× (off) to 3.0×."
@@ -473,10 +473,3 @@ msgstr "jedna licencja, wszystkie funkcje PRO"
 #, php-format
 msgid "What %s adds"
 msgstr "Co dodaje %s"
-
-#~ msgid ""
-#~ "Hover zoom, lightbox and featured video for the WooCommerce product "
-#~ "gallery , reserved space, no jQuery"
-#~ msgstr ""
-#~ "Powiększenie po najechaniu, lightbox i wyróżnione wideo dla galerii "
-#~ "produktów WooCommerce, zarezerwowana przestrzeń, bez jQuery"

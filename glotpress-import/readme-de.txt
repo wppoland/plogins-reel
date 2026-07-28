@@ -22,8 +22,8 @@ Reel erweitert die WooCommerce-Einzelproduktgalerie um Produktbild-Zoom, eine ba
   Button, sodass der Fokus nicht hinter die Überlagerung rutschen kann, Escape schließt sie, und der Fokus
   kehrt zum geöffneten Bild zurück. Es ist eine feste Überlagerung, die anfangs verborgen ist und daher
   keinen Platz reserviert, bis sie genutzt wird.
-* <strong>Hervorgehobenes Video.</strong> Zeige ein produktspezifisches Video – eine selbst gehostete MP4/WebM-Datei oder eine
-  YouTube/Vimeo-(oEmbed)-URL – nach der Galerie oder vor der Produktzusammenfassung.
+* <strong>Hervorgehobenes Video.</strong> Zeige ein produktspezifisches Video, eine selbst gehostete MP4/WebM-Datei oder eine
+  YouTube/Vimeo-(oEmbed)-URL, nach der Galerie oder vor der Produktzusammenfassung.
   Das Video sitzt in einem 16:9-Rahmen, der mit `aspect-ratio` dimensioniert ist, sodass sein Platz
   vor dem Laden reserviert ist.
 
@@ -43,7 +43,7 @@ Shortcode (mit den Attributen `id` und `title`) oder den Block <strong>Reel: Fea
 in beliebige Produktinhalte ein. Beide rendern das Video des aktuellen Produkts im
 gleichen 16:9-Rahmen.
 
-Quellcode und Issue-Tracker: https://github.com/wppoland/plogins-reel — das Plugin wird
+Quellcode und Issue-Tracker: https://github.com/wppoland/plogins-reel, das Plugin wird
 quelloffen entwickelt, Fehlerberichte und Pull Requests sind dort willkommen.
 
 = Documentation and links =
