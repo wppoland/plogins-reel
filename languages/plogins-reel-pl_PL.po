@@ -12,7 +12,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
+"|| n%100>14) ? 1 : 2);\n"
 "X-Domain: plogins-reel\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -29,8 +30,8 @@ msgstr "https://plogins.com/reel/"
 #. Description of the plugin
 #: plogins-reel.php
 msgid ""
-"Hover zoom, lightbox and featured video for the WooCommerce product gallery,"
-" reserved space, no jQuery"
+"Hover zoom, lightbox and featured video for the WooCommerce product gallery, "
+"reserved space, no jQuery"
 msgstr ""
 "Najedź kursorem, lightbox i polecane wideo dla galerii produktów "
 "WooCommerce, zarezerwowane miejsce, bez jQuery"
@@ -105,13 +106,12 @@ msgstr "Powiększenie po najechaniu"
 #: src/Admin/Settings.php:168
 msgid ""
 "When a shopper hovers a gallery image, it magnifies in place to reveal "
-"detail, great for textures, labels and fine print. The zoom stays inside the"
-" image frame, so nothing on the page moves."
+"detail, great for textures, labels and fine print. The zoom stays inside the "
+"image frame, so nothing on the page moves."
 msgstr ""
 "Gdy klient najedzie na zdjęcie z galerii, powiększa się ono w miejscu, "
 "ujawniając szczegóły, świetne dla tekstur, etykiet i drobnego druku. "
-"Powiększenie pozostaje w ramce zdjęcia, więc nic na stronie się nie "
-"przesuwa."
+"Powiększenie pozostaje w ramce zdjęcia, więc nic na stronie się nie przesuwa."
 
 #: src/Admin/Settings.php:171
 msgid "Magnify the image on hover"
@@ -235,8 +235,8 @@ msgstr "Wyróżnione wideo"
 #: src/Admin/Settings.php:251
 #, php-format
 msgid ""
-"Add a video to any product by setting its %s meta field to a self-hosted "
-"MP4/WebM file or a YouTube/Vimeo link."
+"Add a video to any product by setting its %s meta field to a self-hosted MP4/"
+"WebM file or a YouTube/Vimeo link."
 msgstr ""
 "Dodaj wideo do dowolnego produktu, ustawiając jego pole metadanych %s na "
 "samodzielnie hostowany plik MP4/WebM lub link do YouTube/Vimeo."
@@ -247,8 +247,8 @@ msgstr "Pokaż wyróżnione wideo"
 
 #: src/Admin/Settings.php:264
 msgid ""
-"Master switch for the product video. When on, products that have a video URL"
-" show it on their single product page in the position you choose below."
+"Master switch for the product video. When on, products that have a video URL "
+"show it on their single product page in the position you choose below."
 msgstr ""
 "Główny przełącznik wideo produktu. Gdy włączony, produkty mające adres URL "
 "wideo wyświetlają je na swojej stronie pojedynczego produktu w pozycji "
@@ -319,8 +319,8 @@ msgstr "Domyślny nagłówek"
 
 #: src/Admin/Settings.php:307
 msgid ""
-"The heading used when a product has no video heading of its own. Leave empty"
-" to use the built-in \"Product video\" text."
+"The heading used when a product has no video heading of its own. Leave empty "
+"to use the built-in \"Product video\" text."
 msgstr ""
 "Nagłówek używany, gdy produkt nie ma własnego nagłówka wideo. Pozostaw "
 "puste, aby użyć wbudowanego tekstu „Wideo produktu”."
@@ -336,8 +336,8 @@ msgstr "Tekst wprowadzający"
 
 #: src/Admin/Settings.php:317
 msgid ""
-"An optional short paragraph shown under the heading, e.g. \"See it in "
-"action.\" Leave empty to hide it."
+"An optional short paragraph shown under the heading, e.g. \"See it in action."
+"\" Leave empty to hide it."
 msgstr ""
 "Opcjonalny krótki akapit wyświetlany pod nagłówkiem, np. „Zobacz w akcji”. "
 "Pozostaw puste, aby go ukryć."
@@ -381,8 +381,7 @@ msgstr "Reel: Wyróżnione wideo"
 
 #: src/Admin/Settings.php:348
 msgid ""
-"Search for it in the block inserter. Renders the same video as the "
-"shortcode."
+"Search for it in the block inserter. Renders the same video as the shortcode."
 msgstr ""
 "Wyszukaj go w narzędziu wstawiania bloków. Renderuje to samo wideo co "
 "shortcode."
@@ -397,11 +396,11 @@ msgstr "Pokaż wyróżnione wideo bieżącego produktu (Reel)."
 
 #: src/Frontend/VideoShortcode.php:119
 msgid ""
-"This shows the current product's video on the storefront. Set a video URL in"
-" the product's _reel_video_url meta field, then view the product page."
+"This shows the current product's video on the storefront. Set a video URL in "
+"the product's _reel_video_url meta field, then view the product page."
 msgstr ""
-"To pokazuje wideo bieżącego produktu w sklepie. Ustaw adres URL wideo w polu"
-" metadanych produktu _reel_video_url, a następnie wyświetl stronę produktu."
+"To pokazuje wideo bieżącego produktu w sklepie. Ustaw adres URL wideo w polu "
+"metadanych produktu _reel_video_url, a następnie wyświetl stronę produktu."
 
 #: templates/featured-video.php:27
 msgid "Now playing"
@@ -415,9 +414,69 @@ msgstr "Przeglądarka zdjęć produktu"
 msgid "Close image viewer"
 msgstr "Zamknij przeglądarkę zdjęć"
 
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr "Wkrótce"
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr "Wkrótce"
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr "od %d zł/rok"
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr "od %1$s%2$d/rok"
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr "Przejdź na PRO"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr "Powiadom mnie"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr "Powiadom mnie"
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr "Brak uprawnień."
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr "Zrób więcej dzięki %s"
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr "Odrzuć to powiadomienie"
+
+#: src/Admin/ProUpsell.php:182
+msgid "Unlock every PRO feature"
+msgstr "Odblokuj wszystkie funkcje PRO"
+
+#: src/Admin/ProUpsell.php:195
+msgid "one licence, every PRO feature"
+msgstr "jedna licencja, wszystkie funkcje PRO"
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:214
+#, php-format
+msgid "What %s adds"
+msgstr "Co dodaje %s"
+
 #~ msgid ""
-#~ "Hover zoom, lightbox and featured video for the WooCommerce product gallery "
-#~ ", reserved space, no jQuery"
+#~ "Hover zoom, lightbox and featured video for the WooCommerce product "
+#~ "gallery , reserved space, no jQuery"
 #~ msgstr ""
 #~ "Powiększenie po najechaniu, lightbox i wyróżnione wideo dla galerii "
 #~ "produktów WooCommerce, zarezerwowana przestrzeń, bez jQuery"

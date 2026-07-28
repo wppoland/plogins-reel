@@ -29,8 +29,8 @@ msgstr "https://plogins.com/de/reel/"
 #. Description of the plugin
 #: plogins-reel.php
 msgid ""
-"Hover zoom, lightbox and featured video for the WooCommerce product gallery,"
-" reserved space, no jQuery"
+"Hover zoom, lightbox and featured video for the WooCommerce product gallery, "
+"reserved space, no jQuery"
 msgstr ""
 "Hover-Zoom, Lightbox und vorgestelltes Video für die WooCommerce-"
 "Produktgalerie, reservierter Platz, kein jQuery"
@@ -105,13 +105,13 @@ msgstr "Hover-Zoom"
 #: src/Admin/Settings.php:168
 msgid ""
 "When a shopper hovers a gallery image, it magnifies in place to reveal "
-"detail, great for textures, labels and fine print. The zoom stays inside the"
-" image frame, so nothing on the page moves."
+"detail, great for textures, labels and fine print. The zoom stays inside the "
+"image frame, so nothing on the page moves."
 msgstr ""
-"Wenn ein Käufer mit der Maus über ein Galeriebild fährt, wird es vergrößert,"
-" um Details sichtbar zu machen, was sich hervorragend für Texturen, "
-"Etiketten und Kleingedrucktes eignet. Der Zoom bleibt innerhalb des "
-"Bildrahmens, sodass sich nichts auf der Seite bewegt."
+"Wenn ein Käufer mit der Maus über ein Galeriebild fährt, wird es vergrößert, "
+"um Details sichtbar zu machen, was sich hervorragend für Texturen, Etiketten "
+"und Kleingedrucktes eignet. Der Zoom bleibt innerhalb des Bildrahmens, "
+"sodass sich nichts auf der Seite bewegt."
 
 #: src/Admin/Settings.php:171
 msgid "Magnify the image on hover"
@@ -126,8 +126,8 @@ msgid ""
 "How much the image grows on hover. 1.2× is subtle; 2× is dramatic. Around "
 "1.4–1.6× reads well for most stores."
 msgstr ""
-"Wie stark wächst das Bild beim Schweben? 1,2× ist subtil; 2× ist dramatisch."
-" Etwa 1,4–1,6× ist für die meisten Geschäfte gut geeignet."
+"Wie stark wächst das Bild beim Schweben? 1,2× ist subtil; 2× ist dramatisch. "
+"Etwa 1,4–1,6× ist für die meisten Geschäfte gut geeignet."
 
 #: src/Admin/Settings.php:185
 msgid "Magnification factor on hover, from 1.0× (off) to 3.0×."
@@ -163,9 +163,9 @@ msgid ""
 "returns to where it was."
 msgstr ""
 "Wenn du auf ein Galeriebild klickst, wird es im Vollbildmodus vor einem "
-"abgeblendeten Hintergrund geöffnet. Vollständig über die Tastatur bedienbar:"
-" Mit Enter/Leertaste öffnen, mit Escape schließen und der Fokus kehrt "
-"dorthin zurück, wo er war."
+"abgeblendeten Hintergrund geöffnet. Vollständig über die Tastatur bedienbar: "
+"Mit Enter/Leertaste öffnen, mit Escape schließen und der Fokus kehrt dorthin "
+"zurück, wo er war."
 
 #: src/Admin/Settings.php:204
 msgid "Open images full-screen on click"
@@ -181,8 +181,8 @@ msgid ""
 "image, in addition to the close button and Escape key."
 msgstr ""
 "Ermögliche Käufern, die Lightbox zu schließen, indem sie zusätzlich zur "
-"Schaltfläche „Schließen“ und der Escape-Taste auf den dunklen Bereich um das"
-" Bild klicken."
+"Schaltfläche „Schließen“ und der Escape-Taste auf den dunklen Bereich um das "
+"Bild klicken."
 
 #: src/Admin/Settings.php:214
 msgid "Click outside the image to close"
@@ -238,8 +238,8 @@ msgstr "Ausgewähltes Video"
 #: src/Admin/Settings.php:251
 #, php-format
 msgid ""
-"Add a video to any product by setting its %s meta field to a self-hosted "
-"MP4/WebM file or a YouTube/Vimeo link."
+"Add a video to any product by setting its %s meta field to a self-hosted MP4/"
+"WebM file or a YouTube/Vimeo link."
 msgstr ""
 "Füge einem beliebigen Produkt ein Video hinzu, indem du dessen Metafeld %s "
 "auf eine selbst gehostete MP4-/WebM-Datei oder einen YouTube-/Vimeo-Link "
@@ -251,8 +251,8 @@ msgstr "Empfohlenes Video anzeigen"
 
 #: src/Admin/Settings.php:264
 msgid ""
-"Master switch for the product video. When on, products that have a video URL"
-" show it on their single product page in the position you choose below."
+"Master switch for the product video. When on, products that have a video URL "
+"show it on their single product page in the position you choose below."
 msgstr ""
 "Hauptschalter für das Produktvideo. Wenn diese Option aktiviert ist, wird "
 "diese bei Produkten mit einer Video-URL auf ihrer einzelnen Produktseite an "
@@ -323,8 +323,8 @@ msgstr "Standardüberschrift"
 
 #: src/Admin/Settings.php:307
 msgid ""
-"The heading used when a product has no video heading of its own. Leave empty"
-" to use the built-in \"Product video\" text."
+"The heading used when a product has no video heading of its own. Leave empty "
+"to use the built-in \"Product video\" text."
 msgstr ""
 "Die Überschrift, die verwendet wird, wenn ein Produkt keine eigene "
 "Videoüberschrift hat. Lass das Feld leer, um den integrierten Text "
@@ -341,8 +341,8 @@ msgstr "Einleitungstext"
 
 #: src/Admin/Settings.php:317
 msgid ""
-"An optional short paragraph shown under the heading, e.g. \"See it in "
-"action.\" Leave empty to hide it."
+"An optional short paragraph shown under the heading, e.g. \"See it in action."
+"\" Leave empty to hide it."
 msgstr ""
 "Ein optionaler kurzer Absatz, der unter der Überschrift angezeigt wird, z. "
 "B. „Sehe es in Aktion.“ Lass es leer, um es zu verbergen."
@@ -387,8 +387,7 @@ msgstr "Reel: Empfohlenes Video"
 
 #: src/Admin/Settings.php:348
 msgid ""
-"Search for it in the block inserter. Renders the same video as the "
-"shortcode."
+"Search for it in the block inserter. Renders the same video as the shortcode."
 msgstr ""
 "Suche im Block-Inserter danach. Rendert dasselbe Video wie der Shortcode."
 
@@ -402,8 +401,8 @@ msgstr "Zeigt das vorgestellte Video des aktuellen Produkts (Reel)."
 
 #: src/Frontend/VideoShortcode.php:119
 msgid ""
-"This shows the current product's video on the storefront. Set a video URL in"
-" the product's _reel_video_url meta field, then view the product page."
+"This shows the current product's video on the storefront. Set a video URL in "
+"the product's _reel_video_url meta field, then view the product page."
 msgstr ""
 "Dies zeigt das aktuelle Produktvideo auf der Storefront. Lege im Metafeld "
 "„_reel_video_url“ des Produkts eine Video-URL fest und sehen Sie sich dann "
@@ -420,3 +419,63 @@ msgstr "Produktbildbetrachter"
 #: templates/lightbox.php:29
 msgid "Close image viewer"
 msgstr "Bildbetrachter schließen"
+
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr "Demnächst"
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr "Demnächst"
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr "ab %d zł/Jahr"
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr "ab %1$s%2$d/Jahr"
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr "Auf PRO upgraden"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr "Benachrichtige mich"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr "Benachrichtige mich"
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr "Zugriff verweigert."
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr "Mehr erreichen mit %s"
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr "Diesen Hinweis ausblenden"
+
+#: src/Admin/ProUpsell.php:182
+msgid "Unlock every PRO feature"
+msgstr "Alle PRO-Funktionen freischalten"
+
+#: src/Admin/ProUpsell.php:195
+msgid "one licence, every PRO feature"
+msgstr "eine Lizenz, alle PRO-Funktionen"
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:214
+#, php-format
+msgid "What %s adds"
+msgstr "Was %s ergänzt"
