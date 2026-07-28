@@ -22,8 +22,8 @@ Reel mejora la galería de producto individual de WooCommerce con zoom de imagen
   cierre para que el foco no se escape detrás de la superposición, Escape lo cierra y el foco
   vuelve a la imagen que lo abrió. Es una superposición fija que empieza oculta, así que
   no reserva espacio hasta que se usa.
-* <strong>Vídeo destacado.</strong> Muestra un vídeo por producto — un archivo MP4/WebM autohospedado o una
-  URL de YouTube/Vimeo (oEmbed) — después de la galería o antes del resumen del producto.
+* <strong>Vídeo destacado.</strong> Muestra un vídeo por producto, un archivo MP4/WebM autohospedado o una
+  URL de YouTube/Vimeo (oEmbed), después de la galería o antes del resumen del producto.
   El vídeo va en un marco 16:9 dimensionado con `aspect-ratio`, así que su espacio queda reservado
   antes de cargarse.
 
@@ -43,7 +43,7 @@ Para colocar el vídeo fuera del área de la galería, inserta el shortcode `[re
 en cualquier contenido del producto. Ambos renderizan el vídeo del producto actual en el
 mismo marco 16:9.
 
-Código fuente y seguimiento de incidencias: https://github.com/wppoland/plogins-reel — el plugin se desarrolla
+Código fuente y seguimiento de incidencias: https://github.com/wppoland/plogins-reel, el plugin se desarrolla
 de forma abierta (código abierto), así que los informes de errores y las pull requests son bienvenidos allí.
 
 = Documentation and links =

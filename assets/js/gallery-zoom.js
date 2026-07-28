@@ -1,5 +1,5 @@
 /**
- * Reel — gallery hover-zoom + accessible lightbox.
+ * Reel, gallery hover-zoom + accessible lightbox.
  *
  * No jQuery, deferred, in-footer. Config is injected via wp_localize_script as
  * window.reelGalleryZoom. The lightbox shell is printed in the footer
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Plugin-local extras injected on the same handle (only the core config object
-  // is localized otherwise). Optional — defaults keep prior behaviour.
+  // is localized otherwise). Optional, defaults keep prior behaviour.
   const extra = window.reelGalleryExtra || {};
   const isTouch = window.matchMedia ? window.matchMedia('(hover: none)').matches : false;
   const allowZoom = config.enableZoom && !(extra.disableZoomOnTouch && isTouch);

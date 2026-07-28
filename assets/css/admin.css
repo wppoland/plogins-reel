@@ -1,7 +1,7 @@
-/* Reel — admin settings UI.
+/* Reel, admin settings UI.
    Polished, themeable card layout on top of the WP Settings API. Uses CSS
    custom properties, fluid spacing, logical properties, dark-mode and
-   reduced-motion guards. Real file (wp_enqueue_style) — no inlined blobs. */
+   reduced-motion guards. Real file (wp_enqueue_style), no inlined blobs. */
 
 .reel-admin {
     --reel-radius: 12px;
@@ -9,10 +9,10 @@
     --reel-gap: clamp(0.75rem, 0.4rem + 1vw, 1.25rem);
     --reel-card-pad: clamp(1rem, 0.6rem + 1.4vw, 1.75rem);
 
-    /* Accent — Reel's projector amber, the same warm cast used on the
+    /* Accent, Reel's projector amber, the same warm cast used on the
        storefront video player (family consistency). Two tones:
        --reel-accent is computed for AA text/UI on the wp-admin surface
-       (#9c5d0f = 5.27:1 on #fff, 4.63:1 on #f0f0f1 — passes 4.5:1 text and
+       (#9c5d0f = 5.27:1 on #fff, 4.63:1 on #f0f0f1, passes 4.5:1 text and
        3:1 UI); --reel-beam is the bright decorative amber used only as a faint
        non-text fill (hero glow). Never colour text with --reel-beam. */
     --reel-accent: #9c5d0f;
@@ -380,7 +380,7 @@
 }
 
 /* ------------------------------------------------------------------ *
- * PRO upsell — dismissible banner, sidebar promo, "what PRO adds"
+ * PRO upsell, dismissible banner, sidebar promo, "what PRO adds"
  * locked cards. Pure advertising (no disabled inputs), scoped entirely
  * to the .reel-admin settings wrapper so nothing leaks into wp-admin.
  * Accent uses --reel-accent (#9c5d0f), AA on the admin surface.

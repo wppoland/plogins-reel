@@ -1,7 +1,7 @@
 <?php
 /**
  * Gallery lightbox shell, printed in the footer. Markup matches the data
- * attributes the gallery-zoom.js script binds to. Starts hidden (no CLS — fixed
+ * attributes the gallery-zoom.js script binds to. Starts hidden (no CLS, fixed
  * overlay, zero layout cost).
  *
  * @package Reel

@@ -1,12 +1,12 @@
-/* Reel — featured product video. Responsive 16:9 frame reserves its space via
+/* Reel, featured product video. Responsive 16:9 frame reserves its space via
    aspect-ratio, so the embed/video loads without layout shift (no CLS).
    Themeable via custom properties; honours dark mode and reduced motion.
 
-   Craft note — the moment: the player frame is treated as a lit screen.
+   Craft note, the moment: the player frame is treated as a lit screen.
    A thin "projector beam" of warm light catches the top edge of the frame and
    the loading state glows like a projector warming up. The accent is a
    projector amber (light through film), grounded in this plugin's cinema world
-   — deliberately not a default UI blue. Restraint elsewhere. */
+, deliberately not a default UI blue. Restraint elsewhere. */
 
 .reel-featured-video {
     /* Theme-inheriting fallbacks: every token falls back to a sane literal so a
@@ -17,7 +17,7 @@
     --reel-screen: #0c0d10;
     --reel-skeleton: #14161b;
     --reel-skeleton-sheen: #20232b;
-    /* Projector amber — the warm cast of light through film. */
+    /* Projector amber, the warm cast of light through film. */
     --reel-beam: #e8a23a;
     --reel-beam-soft: rgba(232, 162, 58, 0.32);
     --reel-beam-faint: rgba(232, 162, 58, 0.12);
@@ -25,7 +25,7 @@
     margin-block-start: clamp(1rem, 0.7rem + 1vw, 1.5rem);
 }
 
-/* "Now playing" eyebrow — names the outcome, sentence case, with one softly
+/* "Now playing" eyebrow, names the outcome, sentence case, with one softly
    pulsing amber dot that reads as a live projector lamp. */
 .reel-featured-video__eyebrow {
     display: inline-flex;
@@ -72,7 +72,7 @@
     border-radius: var(--reel-radius, 14px);
     overflow: hidden;
     /* The frame is a screen: a deep cinematic ink that reserves space and warms
-       toward amber as the embed loads — no blank flash, no shift. */
+       toward amber as the embed loads, no blank flash, no shift. */
     background:
         radial-gradient(120% 80% at 50% 100%, var(--reel-beam-faint, rgba(232, 162, 58, 0.12)), transparent 60%),
         var(--reel-screen, #0c0d10);
@@ -101,7 +101,7 @@
     block-size: 100%;
 }
 
-/* THE MOMENT — the projector beam. A thin bar of warm light catches the top
+/* THE MOMENT, the projector beam. A thin bar of warm light catches the top
    edge of the screen, brightest at centre, fading to the corners. It sits above
    the loading skeleton and below the painted embed (z-order via ::after on the
    frame), so it frames the player without ever covering the controls. */
@@ -122,7 +122,7 @@
     pointer-events: none;
 }
 
-/* Skeleton sheen while the embed has not yet painted — a warm projector glow
+/* Skeleton sheen while the embed has not yet painted, a warm projector glow
    sweeping the screen, not a cold gray shimmer. */
 .reel-featured-video__embed::before {
     content: "";

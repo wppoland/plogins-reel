@@ -19,7 +19,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: plogins-reel.php
 msgid "Reel - Gallery and Video for WooCommerce"
-msgstr "Reel – Galerie und Video für WooCommerce"
+msgstr "Reel, Galerie und Video für WooCommerce"
 
 #. Plugin URI of the plugin
 #: plogins-reel.php
@@ -124,10 +124,10 @@ msgstr "Zoomstärke"
 #: src/Admin/Settings.php:178
 msgid ""
 "How much the image grows on hover. 1.2× is subtle; 2× is dramatic. Around "
-"1.4–1.6× reads well for most stores."
+"1.4-1.6× reads well for most stores."
 msgstr ""
 "Wie stark wächst das Bild beim Schweben? 1,2× ist subtil; 2× ist dramatisch. "
-"Etwa 1,4–1,6× ist für die meisten Geschäfte gut geeignet."
+"Etwa 1,4-1,6× ist für die meisten Geschäfte gut geeignet."
 
 #: src/Admin/Settings.php:185
 msgid "Magnification factor on hover, from 1.0× (off) to 3.0×."

@@ -1,5 +1,5 @@
 /**
- * Reel — admin settings enhancements.
+ * Reel, admin settings enhancements.
  *
  * Progressive enhancement only: the page is fully usable without JS (CSS shows
  * help bubbles on hover/focus, the number input is the source of truth). This

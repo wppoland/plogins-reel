@@ -22,8 +22,8 @@ Reel ulepsza galerię pojedynczego produktu WooCommerce o powiększenie obrazu p
   zamknięcia, więc fokus nie ucieka za nakładkę, Escape go zamyka, a fokus
   wraca do obrazu, który go otworzył. To stała nakładka początkowo ukryta, więc
   nie rezerwuje miejsca, dopóki nie zostanie użyta.
-* <strong>Polecane wideo.</strong> Pokaż wideo dla każdego produktu — plik MP4/WebM hostowany na własnym serwerze lub
-  adres URL YouTube/Vimeo (oEmbed) — po galerii lub przed podsumowaniem produktu.
+* <strong>Polecane wideo.</strong> Pokaż wideo dla każdego produktu, plik MP4/WebM hostowany na własnym serwerze lub
+  adres URL YouTube/Vimeo (oEmbed), po galerii lub przed podsumowaniem produktu.
   Wideo znajduje się w ramce 16:9 wymiarowanej przez `aspect-ratio`, więc jego miejsce jest zarezerwowane
   przed załadowaniem.
 
@@ -43,7 +43,7 @@ Aby umieścić wideo poza obszarem galerii, wstaw shortcode `[reel_video]`
 w dowolnej treści produktu. Oba renderują wideo bieżącego produktu w tej samej
 ramce 16:9.
 
-Kod źródłowy i zgłaszanie problemów: https://github.com/wppoland/plogins-reel — wtyczka jest
+Kod źródłowy i zgłaszanie problemów: https://github.com/wppoland/plogins-reel, wtyczka jest
 rozwijana otwarcie (open source), więc zgłoszenia błędów i pull requesty są tam mile widziane.
 
 = Documentation and links =
