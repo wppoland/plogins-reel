@@ -17,14 +17,10 @@ return [
     'currency'   => 'EUR',
     'price_pln'  => 85,
     'lead'       => [
-        'en' => 'External video embeds, per-variation galleries, 360° spin, autoplay rules and CDN lazy media ship in the current PRO release.',
-        'pl' => 'Wszystkie funkcje PRO, osadzenia wideo, galeria per wariant, spin 360°, reguły autoplay i CDN lazy media, są dostępne w bieżącym wydaniu.',
+        'en' => 'Per-variation galleries, 360° spin, autoplay rules and CDN lazy media ship in the current PRO release.',
+        'pl' => 'Wszystkie funkcje PRO, galeria per wariant, spin 360°, reguły autoplay i CDN lazy media, są dostępne w bieżącym wydaniu.',
     ],
     'features'   => [
-        [
-            'en' => ['title' => 'External video embeds', 'desc' => 'Reel tab on the product editor: YouTube, Vimeo or direct .mp4/.webm URL plus optional title. Rendered through the free Reel media engine.'],
-            'pl' => ['title' => 'Osadzenia wideo zewnętrzne', 'desc' => 'Zakładka Reel w edytorze produktu: URL YouTube, Vimeo lub bezpośredni .mp4/.webm plus opcjonalny tytuł. Render przez silnik mediów free Reel.'],
-        ],
         [
             'en' => ['title' => 'Per-variation gallery', 'desc' => 'Assign gallery images from the media library to each variation. The storefront gallery swaps when a variation is selected and restores when cleared.'],
             'pl' => ['title' => 'Galeria per wariant', 'desc' => 'Przypisz zestaw obrazów z biblioteki mediów do każdego wariantu. Galeria na froncie przełącza się przy wyborze wariantu i wraca po wyczyszczeniu.'],

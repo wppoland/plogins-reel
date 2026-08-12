@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.10
+Stable tag: 1.0.11
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,8 +35,8 @@ Settings live under a top-level **Reel** admin menu. Each of the three features
 has its own on/off switch; you can also set the zoom scale and skip it on touch
 devices, show an alt-text caption in the lightbox, relabel the open-image control
 for screen readers, and choose the video's position, autoplay, heading and intro
-text. The per-product video URL comes from the `_reel_video_url` product meta
-field, with an optional `_reel_video_title` for that product's heading.
+text. The per-product video URL is set on the **Reel** tab in the product editor,
+with an optional heading for that product.
 
 To place the video somewhere other than the gallery area, drop the `[reel_video]`
 shortcode (it takes `id` and `title` attributes) or the **Reel: Featured video**
@@ -75,7 +75,6 @@ developed in the open, so bug reports and pull requests are welcome there.
 
 The free edition upgrades the WooCommerce gallery: zoom, lightbox and self-hosted video. **Plogins Reel PRO** adds richer video and per-variation media:
 
-* **External video embeds** - YouTube, Vimeo or a direct .mp4/.webm URL per product, shown in the gallery
 * **Per-variation gallery** - a distinct image and video set that swaps in when the shopper selects a variation
 * **Video autoplay rules** - control when and how product videos autoplay
 
@@ -88,7 +87,7 @@ Compare editions and pricing: https://plogins.com/plogins-reel-pro/pricing/
 1. Upload the plugin to `/wp-content/plugins/plogins-reel`, or install via Plugins → Add New.
 2. Activate it. WooCommerce must be active.
 3. Go to the **Reel** menu and enable the features you want.
-4. For a product video, set the video URL in the product's `_reel_video_url` meta.
+4. For a product video, open a product, go to the **Reel** tab in the product data panel and paste the video URL.
 
 == Frequently Asked Questions ==
 
@@ -147,6 +146,9 @@ The one exception is when you set a product's video URL to a YouTube, Vimeo or o
 Plogins Reel includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-reel`, so WordPress.org language packs can also override or extend these bundled translations.
 
 == Changelog ==
+
+= 1.0.11 =
+* The featured video can now be set from the product editor. A **Reel** tab on the product data panel takes a YouTube, Vimeo or direct .mp4/.webm URL and an optional heading. The rendering side always shipped here, but nothing in the free plugin could fill those fields in, so the readme asked people to edit a meta field by hand. That was a feature with its interface missing, and it is fixed by adding the interface rather than by removing the feature.
 
 = 1.0.10 =
 * The package no longer ships .po and .mo files. Translations for plugins hosted on WordPress.org come from translate.wordpress.org, which generates and delivers them per locale. The .pot template stays, since that is what translators import.

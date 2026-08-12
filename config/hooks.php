@@ -13,6 +13,7 @@
 
 declare(strict_types=1);
 
+use Reel\Admin\ProductVideoFields;
 use Reel\Admin\Settings;
 use Reel\Frontend\VideoShortcode;
 use Reel\Service\ReelService;
@@ -24,6 +25,7 @@ return is_admin()
         ReelService::class,
         VideoShortcode::class,
         Settings::class,
+        ProductVideoFields::class,
     ]
     : [
         ReelService::class,

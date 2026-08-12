@@ -116,7 +116,7 @@ final class VideoShortcode implements HasHooks
         return sprintf(
             '<div class="reel-featured-video reel-featured-video--placeholder" style="padding:1.25rem;border:1px dashed currentColor;border-radius:14px;opacity:.7;text-align:center;">%s<br><small>%s</small></div>',
             esc_html__('Reel: Featured video', 'plogins-reel'),
-            esc_html__('This shows the current product\'s video on the storefront. Set a video URL in the product\'s _reel_video_url meta field, then view the product page.', 'plogins-reel'),
+            esc_html__('This shows the current product\'s video on the storefront. Set a video URL on the Reel tab in the product editor, then view the product page.', 'plogins-reel'),
         );
     }
 
