@@ -257,9 +257,9 @@ final class Settings implements HasHooks
                                 <p>
                                     <?php
                                     $reel_meta = sprintf(
-                                        /* translators: %s: the product meta field name. */
-                                        __('Add a video to any product by setting its %s meta field to a self-hosted MP4/WebM file or a YouTube/Vimeo link.', 'plogins-reel'),
-                                        '<code class="reel-admin__code">_reel_video_url</code>',
+                                        /* translators: %s: the name of the product editor tab. */
+                                        __('Add a video to any product on the %s tab in the product editor: a self-hosted MP4/WebM file or a YouTube/Vimeo link.', 'plogins-reel'),
+                                        '<code class="reel-admin__code">Reel</code>',
                                     );
                                     echo wp_kses($reel_meta, ['code' => ['class' => true]]);
                                     ?>

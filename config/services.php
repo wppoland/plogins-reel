@@ -8,6 +8,7 @@
 
 declare(strict_types=1);
 
+use Reel\Admin\ProductVideoFields;
 use Reel\Admin\Settings;
 use Reel\Container;
 use Reel\Frontend\VideoShortcode;
@@ -30,5 +31,6 @@ return static function (Container $c): void {
     // Admin (only needed in wp-admin context).
     if (is_admin()) {
         $c->singleton(Settings::class, static fn (): Settings => new Settings());
+        $c->singleton(ProductVideoFields::class, static fn (): ProductVideoFields => new ProductVideoFields());
     }
 };
