@@ -350,13 +350,6 @@ final class Settings implements HasHooks
                                 </div>
                                 <p class="reel-field__hint"><?php esc_html_e('Paste into any product description or page. Optional attributes: id="123" to target a specific product, and title="hide" to drop the heading.', 'plogins-reel'); ?></p>
                             </div>
-                            <div class="reel-field">
-                                <span class="reel-field__label"><?php esc_html_e('Block', 'plogins-reel'); ?></span>
-                                <div class="reel-field__control">
-                                    <code class="reel-admin__code"><?php esc_html_e('Reel: Featured video', 'plogins-reel'); ?></code>
-                                </div>
-                                <p class="reel-field__hint"><?php esc_html_e('Search for it in the block inserter. Renders the same video as the shortcode.', 'plogins-reel'); ?></p>
-                            </div>
                         </div>
                     </section>
                 </div>

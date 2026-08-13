@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.11
+Stable tag: 1.0.12
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,9 +39,8 @@ text. The per-product video URL is set on the **Reel** tab in the product editor
 with an optional heading for that product.
 
 To place the video somewhere other than the gallery area, drop the `[reel_video]`
-shortcode (it takes `id` and `title` attributes) or the **Reel: Featured video**
-block into any product content. Both render the current product's video in the
-same 16:9 frame.
+shortcode (it takes `id` and `title` attributes) into any product content. It
+renders the current product's video in the same 16:9 frame.
 
 Source and issue tracker: https://github.com/wppoland/plogins-reel, the plugin is
 developed in the open, so bug reports and pull requests are welcome there.
@@ -59,7 +58,7 @@ developed in the open, so bug reports and pull requests are welcome there.
 * Gallery image hover zoom with a configurable scale.
 * Accessible, keyboard-operable full-screen lightbox (Escape / backdrop close).
 * Featured product video (self-hosted or oEmbed) with selectable position.
-* `[reel_video]` shortcode and a "Reel: Featured video" block to place the video anywhere.
+* `[reel_video]` shortcode to place the video anywhere.
 * Optional lightbox caption from the image alt text.
 * Skip hover zoom on touch devices (where hover is unreliable).
 * Custom accessible label for the open-in-lightbox control.
@@ -111,7 +110,7 @@ No. Reel enhances the existing WooCommerce product gallery with image zoom, ligh
 
 = Can I show a product video outside the gallery? =
 
-Yes. Use the `[reel_video]` shortcode or the "Reel: Featured video" block to place the product video in custom product content.
+Yes. Use the `[reel_video]` shortcode to place the product video in custom product content.
 
 = Will it cause layout shift (CLS)? =
 
@@ -147,6 +146,9 @@ Plogins Reel includes Polish, German and Spanish translations for the plugin int
 
 == Changelog ==
 
+= 1.0.12 =
+* Stopped advertising a block that could not be inserted. The plugin registered `reel/featured-video` server-side only, with no block.json and no editor script, so it never appeared in the inserter, yet the readme and the settings screen told merchants to look for it. The `[reel_video]` shortcode does the same job and is unchanged.
+
 = 1.0.11 =
 * The featured video can now be set from the product editor. A **Reel** tab on the product data panel takes a YouTube, Vimeo or direct .mp4/.webm URL and an optional heading. The rendering side always shipped here, but nothing in the free plugin could fill those fields in, so the readme asked people to edit a meta field by hand. That was a feature with its interface missing, and it is fixed by adding the interface rather than by removing the feature.
 
@@ -179,7 +181,7 @@ Plogins Reel includes Polish, German and Spanish translations for the plugin int
 * Polished storefront styling: themeable CSS custom properties, fluid sizing, dark-mode support and reduced-motion guards.
 * Accessibility: named lightbox dialog, role=tooltip help, visible focus styles and full keyboard operability.
 * Robustness: graceful empty/placeholder states, a no-layout-shift video skeleton and hardened event handling.
-* Add `[reel_video]` shortcode and a "Reel: Featured video" block to place the featured video anywhere.
+* Add `[reel_video]` shortcode to place the featured video anywhere.
 * Add lightbox caption (from image alt text) and an option to skip hover zoom on touch devices.
 * Add settings for the open-in-lightbox label, a default video heading and an optional intro paragraph.
 * Add a "Settings" link on the plugins list and an uninstall routine that removes plugin options.
