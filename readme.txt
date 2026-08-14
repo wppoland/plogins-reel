@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.12
+Stable tag: 1.0.13
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -145,6 +145,10 @@ The one exception is when you set a product's video URL to a YouTube, Vimeo or o
 Plogins Reel includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-reel`, so WordPress.org language packs can also override or extend these bundled translations.
 
 == Changelog ==
+
+= 1.0.13 =
+* The video heading now falls back to the built-in "Product video" text, as the setting always said it would. With "Show heading" on and the default heading left empty, the video on the product page showed no heading at all; only the shortcode got this right. Set your own text in Reel > Featured video, or turn "Show heading" off if you prefer none.
+* Autoplay now really plays. The video is muted whenever autoplay is on, which is the only way browsers allow it, so a video that used to sit there paused starts on its own with the sound off until the shopper turns it up.
 
 = 1.0.12 =
 * Stopped advertising a block that could not be inserted. The plugin registered `reel/featured-video` server-side only, with no block.json and no editor script, so it never appeared in the inserter, yet the readme and the settings screen told merchants to look for it. The `[reel_video]` shortcode does the same job and is unchanged.

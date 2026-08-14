@@ -184,16 +184,28 @@ final class ReelService implements HasHooks
         $settings = $this->settings();
 
         $intro = trim((string) ($settings['video_intro'] ?? ''));
+        $title = trim((string) ($settings['video_title'] ?? ''));
 
-        return [
+        $config = [
             'position'       => (string) ($settings['video_position'] ?? 'after_gallery'),
             'autoplay'       => (bool) ($settings['video_autoplay'] ?? false),
             'show_title'     => (bool) ($settings['video_show_title'] ?? true),
-            'title'          => trim((string) ($settings['video_title'] ?? '')),
             'intro_text'     => $intro,
             'show_intro'     => $intro !== '',
             'show_on_single' => true,
         ];
+
+        // Only override the engine fallback when an explicit heading is set.
+        // Sending an empty string beat the engine's `?? label('title')`, so with
+        // the shipped defaults (heading on, default heading blank) the merchant
+        // was promised the built-in "Product video" text and the shopper got a
+        // video with no heading and no eyebrow at all. The shortcode path had
+        // the fallback right all along.
+        if ($title !== '') {
+            $config['title'] = $title;
+        }
+
+        return $config;
     }
 
     /**
