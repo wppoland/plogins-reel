@@ -92,10 +92,15 @@ final class FeaturedVideoEngine
 
         $autoplay = (bool) ($this->getSettings()['autoplay'] ?? false);
 
+        // Autoplay only survives if the video is also muted: browsers block
+        // sound-on autoplay outright, so the merchant ticked "play automatically
+        // (muted)" and the shopper got a video sitting there paused. Mute rides
+        // along with autoplay on both paths, and nothing is muted otherwise.
         if (preg_match('/\.(mp4|m4v|webm|ogv)(\?.*)?$/i', $url) === 1) {
             $shortcode = wp_video_shortcode([
                 'src' => $url,
                 'autoplay' => $autoplay ? 'on' : '',
+                'muted' => $autoplay ? 'on' : 'false',
                 'preload' => 'metadata',
             ]);
 
@@ -103,7 +108,13 @@ final class FeaturedVideoEngine
         }
 
         if ($autoplay) {
-            $url = (string) add_query_arg('autoplay', '1', $url);
+            $host = strtolower((string) wp_parse_url($url, PHP_URL_HOST));
+
+            // Vimeo spells the player parameter `muted`, YouTube spells it
+            // `mute`; other providers ignore the one they do not know.
+            $muteArg = str_contains($host, 'vimeo.') ? 'muted' : 'mute';
+
+            $url = (string) add_query_arg(['autoplay' => '1', $muteArg => '1'], $url);
         }
 
         $embed = wp_oembed_get($url);
