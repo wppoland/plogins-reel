@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.13
+Stable tag: 1.0.14
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,7 +77,7 @@ The free edition upgrades the WooCommerce gallery: zoom, lightbox and self-hoste
 * **Per-variation gallery** - a distinct image and video set that swaps in when the shopper selects a variation
 * **Video autoplay rules** - control when and how product videos autoplay
 
-Everything in the free edition stays free and open. Plogins Reel PRO starts at 19 EUR per year (PLN shown at checkout).
+Everything in the free edition stays free and open. Plogins Reel PRO starts at 19 EUR per year, priced and charged in EUR.
 
 Compare editions and pricing: https://plogins.com/plogins-reel-pro/pricing/
 
@@ -145,6 +145,9 @@ The one exception is when you set a product's video URL to a YouTube, Vimeo or o
 Plogins Reel includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-reel`, so WordPress.org language packs can also override or extend these bundled translations.
 
 == Changelog ==
+
+= 1.0.14 =
+* Corrected the PRO pricing line. It implied a second currency was available; there is none. PRO is priced and charged in EUR.
 
 = 1.0.13 =
 * The video heading now falls back to the built-in "Product video" text, as the setting always said it would. With "Show heading" on and the default heading left empty, the video on the product page showed no heading at all; only the shortcode got this right. Set your own text in Reel > Featured video, or turn "Show heading" off if you prefer none.
