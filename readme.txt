@@ -42,15 +42,15 @@ To place the video somewhere other than the gallery area, drop the `[reel_video]
 shortcode (it takes `id` and `title` attributes) into any product content. It
 renders the current product's video in the same 16:9 frame.
 
-Source and issue tracker: https://github.com/wppoland/plogins-reel, the plugin is
+Source and issue tracker: [github.com/wppoland/plogins-reel](https://github.com/wppoland/plogins-reel), the plugin is
 developed in the open, so bug reports and pull requests are welcome there.
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/reel/docs/
-* **Plugin page** - https://plogins.com/reel/
-* **Source code** - https://github.com/wppoland/plogins-reel
-* **Bug reports and feature requests** - https://github.com/wppoland/plogins-reel/issues
+* **Documentation**: [plogins.com/reel/docs/](https://plogins.com/reel/docs/)
+* **Plugin page**: [plogins.com/reel/](https://plogins.com/reel/)
+* **Source code**: [github.com/wppoland/plogins-reel](https://github.com/wppoland/plogins-reel)
+* **Bug reports and feature requests**: [github.com/wppoland/plogins-reel/issues](https://github.com/wppoland/plogins-reel/issues)
 
 
 = Features =
@@ -79,7 +79,7 @@ The free edition upgrades the WooCommerce gallery: zoom, lightbox and self-hoste
 
 Everything in the free edition stays free and open. Plogins Reel PRO starts at 19 EUR per year, priced and charged in EUR.
 
-Compare editions and pricing: https://plogins.com/plogins-reel-pro/pricing/
+Compare editions and pricing: [plogins.com/plogins-reel-pro/pricing/](https://plogins.com/plogins-reel-pro/pricing/)
 
 == Installation ==
 
