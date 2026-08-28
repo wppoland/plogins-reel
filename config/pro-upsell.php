@@ -15,7 +15,6 @@ return [
     'sellable'   => true,
     'price_from' => 19,
     'currency'   => 'EUR',
-    'price_pln'  => 85,
     'lead'       => [
         'en' => 'Per-variation galleries, 360° spin, autoplay rules and CDN lazy media ship in the current PRO release.',
         'pl' => 'Wszystkie funkcje PRO, galeria per wariant, spin 360°, reguły autoplay i CDN lazy media, są dostępne w bieżącym wydaniu.',
