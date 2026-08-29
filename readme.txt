@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.15
+Stable tag: 1.0.16
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -145,6 +145,9 @@ The one exception is when you set a product's video URL to a YouTube, Vimeo or o
 Plogins Reel includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-reel`, so WordPress.org language packs can also override or extend these bundled translations.
 
 == Changelog ==
+
+= 1.0.16 =
+* Declared compatibility with WooCommerce 11.0.
 
 = 1.0.15 =
 * Fixed the PRO promo on the settings screen quoting a price in PLN. PRO is priced and charged in EUR, so an admin on a Polish site was shown a zloty amount and then billed in euro, and the zloty figure was a fixed conversion that drifted from the real charge as the rate moved. The promo now shows the euro price that is actually taken.

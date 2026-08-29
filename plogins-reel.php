@@ -3,7 +3,7 @@
  * Plugin Name:       Plogins Reel - Product Gallery Zoom & Video for WooCommerce
  * Plugin URI:        https://plogins.com/plogins-reel/
  * Description:        Hover zoom, lightbox and featured video for the WooCommerce product gallery: reserved space, no jQuery.
- * Version:           1.0.15
+ * Version:           1.0.16
  * Requires at least: 6.5
  * Requires PHP:      8.1
  * Requires Plugins:  woocommerce
@@ -14,7 +14,7 @@
  * Text Domain:       plogins-reel
  * Domain Path:       /languages
  * WC requires at least: 8.0
- * WC tested up to: 10.9
+ * WC tested up to: 11.0
  *
  * @package Reel
  */
