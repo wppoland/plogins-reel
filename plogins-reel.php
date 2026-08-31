@@ -25,7 +25,7 @@ namespace Reel;
 
 defined('ABSPATH') || exit;
 
-const VERSION     = '1.0.14';
+const VERSION     = '1.0.16';
 const PLUGIN_FILE = __FILE__;
 
 define('REEL_DIR', plugin_dir_path(__FILE__));
