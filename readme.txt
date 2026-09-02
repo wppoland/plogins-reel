@@ -67,7 +67,7 @@ developed in the open, so bug reports and pull requests are welcome there.
 * No jQuery; one deferred, in-footer script loaded only on product pages.
 * Independent on/off toggle for each feature.
 * "Settings" link on the plugins list; clean uninstall removes plugin options.
-* Translation-ready: bundled .pot template plus a Polish (pl_PL) translation.
+* Fully translatable: ships the `plogins-reel.pot` template, with Polish, German and Spanish delivered by the WordPress.org language pack.
 * HPOS and cart/checkout blocks compatible.
 
 == Plogins Reel PRO ==
