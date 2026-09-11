@@ -29,12 +29,12 @@ return [
             'pl' => ['title' => 'Spin 360 stopni', 'desc' => 'Sekwencja klatek na zakładce Reel; viewer z przeciąganiem, swipe i klawiszami strzałek, z zarezerwowanym aspect ratio.'],
         ],
         [
-            'en' => ['title' => 'Video autoplay rules', 'desc' => 'Reel → Video Autoplay: skip mobile autoplay, play in-view only and respect prefers-reduced-motion when FREE autoplay is on.'],
-            'pl' => ['title' => 'Reguły autoplay wideo', 'desc' => 'Reel → Video Autoplay: bez autoplay na mobile, start po wejściu w viewport i szacunek prefers-reduced-motion, gdy autoplay w FREE jest włączony.'],
+            'en' => ['title' => 'Video autoplay rules', 'desc' => 'Reel > Video Autoplay: skip mobile autoplay, play in-view only and respect prefers-reduced-motion when FREE autoplay is on.'],
+            'pl' => ['title' => 'Reguły autoplay wideo', 'desc' => 'Reel > Video Autoplay: bez autoplay na mobile, start po wejściu w viewport i szacunek prefers-reduced-motion, gdy autoplay w FREE jest włączony.'],
         ],
         [
-            'en' => ['title' => 'CDN & lazy media', 'desc' => 'Reel → CDN Media: rewrite upload URLs to a CDN origin and defer spin-frame preloads and self-hosted video until in-view.'],
-            'pl' => ['title' => 'CDN i leniwe media', 'desc' => 'Reel → CDN Media: przepisywanie URL-i uploadów na CDN oraz opóźnione ładowanie klatek spinu i self-hosted wideo do wejścia w viewport.'],
+            'en' => ['title' => 'CDN & lazy media', 'desc' => 'Reel > CDN Media: rewrite upload URLs to a CDN origin and defer spin-frame preloads and self-hosted video until in-view.'],
+            'pl' => ['title' => 'CDN i leniwe media', 'desc' => 'Reel > CDN Media: przepisywanie URL-i uploadów na CDN oraz opóźnione ładowanie klatek spinu i self-hosted wideo do wejścia w viewport.'],
         ],
     ],
 ];
