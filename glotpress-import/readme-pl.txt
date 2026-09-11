@@ -73,7 +73,7 @@ rozwijana otwarcie (open source), więc zgłoszenia błędów i pull requesty s�
 
 == Installation ==
 
-1. Prześlij wtyczkę do `/wp-content/plugins/plogins-reel` lub zainstaluj przez Wtyczki → Dodaj nową.
+1. Prześlij wtyczkę do `/wp-content/plugins/plogins-reel` lub zainstaluj przez Wtyczki > Dodaj nową.
 2. Włącz ją. WooCommerce musi być aktywne.
 3. Wejdź w menu <strong>Reel</strong> i włącz funkcje, których potrzebujesz.
 4. Dla wideo produktu ustaw adres URL wideo w meta produktu `_reel_video_url`.
