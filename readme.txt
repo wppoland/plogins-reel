@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.20
+Stable tag: 1.0.21
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,7 +83,7 @@ Compare editions and pricing: [plogins.com/plogins-reel-pro/pricing/](https://pl
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/plogins-reel`, or install via Plugins → Add New.
+1. Upload the plugin to `/wp-content/plugins/plogins-reel`, or install via Plugins > Add New.
 2. Activate it. WooCommerce must be active.
 3. Go to the **Reel** menu and enable the features you want.
 4. For a product video, open a product, go to the **Reel** tab in the product data panel and paste the video URL.
@@ -145,6 +145,10 @@ The one exception is when you set a product's video URL to a YouTube, Vimeo or o
 Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.21 =
+* Fixed: the PRO upgrade promo kept selling to people who had already bought the paid edition. Only the banner could be dismissed, so the sidebar promo and the locked feature cards followed a paying customer around for good. The promo now checks whether the paid edition is active and steps aside when it is.
+* Fixed: arrow glyphs in the admin menu paths, and in the strings handed to translators. An arrow inside a translatable string makes the glyph every translator's problem and changes the layout in any locale that drops it.
 
 = 1.0.20 =
 * Changed: the PRO feature cards printed an arrow glyph in menu paths where the rest of the plugin and the documentation use a plain ">". Same navigation, one character that renders everywhere.

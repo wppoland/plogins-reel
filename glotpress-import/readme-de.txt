@@ -73,7 +73,7 @@ quelloffen entwickelt, Fehlerberichte und Pull Requests sind dort willkommen.
 
 == Installation ==
 
-1. Lade das Plugin nach `/wp-content/plugins/plogins-reel` hoch oder installiere es über Plugins → Neu hinzufügen.
+1. Lade das Plugin nach `/wp-content/plugins/plogins-reel` hoch oder installiere es über Plugins > Neu hinzufügen.
 2. Aktiviere es. WooCommerce muss aktiv sein.
 3. Öffne das Menü <strong>Reel</strong> und aktiviere die gewünschten Features.
 4. Für ein Produktvideo setze die Video-URL im Produkt-Meta `_reel_video_url`.
