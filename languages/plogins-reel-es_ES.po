@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Plogins Reel for WooCommerce 0.2.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/plogins-reel\n"
-"POT-Creation-Date: 2026-06-16T20:25:13+00:00\n"
+"POT-Creation-Date: 2026-09-09T14:37:58+00:00\n"
 "PO-Revision-Date: 2026-06-16T20:25:13+00:00\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -18,54 +18,130 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: plogins-reel.php
-msgid "Reel - Gallery and Video for WooCommerce"
-msgstr "Reel - Galería y vídeo para WooCommerce"
+msgid "Plogins Reel - Product Gallery Zoom & Video for WooCommerce"
+msgstr ""
 
 #. Plugin URI of the plugin
 #: plogins-reel.php
-msgid "https://plogins.com/reel/"
-msgstr "https://plogins.com/es/reel/"
+msgid "https://plogins.com/plogins-reel/"
+msgstr ""
 
 #. Description of the plugin
 #: plogins-reel.php
 msgid ""
-"Hover zoom, lightbox and featured video for the WooCommerce product gallery, "
-"reserved space, no jQuery"
+"Hover zoom, lightbox and featured video for the WooCommerce product gallery: "
+"reserved space, no jQuery."
 msgstr ""
-"Zoom flotante, caja de luz y video destacado para la galería de productos "
-"WooCommerce, espacio reservado, sin jQuery"
 
 #. Author of the plugin
 #: plogins-reel.php
-msgid "WPPoland"
-msgstr "WPPoland"
+msgid "WPPoland.com"
+msgstr ""
 
 #. Author URI of the plugin
 #: plogins-reel.php
-msgid "https://plogins.com/"
-msgstr "https://plogins.com/"
+msgid "https://wppoland.com"
+msgstr ""
 
-#: plogins-reel.php:44
+#: plogins-reel.php:45
 msgid "Settings"
 msgstr "Ajustes"
 
-#: plogins-reel.php:64
+#: plogins-reel.php:65
 msgid "Reel requires WooCommerce to be active."
 msgstr "Reel requiere que WooCommerce esté activo."
 
-#: src/Admin/Settings.php:69
-msgid "More information"
-msgstr "Más información"
-
-#: src/Admin/Settings.php:76
-msgid "Reel Settings"
-msgstr "Configuración de Reel"
-
-#: src/Admin/Settings.php:77
+#: src/Admin/ProductVideoFields.php:47 src/Admin/Settings.php:85
 msgid "Reel"
 msgstr "Reel"
 
-#: src/Admin/Settings.php:142
+#: src/Admin/ProductVideoFields.php:69
+msgid "Video URL"
+msgstr ""
+
+#: src/Admin/ProductVideoFields.php:71
+msgid ""
+"A YouTube or Vimeo link, or a direct .mp4/.webm file URL. It shows in the "
+"gallery area on the product page. Leave empty for no video."
+msgstr ""
+
+#: src/Admin/ProductVideoFields.php:79
+msgid "Video heading (optional)"
+msgstr ""
+
+#: src/Admin/ProductVideoFields.php:80
+msgid "e.g. See it in action"
+msgstr ""
+
+#: src/Admin/ProductVideoFields.php:81
+msgid ""
+"Heading shown above the video. Leave empty to use the default from Reel "
+"settings."
+msgstr ""
+
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr "Próximamente"
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr "Próximamente"
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:84
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr "desde %1$s%2$d/año"
+
+#: src/Admin/ProUpsell.php:93
+msgid "Upgrade to PRO"
+msgstr "Mejora a PRO"
+
+#: src/Admin/ProUpsell.php:94
+msgid "Powiadom mnie"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:94
+msgid "Get notified"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:124
+msgid "Permission denied."
+msgstr "Permiso denegado."
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:154
+#, php-format
+msgid "Do more with %s"
+msgstr "Haz más con %s"
+
+#: src/Admin/ProUpsell.php:161
+msgid "Dismiss this notice"
+msgstr "Descartar este aviso"
+
+#: src/Admin/ProUpsell.php:178
+msgid "Unlock every PRO feature"
+msgstr "Desbloquea todas las funciones PRO"
+
+#: src/Admin/ProUpsell.php:191
+msgid "one licence, every PRO feature"
+msgstr "una licencia, todas las funciones PRO"
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:210
+#, php-format
+msgid "What %s adds"
+msgstr "Lo que añade %s"
+
+#: src/Admin/Settings.php:77
+msgid "More information"
+msgstr "Más información"
+
+#: src/Admin/Settings.php:84
+msgid "Reel Settings"
+msgstr "Configuración de Reel"
+
+#: src/Admin/Settings.php:152
 msgid ""
 "Hover zoom, an accessible lightbox and a featured product video for your "
 "WooCommerce gallery, tuned for speed, with no layout shift and no jQuery."
@@ -74,23 +150,23 @@ msgstr ""
 "para tu galería WooCommerce, optimizado para la velocidad, sin cambios de "
 "diseño y sin jQuery."
 
-#: src/Admin/Settings.php:145
+#: src/Admin/Settings.php:155
 msgid "No CLS"
 msgstr "Sin CLS"
 
-#: src/Admin/Settings.php:146
+#: src/Admin/Settings.php:156
 msgid "No jQuery"
 msgstr "Sin jQuery"
 
-#: src/Admin/Settings.php:147
+#: src/Admin/Settings.php:157
 msgid "Accessible"
 msgstr "Accesible"
 
-#: src/Admin/Settings.php:159
+#: src/Admin/Settings.php:169
 msgid "Gallery zoom & lightbox"
 msgstr "Zoom de galería y caja de luz"
 
-#: src/Admin/Settings.php:160
+#: src/Admin/Settings.php:170
 msgid ""
 "How shoppers explore your product images: magnify on hover and open them "
 "full-screen."
@@ -98,11 +174,11 @@ msgstr ""
 "Cómo exploran los compradores las imágenes de tus productos: amplíalas al "
 "pasar el mouse y ábrelas en pantalla completa."
 
-#: src/Admin/Settings.php:167
+#: src/Admin/Settings.php:177
 msgid "Hover zoom"
 msgstr "zoom al pasar el cursor"
 
-#: src/Admin/Settings.php:168
+#: src/Admin/Settings.php:178
 msgid ""
 "When a shopper hovers a gallery image, it magnifies in place to reveal "
 "detail, great for textures, labels and fine print. The zoom stays inside the "
@@ -113,15 +189,15 @@ msgstr ""
 "pequeña. El zoom permanece dentro del marco de la imagen, por lo que nada en "
 "la página se mueve."
 
-#: src/Admin/Settings.php:171
+#: src/Admin/Settings.php:181
 msgid "Magnify the image on hover"
 msgstr "Ampliar la imagen al pasar el mouse"
 
-#: src/Admin/Settings.php:177
+#: src/Admin/Settings.php:187
 msgid "Zoom strength"
 msgstr "Fuerza del zoom"
 
-#: src/Admin/Settings.php:178
+#: src/Admin/Settings.php:188
 msgid ""
 "How much the image grows on hover. 1.2× is subtle; 2× is dramatic. Around "
 "1.4-1.6× reads well for most stores."
@@ -129,15 +205,15 @@ msgstr ""
 "Cuánto crece la imagen al pasar el mouse. 1,2× es sutil; 2× es dramático. "
 "Alrededor de 1,4 a 1,6 × se lee bien en la mayoría de las tiendas."
 
-#: src/Admin/Settings.php:185
+#: src/Admin/Settings.php:195
 msgid "Magnification factor on hover, from 1.0× (off) to 3.0×."
 msgstr "Factor de ampliación al pasar el mouse, de 1,0× (apagado) a 3,0×."
 
-#: src/Admin/Settings.php:190
+#: src/Admin/Settings.php:200
 msgid "Disable zoom on touch"
 msgstr "Desactivar el zoom al tocar"
 
-#: src/Admin/Settings.php:191
+#: src/Admin/Settings.php:201
 msgid ""
 "Phones and tablets have no real hover, so the zoom can feel unpredictable. "
 "Keep this on to skip it on touch devices and rely on the lightbox there "
@@ -147,15 +223,15 @@ msgstr ""
 "zoom puede parecer impredecible. Mantenlo activado para omitirlo en "
 "dispositivos táctiles y, en su lugar, confía en la caja de luz allí."
 
-#: src/Admin/Settings.php:194
+#: src/Admin/Settings.php:204
 msgid "Skip hover zoom on touch devices"
 msgstr "Omitir el zoom al pasar el mouse en dispositivos táctiles"
 
-#: src/Admin/Settings.php:200
+#: src/Admin/Settings.php:210
 msgid "Lightbox"
 msgstr "Caja de luz"
 
-#: src/Admin/Settings.php:201
+#: src/Admin/Settings.php:211
 msgid ""
 "Clicking a gallery image opens it full-screen over a dimmed backdrop. Fully "
 "keyboard-operable: open with Enter/Space, close with Escape, and focus "
@@ -165,15 +241,15 @@ msgstr ""
 "sobre un fondo atenuado. Totalmente operable con el teclado: ábrelo con "
 "Intro/Espacio, ciérralo con Escape y el foco vuelve a donde estaba."
 
-#: src/Admin/Settings.php:204
+#: src/Admin/Settings.php:214
 msgid "Open images full-screen on click"
 msgstr "Abrir imágenes en pantalla completa al hacer clic"
 
-#: src/Admin/Settings.php:210
+#: src/Admin/Settings.php:220
 msgid "Close on backdrop click"
 msgstr "Cerrar al hacer clic en el fondo"
 
-#: src/Admin/Settings.php:211
+#: src/Admin/Settings.php:221
 msgid ""
 "Let shoppers dismiss the lightbox by clicking the dark area around the "
 "image, in addition to the close button and Escape key."
@@ -181,15 +257,15 @@ msgstr ""
 "Permite que los compradores cierren la caja de luz haciendo clic en el área "
 "oscura alrededor de la imagen, además del botón de cerrar y la tecla Escape."
 
-#: src/Admin/Settings.php:214
+#: src/Admin/Settings.php:224
 msgid "Click outside the image to close"
 msgstr "Haz clic fuera de la imagen para cerrar"
 
-#: src/Admin/Settings.php:220
+#: src/Admin/Settings.php:230
 msgid "Image caption"
 msgstr "Título de la imagen"
 
-#: src/Admin/Settings.php:221
+#: src/Admin/Settings.php:231
 msgid ""
 "Show each image's alt text as a caption inside the lightbox. Helpful when "
 "your images have descriptive alt text; leave off if they don't."
@@ -198,15 +274,15 @@ msgstr ""
 "luz. Útil cuando tus imágenes tienen texto alternativo descriptivo; déjalo "
 "si no lo hacen."
 
-#: src/Admin/Settings.php:224
+#: src/Admin/Settings.php:234
 msgid "Show the image alt text as a caption"
 msgstr "Mostrar el texto alternativo de la imagen como título"
 
-#: src/Admin/Settings.php:230
+#: src/Admin/Settings.php:240
 msgid "Open-image label"
 msgstr "Etiqueta de imagen abierta"
 
-#: src/Admin/Settings.php:231
+#: src/Admin/Settings.php:241
 msgid ""
 "The accessible label screen readers announce for each gallery image, e.g. "
 "\"Open image in full screen\". Leave empty to use the built-in default."
@@ -215,11 +291,11 @@ msgstr ""
 "de la galería, p. \"Abrir imagen en pantalla completa\". Déjalo vacío para "
 "usar el valor predeterminado integrado."
 
-#: src/Admin/Settings.php:234 src/Service/ReelService.php:52
+#: src/Admin/Settings.php:244 src/Service/ReelService.php:52
 msgid "Open image in full screen"
 msgstr "Abrir imagen en pantalla completa"
 
-#: src/Admin/Settings.php:236
+#: src/Admin/Settings.php:246
 msgid ""
 "Accessible label for the open-in-lightbox control. Leave empty for the "
 "default."
@@ -227,25 +303,23 @@ msgstr ""
 "Etiqueta accesible para el control de apertura en caja de luz. Déjalo vacío "
 "por defecto."
 
-#: src/Admin/Settings.php:246
+#: src/Admin/Settings.php:256
 msgid "Featured video"
 msgstr "Vídeo destacado"
 
-#. translators: %s: the product meta field name.
-#: src/Admin/Settings.php:251
+#. translators: %s: the name of the product editor tab.
+#: src/Admin/Settings.php:261
 #, php-format
 msgid ""
-"Add a video to any product by setting its %s meta field to a self-hosted MP4/"
-"WebM file or a YouTube/Vimeo link."
+"Add a video to any product on the %s tab in the product editor: a self-"
+"hosted MP4/WebM file or a YouTube/Vimeo link."
 msgstr ""
-"Añade un video a cualquier producto configurando su metacampo %s en un "
-"archivo MP4/WebM autohospedado o un enlace de YouTube/Vimeo."
 
-#: src/Admin/Settings.php:263
+#: src/Admin/Settings.php:273
 msgid "Show featured video"
 msgstr "Mostrar vídeo destacado"
 
-#: src/Admin/Settings.php:264
+#: src/Admin/Settings.php:274
 msgid ""
 "Master switch for the product video. When on, products that have a video URL "
 "show it on their single product page in the position you choose below."
@@ -254,15 +328,15 @@ msgstr ""
 "productos que tienen una URL de vídeo la muestran en la página de su único "
 "producto en la posición que elijas a continuación."
 
-#: src/Admin/Settings.php:267
+#: src/Admin/Settings.php:277
 msgid "Display the product video on the product page"
 msgstr "Mostrar el vídeo del producto en la página del producto."
 
-#: src/Admin/Settings.php:273
+#: src/Admin/Settings.php:283
 msgid "Position"
 msgstr "Posición"
 
-#: src/Admin/Settings.php:274
+#: src/Admin/Settings.php:284
 msgid ""
 "Where the video appears: directly under the image gallery, or above the "
 "title/price summary column. Pick whichever fits your theme best."
@@ -271,19 +345,19 @@ msgstr ""
 "encima de la columna de resumen de título/precio. Elige el que mejor se "
 "adapte a tu tema."
 
-#: src/Admin/Settings.php:278
+#: src/Admin/Settings.php:288
 msgid "After the gallery"
 msgstr "despues de la galeria"
 
-#: src/Admin/Settings.php:279
+#: src/Admin/Settings.php:289
 msgid "Before the summary"
 msgstr "antes del resumen"
 
-#: src/Admin/Settings.php:286
+#: src/Admin/Settings.php:296
 msgid "Autoplay"
 msgstr "Reproducción automática"
 
-#: src/Admin/Settings.php:287
+#: src/Admin/Settings.php:297
 msgid ""
 "Start the video automatically on page load. Browsers only allow this when "
 "the video is muted, so sound stays off until the shopper turns it on. Use "
@@ -294,15 +368,15 @@ msgstr ""
 "permanece apagado hasta que el comprador lo enciende. Úsalo con moderación, "
 "puede distraer."
 
-#: src/Admin/Settings.php:290
+#: src/Admin/Settings.php:300
 msgid "Play automatically (muted)"
 msgstr "Reproducir automáticamente (silenciado)"
 
-#: src/Admin/Settings.php:296
+#: src/Admin/Settings.php:306
 msgid "Show heading"
 msgstr "Mostrar encabezado"
 
-#: src/Admin/Settings.php:297
+#: src/Admin/Settings.php:307
 msgid ""
 "Display a heading above the video. Turn off for a cleaner, heading-free "
 "embed."
@@ -310,15 +384,15 @@ msgstr ""
 "Muestra un título encima del vídeo. Apágalo para obtener una incrustación "
 "más limpia y sin encabezados."
 
-#: src/Admin/Settings.php:300
+#: src/Admin/Settings.php:310
 msgid "Show a heading above the video"
 msgstr "Mostrar un título encima del vídeo"
 
-#: src/Admin/Settings.php:306
+#: src/Admin/Settings.php:316
 msgid "Default heading"
 msgstr "Título predeterminado"
 
-#: src/Admin/Settings.php:307
+#: src/Admin/Settings.php:317
 msgid ""
 "The heading used when a product has no video heading of its own. Leave empty "
 "to use the built-in \"Product video\" text."
@@ -326,16 +400,16 @@ msgstr ""
 "El título utilizado cuando un producto no tiene un título de vídeo propio. "
 "Déjalo vacío para utilizar el texto integrado \"Video del producto\"."
 
-#: src/Admin/Settings.php:310 src/Service/ReelService.php:69
-#: src/Service/ReelService.php:262
+#: src/Admin/Settings.php:320 src/Service/ReelService.php:69
+#: src/Service/ReelService.php:274
 msgid "Product video"
 msgstr "Vídeo del producto"
 
-#: src/Admin/Settings.php:316
+#: src/Admin/Settings.php:326
 msgid "Intro text"
 msgstr "Texto de introducción"
 
-#: src/Admin/Settings.php:317
+#: src/Admin/Settings.php:327
 msgid ""
 "An optional short paragraph shown under the heading, e.g. \"See it in action."
 "\" Leave empty to hide it."
@@ -343,15 +417,15 @@ msgstr ""
 "Un breve párrafo opcional que se muestra debajo del título, p. \"Míralo en "
 "acción\". Déjalo vacío para ocultarlo."
 
-#: src/Admin/Settings.php:320
+#: src/Admin/Settings.php:330
 msgid "See this product in action…"
 msgstr "Mira este producto en acción..."
 
-#: src/Admin/Settings.php:331
+#: src/Admin/Settings.php:341
 msgid "Place it anywhere"
 msgstr "Colócalo en cualquier lugar"
 
-#: src/Admin/Settings.php:332
+#: src/Admin/Settings.php:342
 msgid ""
 "Beyond the automatic gallery position, drop the current product's video "
 "wherever you like."
@@ -359,38 +433,26 @@ msgstr ""
 "Más allá de la posición automática de la galería, suelta el vídeo del "
 "producto actual donde quieras."
 
-#: src/Admin/Settings.php:337
+#: src/Admin/Settings.php:347
 msgid "Shortcode"
 msgstr "Código corto"
 
-#: src/Admin/Settings.php:341
+#: src/Admin/Settings.php:351
 msgid ""
 "Paste into any product description or page. Optional attributes: id=\"123\" "
 "to target a specific product, and title=\"hide\" to drop the heading."
 msgstr ""
-"Pégalo en cualquier descripción o página del producto. Atributos "
-"opcionales: id=\"123\" para apuntar a un producto específico y "
-"title=\"hide\" para eliminar el encabezado."
+"Pégalo en cualquier descripción o página del producto. Atributos opcionales: "
+"id=\"123\" para apuntar a un producto específico y title=\"hide\" para "
+"eliminar el encabezado."
 
-#: src/Admin/Settings.php:344
-msgid "Block"
-msgstr "Bloque"
-
-#: src/Admin/Settings.php:346 src/Frontend/VideoShortcode.php:70
-#: src/Frontend/VideoShortcode.php:118
-msgid "Reel: Featured video"
-msgstr "Reel: Vídeo destacado"
-
-#: src/Admin/Settings.php:348
-msgid ""
-"Search for it in the block inserter. Renders the same video as the shortcode."
-msgstr ""
-"Búscalo en el insertador de bloques. Representa el mismo video que el código "
-"corto."
-
-#: src/Admin/Settings.php:355
+#: src/Admin/Settings.php:358
 msgid "Save changes"
 msgstr "Guardar cambios"
+
+#: src/Frontend/VideoShortcode.php:70 src/Frontend/VideoShortcode.php:118
+msgid "Reel: Featured video"
+msgstr "Reel: Vídeo destacado"
 
 #: src/Frontend/VideoShortcode.php:73
 msgid "Show the current product's featured video (Reel)."
@@ -398,12 +460,9 @@ msgstr "Mostrar el vídeo destacado del producto actual (Reel)."
 
 #: src/Frontend/VideoShortcode.php:119
 msgid ""
-"This shows the current product's video on the storefront. Set a video URL in "
-"the product's _reel_video_url meta field, then view the product page."
+"This shows the current product's video on the storefront. Set a video URL on "
+"the Reel tab in the product editor, then view the product page."
 msgstr ""
-"Esto muestra el vídeo del producto actual en el escaparate. Establece una "
-"URL de video en el metacampo _reel_video_url del producto y luego visita la "
-"página del producto."
 
 #: templates/featured-video.php:27
 msgid "Now playing"
@@ -417,62 +476,51 @@ msgstr "Visor de imágenes del producto"
 msgid "Close image viewer"
 msgstr "Cerrar visor de imágenes"
 
-#: src/Admin/ProUpsell.php:78
-msgid "Wkrótce"
-msgstr "Próximamente"
+#~ msgid "Reel - Gallery and Video for WooCommerce"
+#~ msgstr "Reel - Galería y vídeo para WooCommerce"
 
-#: src/Admin/ProUpsell.php:78
-msgid "Coming soon"
-msgstr "Próximamente"
+#~ msgid "https://plogins.com/reel/"
+#~ msgstr "https://plogins.com/es/reel/"
 
-#. translators: %d: yearly price in PLN
-#: src/Admin/ProUpsell.php:83
+#~ msgid ""
+#~ "Hover zoom, lightbox and featured video for the WooCommerce product "
+#~ "gallery, reserved space, no jQuery"
+#~ msgstr ""
+#~ "Zoom flotante, caja de luz y video destacado para la galería de productos "
+#~ "WooCommerce, espacio reservado, sin jQuery"
+
+#~ msgid "WPPoland"
+#~ msgstr "WPPoland"
+
+#~ msgid "https://plogins.com/"
+#~ msgstr "https://plogins.com/"
+
 #, php-format
-msgid "od %d zł/rok"
-msgstr "desde %d zł/año"
+#~ msgid ""
+#~ "Add a video to any product by setting its %s meta field to a self-hosted "
+#~ "MP4/WebM file or a YouTube/Vimeo link."
+#~ msgstr ""
+#~ "Añade un video a cualquier producto configurando su metacampo %s en un "
+#~ "archivo MP4/WebM autohospedado o un enlace de YouTube/Vimeo."
 
-#. translators: 1: currency symbol, 2: yearly price
-#: src/Admin/ProUpsell.php:88
+#~ msgid "Block"
+#~ msgstr "Bloque"
+
+#~ msgid ""
+#~ "Search for it in the block inserter. Renders the same video as the "
+#~ "shortcode."
+#~ msgstr ""
+#~ "Búscalo en el insertador de bloques. Representa el mismo video que el "
+#~ "código corto."
+
+#~ msgid ""
+#~ "This shows the current product's video on the storefront. Set a video URL "
+#~ "in the product's _reel_video_url meta field, then view the product page."
+#~ msgstr ""
+#~ "Esto muestra el vídeo del producto actual en el escaparate. Establece una "
+#~ "URL de video en el metacampo _reel_video_url del producto y luego visita "
+#~ "la página del producto."
+
 #, php-format
-msgid "from %1$s%2$d/yr"
-msgstr "desde %1$s%2$d/año"
-
-#: src/Admin/ProUpsell.php:97
-msgid "Upgrade to PRO"
-msgstr "Mejora a PRO"
-
-#: src/Admin/ProUpsell.php:98
-msgid "Powiadom mnie"
-msgstr "Avísame"
-
-#: src/Admin/ProUpsell.php:98
-msgid "Get notified"
-msgstr "Avísame"
-
-#: src/Admin/ProUpsell.php:128
-msgid "Permission denied."
-msgstr "Permiso denegado."
-
-#. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:158
-#, php-format
-msgid "Do more with %s"
-msgstr "Haz más con %s"
-
-#: src/Admin/ProUpsell.php:165
-msgid "Dismiss this notice"
-msgstr "Descartar este aviso"
-
-#: src/Admin/ProUpsell.php:182
-msgid "Unlock every PRO feature"
-msgstr "Desbloquea todas las funciones PRO"
-
-#: src/Admin/ProUpsell.php:195
-msgid "one licence, every PRO feature"
-msgstr "una licencia, todas las funciones PRO"
-
-#. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:214
-#, php-format
-msgid "What %s adds"
-msgstr "Lo que añade %s"
+#~ msgid "od %d zł/rok"
+#~ msgstr "desde %d zł/año"
