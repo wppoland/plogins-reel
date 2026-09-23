@@ -18,29 +18,29 @@ msgstr ""
 #. Plugin Name of the plugin
 #: plogins-reel.php
 msgid "Plogins Reel - Product Gallery Zoom & Video for WooCommerce"
-msgstr ""
+msgstr "Plogins Reel - powiększanie galerii produktu i wideo dla WooCommerce"
 
 #. Plugin URI of the plugin
 #: plogins-reel.php
 msgid "https://plogins.com/plogins-reel/"
-msgstr ""
+msgstr "https://plogins.com/plogins-reel/"
 
 #. Description of the plugin
 #: plogins-reel.php
 msgid ""
 "Hover zoom, lightbox and featured video for the WooCommerce product gallery: "
 "reserved space, no jQuery."
-msgstr ""
+msgstr "Powiększanie po najechaniu, lightbox i wyróżnione wideo dla galerii produktu WooCommerce: zarezerwowane miejsce, bez jQuery."
 
 #. Author of the plugin
 #: plogins-reel.php
 msgid "WPPoland.com"
-msgstr ""
+msgstr "WPPoland.com"
 
 #. Author URI of the plugin
 #: plogins-reel.php
 msgid "https://wppoland.com"
-msgstr ""
+msgstr "https://wppoland.com"
 
 #: plogins-reel.php:45
 msgid "Settings"
@@ -56,27 +56,27 @@ msgstr "Reel"
 
 #: src/Admin/ProductVideoFields.php:69
 msgid "Video URL"
-msgstr ""
+msgstr "Adres URL wideo"
 
 #: src/Admin/ProductVideoFields.php:71
 msgid ""
 "A YouTube or Vimeo link, or a direct .mp4/.webm file URL. It shows in the "
 "gallery area on the product page. Leave empty for no video."
-msgstr ""
+msgstr "Link do YouTube lub Vimeo albo bezpośredni adres pliku .mp4/.webm. Pokazuje się w obszarze galerii na stronie produktu. Pozostaw puste, aby nie było wideo."
 
 #: src/Admin/ProductVideoFields.php:79
 msgid "Video heading (optional)"
-msgstr ""
+msgstr "Nagłówek wideo (opcjonalny)"
 
 #: src/Admin/ProductVideoFields.php:80
 msgid "e.g. See it in action"
-msgstr ""
+msgstr "np. Zobacz produkt w akcji"
 
 #: src/Admin/ProductVideoFields.php:81
 msgid ""
 "Heading shown above the video. Leave empty to use the default from Reel "
 "settings."
-msgstr ""
+msgstr "Nagłówek pokazywany nad wideo. Pozostaw puste, aby użyć domyślnego z ustawień Reel."
 
 #: src/Admin/ProUpsell.php:78
 msgid "Wkrótce"
@@ -312,7 +312,7 @@ msgstr "Wyróżniony film"
 msgid ""
 "Add a video to any product on the %s tab in the product editor: a self-"
 "hosted MP4/WebM file or a YouTube/Vimeo link."
-msgstr ""
+msgstr "Dodaj wideo do dowolnego produktu na zakładce %s w edytorze produktu: samodzielnie hostowany plik MP4/WebM albo link YouTube/Vimeo."
 
 #: src/Admin/Settings.php:273
 msgid "Show featured video"
@@ -459,7 +459,7 @@ msgstr "Pokaż wyróżniony film obecnego produktu (Reel)."
 msgid ""
 "This shows the current product's video on the storefront. Set a video URL on "
 "the Reel tab in the product editor, then view the product page."
-msgstr ""
+msgstr "To pokazuje wideo bieżącego produktu w sklepie. Ustaw adres URL wideo na zakładce Reel w edytorze produktu, a potem otwórz stronę produktu."
 
 #: templates/featured-video.php:27
 msgid "Now playing"
