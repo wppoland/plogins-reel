@@ -1,10 +1,10 @@
-=== Plogins Reel - Product Gallery Zoom & Video for WooCommerce ===
+=== Reel - Product Gallery Zoom & Video for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.22
+Stable tag: 1.0.23
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -145,6 +145,9 @@ The one exception is when you set a product's video URL to a YouTube, Vimeo or o
 Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.23 =
+* Display name drops the "Plogins " prefix. The slug, the text domain and every option key are unchanged, so nothing on an existing install moves.
 
 = 1.0.22 =
 * The sidebar upgrade promo now follows the same dismissal as the banner. Dismissing the banner used to leave a full-height advert on the settings screen for good, which is not what the WordPress.org guideline on upgrade prompts means by used with moderation.
