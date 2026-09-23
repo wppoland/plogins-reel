@@ -115,7 +115,7 @@ msgstr ""
 
 #: src/Admin/Settings.php:171
 msgid "Magnify the image on hover"
-msgstr "Vergrößern Sie das Bild beim Schweben"
+msgstr "Bild beim Hovern vergrößern"
 
 #: src/Admin/Settings.php:177
 msgid "Zoom strength"
