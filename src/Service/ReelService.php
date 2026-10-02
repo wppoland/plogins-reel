@@ -102,7 +102,25 @@ final class ReelService implements HasHooks
         // after the engine has enqueued it on single product pages.
         if ($this->zoom instanceof GalleryZoomEngine) {
             add_action('wp_enqueue_scripts', [$this, 'enqueueZoomExtras'], 20);
+
+            // Themes that declare WooCommerce's own gallery zoom and lightbox
+            // (every default theme does) ran them on top of Reel's: one click
+            // opened Reel's lightbox and PhotoSwipe together. Whichever Reel
+            // feature is on replaces the WooCommerce one. Priority 99 because
+            // the gallery block switches both on again at the default 10.
+            add_filter('woocommerce_single_product_zoom_enabled', [$this, 'yieldNativeZoom'], 99);
+            add_filter('woocommerce_single_product_photoswipe_enabled', [$this, 'yieldNativeLightbox'], 99);
         }
+    }
+
+    public function yieldNativeZoom(mixed $enabled): mixed
+    {
+        return (bool) ($this->settings()['enable_zoom'] ?? false) ? false : $enabled;
+    }
+
+    public function yieldNativeLightbox(mixed $enabled): mixed
+    {
+        return (bool) ($this->settings()['enable_lightbox'] ?? false) ? false : $enabled;
     }
 
     /**
@@ -254,6 +272,35 @@ final class ReelService implements HasHooks
         set_transient($cacheKey, $html, $html !== '' ? HOUR_IN_SECONDS : MINUTE_IN_SECONDS * 5);
 
         return $html;
+    }
+
+    /**
+     * Allowed HTML for the engine-built video markup.
+     *
+     * wp_kses_post() alone has no <iframe>, which is all a YouTube or Vimeo
+     * oEmbed returns, so every embedded video printed as an empty frame. Only
+     * the iframe is added, with the attributes the providers use.
+     *
+     * @return array<string, array<string, bool>>
+     */
+    public static function videoAllowedHtml(): array
+    {
+        $allowed           = wp_kses_allowed_html('post');
+        $allowed['iframe'] = [
+            'src'             => true,
+            'title'           => true,
+            'width'           => true,
+            'height'          => true,
+            'frameborder'     => true,
+            'allow'           => true,
+            'allowfullscreen' => true,
+            'referrerpolicy'  => true,
+            'loading'         => true,
+            'class'           => true,
+            'style'           => true,
+        ];
+
+        return $allowed;
     }
 
     /**
