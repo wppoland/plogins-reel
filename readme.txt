@@ -150,6 +150,7 @@ Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Tr
 * Fixed: YouTube and Vimeo videos printed as an empty frame. The embed is an iframe, and the output filter removed it; only self-hosted files ever played.
 * Fixed: on a product with gallery images, the video placed after the gallery landed inside the image slider, off to the side where nobody could reach it. It now sits under the images and thumbnails.
 * Fixed: clicking a gallery image opened Reel's lightbox and WooCommerce's own lightbox at the same time on themes that enable WooCommerce's gallery features, which all default themes do. With Reel's zoom or lightbox switched on, WooCommerce's matching feature now steps aside, and the click no longer follows the link to the image file.
+* Fixed: deleting the plugin left the cached video embeds of the shortcode and block in the database.
 
 = 1.0.24 =
 * The upgrade notice's "Coming soon" and "Get notified" labels are English source strings for every language; Polish sites used to get their own Polish source text, which translators in other languages then saw untranslated.
