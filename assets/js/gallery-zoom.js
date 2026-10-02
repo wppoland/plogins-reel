@@ -85,7 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
         img.setAttribute('aria-label', config.triggerLabel);
       }
 
-      img.addEventListener('click', () => openLightbox(img));
+      // The image sits inside a link to the full-size file. Without this the
+      // browser followed it and left the page behind the lightbox.
+      img.addEventListener('click', (event) => {
+        event.preventDefault();
+        openLightbox(img);
+      });
       img.addEventListener('keydown', (event) => {
         if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
           event.preventDefault();

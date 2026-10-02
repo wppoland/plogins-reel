@@ -35,7 +35,7 @@ if (! isset($video_html) || $video_html === '') {
     <div class="reel-featured-video__embed">
         <?php
         // Engine-built embed/video markup (wp_video_shortcode / wp_oembed_get).
-        echo wp_kses_post((string) $video_html);
+        echo wp_kses((string) $video_html, \Reel\Service\ReelService::videoAllowedHtml());
         ?>
     </div>
 </div>

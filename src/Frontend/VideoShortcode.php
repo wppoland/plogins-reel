@@ -157,7 +157,7 @@ final class VideoShortcode implements HasHooks
                 <h2 class="reel-featured-video__title"><?php echo esc_html($title); ?></h2>
             <?php endif; ?>
             <div class="reel-featured-video__embed">
-                <?php echo wp_kses_post($videoHtml); ?>
+                <?php echo wp_kses($videoHtml, ReelService::videoAllowedHtml()); ?>
             </div>
         </div>
         <?php

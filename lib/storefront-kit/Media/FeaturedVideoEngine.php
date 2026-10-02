@@ -70,7 +70,24 @@ final class FeaturedVideoEngine
             return;
         }
 
+        ob_start();
         $this->renderCurrentProductVideo();
+        $html = (string) ob_get_clean();
+
+        if ($html === '') {
+            return;
+        }
+
+        // woocommerce_product_thumbnails fires inside the gallery wrapper,
+        // which the gallery slider turns into a horizontal track as soon as a
+        // product has more than one image: the video became a slide nobody
+        // could reach. Move it to the end of the gallery the moment it is
+        // parsed, and again once WooCommerce has built the slider and its
+        // thumbnails, so it sits under the images.
+        echo '<div data-reel-after-gallery>' . $html . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped by the video template.
+        wp_print_inline_script_tag(
+            '(function(s){var v=s&&s.previousElementSibling,g=v&&v.closest(".woocommerce-product-gallery");if(!g){return;}var p=function(){g.appendChild(v);};p();if(window.jQuery){window.jQuery(g).on("wc-product-gallery-after-init",p);}})(document.currentScript);'
+        );
     }
 
     public function renderBeforeSummary(): void
