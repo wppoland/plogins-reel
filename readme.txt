@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.24
+Stable tag: 1.0.25
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -145,6 +145,11 @@ The one exception is when you set a product's video URL to a YouTube, Vimeo or o
 Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.25 =
+* Fixed: YouTube and Vimeo videos printed as an empty frame. The embed is an iframe, and the output filter removed it; only self-hosted files ever played.
+* Fixed: on a product with gallery images, the video placed after the gallery landed inside the image slider, off to the side where nobody could reach it. It now sits under the images and thumbnails.
+* Fixed: clicking a gallery image opened Reel's lightbox and WooCommerce's own lightbox at the same time on themes that enable WooCommerce's gallery features, which all default themes do. With Reel's zoom or lightbox switched on, WooCommerce's matching feature now steps aside, and the click no longer follows the link to the image file.
 
 = 1.0.24 =
 * The upgrade notice's "Coming soon" and "Get notified" labels are English source strings for every language; Polish sites used to get their own Polish source text, which translators in other languages then saw untranslated.
