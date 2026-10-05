@@ -177,6 +177,21 @@ final class VideoShortcode implements HasHooks
 
         $product = wc_get_product($productId);
 
-        return $product instanceof \WC_Product ? $product : null;
+        if (! $product instanceof \WC_Product) {
+            return null;
+        }
+
+        // Any visitor can put an ID in the shortcode or block, so show only
+        // what that visitor could already read: a password-protected product
+        // needs its password, a draft or private one needs read access.
+        if (post_password_required($productId)) {
+            return null;
+        }
+
+        if ($product->get_status() !== 'publish' && ! current_user_can('read_post', $productId)) {
+            return null;
+        }
+
+        return $product;
     }
 }
