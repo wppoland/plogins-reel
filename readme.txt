@@ -236,3 +236,8 @@ Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Tr
 
 = 0.1.0 =
 * Initial release: gallery hover zoom, accessible lightbox and featured product video.
+
+== Upgrade Notice ==
+
+= 1.0.26 =
+Security release. Not exposed to visitors: only a user who can write posts could see the video of an unpublished or password-protected product in a post preview. Update, nothing else to do.
