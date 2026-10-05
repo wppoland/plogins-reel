@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.25
+Stable tag: 1.0.26
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -145,6 +145,9 @@ The one exception is when you set a product's video URL to a YouTube, Vimeo or o
 Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.26 =
+* Security (low): the [reel_video] shortcode and the Reel featured video block showed the video and title of any product ID, including drafts, private and password-protected products. A contributor previewing a post could read them. They now show only products the visitor is allowed to see.
 
 = 1.0.25 =
 * Fixed: YouTube and Vimeo videos printed as an empty frame. The embed is an iframe, and the output filter removed it; only self-hosted files ever played.
