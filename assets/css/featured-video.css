@@ -165,3 +165,64 @@
         animation: none;
     }
 }
+
+/* Click-to-play facade for YouTube and Vimeo: the poster fills the reserved
+   16:9 frame, so swapping in the player moves nothing. */
+.reel-video-facade {
+    display: block;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.reel-video-facade img {
+    display: block;
+    inline-size: 100%;
+    /* Inside the gallery, WooCommerce's ".woocommerce div.product div.images img
+       { height: auto }" outranks this rule and left the 4:3 poster taller than
+       the frame, its letterbox bar showing at the top. */
+    block-size: 100% !important;
+    object-fit: cover;
+}
+
+.reel-video-facade__play {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    inline-size: 68px;
+    block-size: 48px;
+    translate: -50% -50%;
+    border-radius: 12px;
+    background: rgba(12, 13, 16, 0.78);
+    transition: background 0.15s ease;
+}
+
+.reel-video-facade__play::after {
+    content: "";
+    position: absolute;
+    inset: 50% auto auto 54%;
+    translate: -50% -50%;
+    border-block: 10px solid transparent;
+    border-inline-start: 17px solid #fff;
+}
+
+.reel-video-facade:hover .reel-video-facade__play,
+.reel-video-facade:focus-visible .reel-video-facade__play {
+    background: var(--reel-beam, #e8a23a);
+}
+
+.reel-video-facade:focus-visible {
+    outline: 3px solid var(--reel-beam, #e8a23a);
+    outline-offset: -3px;
+}
+
+/* Nothing is loading behind a facade, so the skeleton sheen stops. */
+.reel-featured-video__embed:has(> .reel-video-facade)::before {
+    animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reel-video-facade__play {
+        transition: none;
+    }
+}

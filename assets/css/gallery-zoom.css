@@ -35,6 +35,19 @@
     cursor: zoom-in;
 }
 
+/* Pinch zoom on touch: the browser keeps one-finger panning (page scroll), the
+   script owns two fingers. The reset eases back; while the fingers are down the
+   image follows them directly on its own compositor layer. */
+.reel-gallery-pinch {
+    touch-action: pan-x pan-y;
+    transition: transform var(--reel-zoom-duration, 0.22s) ease;
+}
+
+.reel-gallery-pinch.reel-gallery-pinched {
+    transition: none;
+    will-change: transform;
+}
+
 .woocommerce-product-gallery__image:hover .reel-gallery-zoomable {
     transform: scale(var(--reel-gallery-zoom-scale, 1.45));
 }
@@ -132,6 +145,7 @@ body.reel-gallery-lightbox-open {
 /* Respect users who prefer less motion: no zoom animation, no fade. */
 @media (prefers-reduced-motion: reduce) {
     .reel-gallery-zoomable,
+    .reel-gallery-pinch,
     .reel-gallery-lightbox__close {
         transition: none;
     }
