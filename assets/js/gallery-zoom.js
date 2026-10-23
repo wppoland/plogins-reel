@@ -5,7 +5,25 @@
  * window.reelGalleryZoom. The lightbox shell is printed in the footer
  * (templates/lightbox.php) and starts hidden, so there is no layout shift.
  */
+// Pure helpers, kept outside the page code so tests/gallery-nav-check.mjs can
+// run them without a browser.
+window.reelGalleryNav = {
+  // Wrap-around step through n images.
+  step: (index, delta, n) => (n > 0 ? (((index + delta) % n) + n) % n : 0),
+  // The full-size file: WooCommerce puts it on data-large_image and on the
+  // wrapping link; currentSrc is only the gallery-size rendition.
+  largeSrc: (img) => {
+    const link = img.closest ? img.closest('a[href]') : null;
+    return img.getAttribute('data-large_image') || (link && link.getAttribute('href')) || img.currentSrc || img.src || '';
+  },
+};
+
+// Gallery images, minus the "In the gallery" video slide.
+const REEL_GALLERY_IMAGES = '.woocommerce-product-gallery__image:not(.reel-gallery-video-slide) img';
+
 document.addEventListener('DOMContentLoaded', () => {
+  const nav = window.reelGalleryNav;
+
   const config = window.reelGalleryZoom;
 
   if (!config) {
@@ -22,27 +40,65 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxImage = document.querySelector('[data-reel-gallery-lightbox-image]');
   const closeButton = lightbox ? lightbox.querySelector('[data-reel-gallery-lightbox-close]') : null;
   const caption = lightbox ? lightbox.querySelector('[data-reel-gallery-lightbox-caption]') : null;
+  const counter = lightbox ? lightbox.querySelector('[data-reel-gallery-lightbox-counter]') : null;
+  const prevButton = lightbox ? lightbox.querySelector('[data-reel-gallery-lightbox-prev]') : null;
+  const nextButton = lightbox ? lightbox.querySelector('[data-reel-gallery-lightbox-next]') : null;
 
   // Element focused before the lightbox opened, so we can restore it on close.
   let lastFocused = null;
+  // Images the lightbox steps through, read when it opens so a variation swap
+  // or a late-loaded slide is picked up.
+  let images = [];
+  let current = 0;
 
-  const openLightbox = (img) => {
-    if (!lightbox || !lightboxImage) {
-      return;
-    }
-
-    const source = img.currentSrc || img.src;
+  const show = (index) => {
+    const img = images[index];
+    const source = img ? nav.largeSrc(img) : '';
     if (!source) {
-      return;
+      return false;
     }
 
-    lastFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    current = index;
     lightboxImage.src = source;
     lightboxImage.alt = img.alt || '';
     if (caption && extra.lightboxCaption) {
       caption.textContent = img.alt || '';
       caption.hidden = !img.alt;
     }
+    if (counter) {
+      counter.textContent = images.length > 1
+        ? (extra.counterLabel || '%1$d / %2$d').replace('%1$d', String(index + 1)).replace('%2$d', String(images.length))
+        : '';
+    }
+    return true;
+  };
+
+  const step = (delta) => {
+    if (images.length > 1) {
+      show(nav.step(current, delta, images.length));
+    }
+  };
+
+  const openLightbox = (img) => {
+    if (!lightbox || !lightboxImage) {
+      return;
+    }
+
+    images = [...document.querySelectorAll(REEL_GALLERY_IMAGES)];
+    if (!images.includes(img)) {
+      images = [img];
+    }
+    const index = images.indexOf(img);
+
+    lastFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    if (!show(index)) {
+      return;
+    }
+    [prevButton, nextButton].forEach((button) => {
+      if (button) {
+        button.hidden = images.length < 2;
+      }
+    });
     lightbox.hidden = false;
     document.body.classList.add('reel-gallery-lightbox-open');
 
@@ -188,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
     pinchResets.push([img, reset]);
   };
 
-  document.querySelectorAll('.woocommerce-product-gallery__image img').forEach((img) => {
+  document.querySelectorAll(REEL_GALLERY_IMAGES).forEach((img) => {
     if (config.enableZoom && window.PointerEvent) {
       setupPinch(img);
     }
@@ -251,6 +307,15 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    if (target.closest('[data-reel-gallery-lightbox-prev]')) {
+      step(-1);
+      return;
+    }
+    if (target.closest('[data-reel-gallery-lightbox-next]')) {
+      step(1);
+      return;
+    }
+
     const close = target.closest('[data-reel-gallery-lightbox-close]');
     const clickedLightbox = target.closest('[data-reel-gallery-lightbox]');
 
@@ -269,11 +334,45 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Single-control dialog: keep Tab on the close button so focus can't
-    // escape behind the modal.
-    if (event.key === 'Tab' && closeButton) {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       event.preventDefault();
-      closeButton.focus();
+      step(event.key === 'ArrowLeft' ? -1 : 1);
+      return;
+    }
+
+    // Keep Tab cycling through the dialog's own buttons so focus can't escape
+    // behind the modal.
+    if (event.key === 'Tab') {
+      const controls = [closeButton, prevButton, nextButton].filter((el) => el && !el.hidden);
+      if (!controls.length) {
+        return;
+      }
+      event.preventDefault();
+      const at = controls.indexOf(document.activeElement);
+      controls[at < 0 ? 0 : nav.step(at, event.shiftKey ? -1 : 1, controls.length)].focus();
     }
   });
+
+  // Swipe left or right anywhere in the open lightbox to step through the
+  // gallery.
+  if (lightbox) {
+    let swipeStart = null;
+    lightbox.addEventListener('pointerdown', (event) => {
+      swipeStart = event.pointerType === 'mouse' ? null : { x: event.clientX, y: event.clientY };
+    });
+    lightbox.addEventListener('pointerup', (event) => {
+      if (!swipeStart) {
+        return;
+      }
+      const dx = event.clientX - swipeStart.x;
+      const dy = event.clientY - swipeStart.y;
+      swipeStart = null;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+        step(dx < 0 ? 1 : -1);
+      }
+    });
+    lightbox.addEventListener('pointercancel', () => {
+      swipeStart = null;
+    });
+  }
 });

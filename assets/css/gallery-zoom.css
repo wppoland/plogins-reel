@@ -130,6 +130,63 @@
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
+/* Prev/next arrows, centred on the screen edges; 44px touch targets. */
+.reel-gallery-lightbox__nav {
+    position: absolute;
+    inset-block-start: 50%;
+    translate: 0 -50%;
+    display: grid;
+    place-items: center;
+    inline-size: 44px;
+    block-size: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--reel-overlay-ink, #fff);
+    font-size: 34px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.reel-gallery-lightbox__nav[hidden] {
+    display: none;
+}
+
+.reel-gallery-lightbox__nav--prev {
+    inset-inline-start: clamp(0.5rem, 2vw, 1.25rem);
+}
+
+.reel-gallery-lightbox__nav--next {
+    inset-inline-end: clamp(0.5rem, 2vw, 1.25rem);
+}
+
+.reel-gallery-lightbox__nav:hover {
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.reel-gallery-lightbox__nav:focus-visible {
+    outline: 3px solid var(--reel-beam, #e8a23a);
+    outline-offset: 2px;
+}
+
+/* "Image N of M", top left, opposite the close button. */
+.reel-gallery-lightbox__counter {
+    position: absolute;
+    inset-block-start: clamp(0.75rem, 2vw, 1.25rem);
+    inset-inline-start: clamp(0.75rem, 2vw, 1.25rem);
+    margin: 0;
+    color: var(--reel-overlay-ink, #fff);
+    font-size: 0.9rem;
+    line-height: 44px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Horizontal swipes in the open lightbox belong to the prev/next gesture. */
+.reel-gallery-lightbox {
+    touch-action: pan-y pinch-zoom;
+}
+
 body.reel-gallery-lightbox-open {
     overflow: hidden;
 }
@@ -146,7 +203,8 @@ body.reel-gallery-lightbox-open {
 @media (prefers-reduced-motion: reduce) {
     .reel-gallery-zoomable,
     .reel-gallery-pinch,
-    .reel-gallery-lightbox__close {
+    .reel-gallery-lightbox__close,
+    .reel-gallery-lightbox__nav {
         transition: none;
     }
 
