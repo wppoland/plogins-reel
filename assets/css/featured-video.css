@@ -179,7 +179,10 @@
 .reel-video-facade img {
     display: block;
     inline-size: 100%;
-    block-size: 100%;
+    /* Inside the gallery, WooCommerce's ".woocommerce div.product div.images img
+       { height: auto }" outranks this rule and left the 4:3 poster taller than
+       the frame, its letterbox bar showing at the top. */
+    block-size: 100% !important;
     object-fit: cover;
 }
 
