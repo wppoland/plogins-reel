@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.26
+Stable tag: 1.0.27
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,8 @@ Reel upgrades the WooCommerce single product gallery with product image zoom, an
 
 * **Hover zoom.** Gallery images magnify on hover at a zoom scale you set (1.0× to
   3.0×). The transform is clipped to the gallery frame, so the rest of the page
-  stays put.
+  stays put. On touch screens, two fingers pinch the image to zoom; a double tap
+  or moving to another slide puts it back, and one finger still scrolls and swipes.
 * **Accessible lightbox.** Click, or press Enter/Space, on any gallery image to
   open it full screen. The lightbox is keyboard-operable: Tab stays on the close
   button so focus can't slip behind the overlay, Escape closes it, and focus
@@ -25,11 +26,14 @@ Reel upgrades the WooCommerce single product gallery with product image zoom, an
 * **Featured video.** Show a per-product video, a self-hosted MP4/WebM file or a
   YouTube/Vimeo (oEmbed) URL, after the gallery or before the product summary.
   The video sits in a 16:9 frame sized with `aspect-ratio`, so its space is held
-  before it loads.
+  before it loads. YouTube and Vimeo show a poster and a play button; the player
+  loads only when the shopper presses play, and YouTube plays from
+  youtube-nocookie.com.
 
-The markup is built in PHP and progressively enhanced by one vanilla-JavaScript
-file (no jQuery), deferred and loaded in the footer. Scripts and styles only
-enqueue on the single product page.
+The markup is built in PHP and progressively enhanced by vanilla JavaScript (no
+jQuery), deferred and loaded in the footer: the gallery script on the single
+product page, and a small click-to-play script only where a YouTube or Vimeo
+video is shown.
 
 Settings live under a top-level **Reel** admin menu. Each of the three features
 has its own on/off switch; you can also set the zoom scale and skip it on touch
@@ -56,15 +60,17 @@ developed in the open, so bug reports and pull requests are welcome there.
 = Features =
 
 * Gallery image hover zoom with a configurable scale.
+* Two-finger pinch zoom on touch screens.
 * Accessible, keyboard-operable full-screen lightbox (Escape / backdrop close).
 * Featured product video (self-hosted or oEmbed) with selectable position.
+* Click-to-play poster for YouTube and Vimeo, so the player loads only on demand.
 * `[reel_video]` shortcode to place the video anywhere.
 * Optional lightbox caption from the image alt text.
 * Skip hover zoom on touch devices (where hover is unreliable).
 * Custom accessible label for the open-in-lightbox control.
 * Default video heading and optional intro paragraph.
 * Reserved-space markup throughout, so no Cumulative Layout Shift.
-* No jQuery; one deferred, in-footer script loaded only on product pages.
+* No jQuery; deferred, in-footer scripts loaded only where they are needed.
 * Independent on/off toggle for each feature.
 * "Settings" link on the plugins list; clean uninstall removes plugin options.
 * Fully translatable: ships the `plogins-reel.pot` template, with Polish, German and Spanish delivered by the WordPress.org language pack.
@@ -98,11 +104,14 @@ Yes. Reel is a WooCommerce product gallery plugin and runs on single product pag
 
 Self-hosted files (MP4, M4V, WebM, OGV) are played with WordPress's native video
 player. Any oEmbed-supported URL (YouTube, Vimeo, etc.) is embedded automatically.
+YouTube and Vimeo start as a poster with a play button and load the player on
+click; with autoplay switched on they embed directly.
 
 = Does it use jQuery? =
 
-No. Reel ships one vanilla-JavaScript file, deferred and loaded in the footer,
-and only on the single product page.
+No. Reel ships vanilla JavaScript only, deferred and loaded in the footer: the
+gallery script on the single product page, and the click-to-play script where a
+YouTube or Vimeo video is shown.
 
 = Does Reel replace the WooCommerce product gallery? =
 
@@ -138,13 +147,19 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 
 Reel makes no API calls or analytics requests of its own; the zoom, lightbox and self-hosted video features run entirely on your site, and the only data Reel stores is the `reel_settings` and `reel_db_version` options plus each product's `_reel_video_url` and `_reel_video_title` meta.
 
-The one exception is when you set a product's video URL to a YouTube, Vimeo or other oEmbed link. In that case WordPress core's own `wp_oembed_get()` fetches the embed markup from that provider, sending the video URL to the provider you chose so it can return the player; Reel caches the result in a transient to avoid repeat requests. No request is made for self-hosted (MP4/WebM) videos. Use of those providers is governed by their own terms and privacy policies, e.g. YouTube (https://www.youtube.com/t/terms, https://policies.google.com/privacy) and Vimeo (https://vimeo.com/terms, https://vimeo.com/privacy).
+The one exception is when you set a product's video URL to a YouTube, Vimeo or other oEmbed link. In that case WordPress core's own `wp_oembed_get()` fetches the embed markup from that provider, sending the video URL to the provider you chose so it can return the player; Reel caches the result in a transient to avoid repeat requests. No request is made for self-hosted (MP4/WebM) videos.
+
+YouTube and Vimeo videos start as a poster image. For YouTube the shopper's browser loads that poster from YouTube's image server (i.ytimg.com); for Vimeo your site fetches the thumbnail address once from Vimeo's oEmbed endpoint and caches it for a week. The player itself, from youtube-nocookie.com or player.vimeo.com, loads only after the shopper presses play. Use of those providers is governed by their own terms and privacy policies, e.g. YouTube (https://www.youtube.com/t/terms, https://policies.google.com/privacy) and Vimeo (https://vimeo.com/terms, https://vimeo.com/privacy).
 
 == Translations ==
 
 Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.27 =
+* New: two-finger pinch zoom on the gallery image on touch screens. One finger still scrolls the page and swipes the slider; a double tap or a slide change resets the zoom. On with hover zoom.
+* New: YouTube and Vimeo featured videos show a poster and a play button, and the player loads only when the shopper presses it. Nothing from the player is loaded for visitors who never play, YouTube plays from youtube-nocookie.com, and the poster fills the reserved 16:9 frame so nothing moves. With autoplay on, the player embeds directly as before.
 
 = 1.0.26 =
 * Security (low): the [reel_video] shortcode and the Reel featured video block showed the video and title of any product ID, including drafts, private and password-protected products. A contributor previewing a post could read them. They now show only products the visitor is allowed to see.
@@ -238,6 +253,9 @@ Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Tr
 * Initial release: gallery hover zoom, accessible lightbox and featured product video.
 
 == Upgrade Notice ==
+
+= 1.0.27 =
+Pinch zoom on touch screens and click-to-play YouTube and Vimeo videos. Nothing to configure.
 
 = 1.0.26 =
 Security release. Not exposed to visitors: only a user who can write posts could see the video of an unpublished or password-protected product in a post preview. Update, nothing else to do.

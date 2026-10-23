@@ -72,6 +72,9 @@ final class ReelService implements HasHooks
                 fn (): array => $this->videoSettings(),
                 static fn (\WC_Product $product, string $key): mixed => $product->get_meta($key),
                 function (string $template, array $context): void {
+                    if (isset($context['video_html'])) {
+                        $context['video_html'] = $this->videoFacade((string) $context['video_html']);
+                    }
                     $this->renderTemplate($template, $context);
                 },
             );
@@ -272,6 +275,85 @@ final class ReelService implements HasHooks
         set_transient($cacheKey, $html, $html !== '' ? HOUR_IN_SECONDS : MINUTE_IN_SECONDS * 5);
 
         return $html;
+    }
+
+    /**
+     * Swap a YouTube or Vimeo embed for a click-to-play facade: a poster and a
+     * play button, with the player iframe injected by assets/js/video-facade.js
+     * only when the shopper clicks. The page no longer loads the player (and
+     * its scripts and cookies) for every visitor, and YouTube plays from
+     * youtube-nocookie.com. Anything else, and every embed when autoplay is on,
+     * is returned unchanged.
+     */
+    public function videoFacade(string $html): string
+    {
+        if ((bool) ($this->videoSettings()['autoplay'] ?? false)
+            || preg_match('/<iframe\b[^>]*>/i', $html, $tag) !== 1
+            || preg_match('/\ssrc=(["\'])(.*?)\1/i', $tag[0], $srcMatch) !== 1
+        ) {
+            return $html;
+        }
+
+        $src  = html_entity_decode($srcMatch[2], ENT_QUOTES);
+        $host = strtolower((string) wp_parse_url($src, PHP_URL_HOST));
+        $path = (string) wp_parse_url($src, PHP_URL_PATH);
+
+        if (preg_match('/(^|\.)youtube(-nocookie)?\.com$/', $host) === 1 && preg_match('#^/embed/([\w-]+)#', $path, $id) === 1) {
+            $query  = (string) wp_parse_url($src, PHP_URL_QUERY);
+            $src    = 'https://www.youtube-nocookie.com/embed/' . $id[1] . ($query !== '' ? '?' . $query : '');
+            $poster = 'https://i.ytimg.com/vi/' . $id[1] . '/hqdefault.jpg';
+        } elseif ($host === 'player.vimeo.com' && preg_match('#^/video/(\d+)#', $path, $id) === 1) {
+            $poster = $this->vimeoPoster($id[1]);
+        } else {
+            return $html;
+        }
+
+        $title = preg_match('/\stitle=(["\'])(.*?)\1/i', $tag[0], $titleMatch) === 1
+            ? trim(html_entity_decode($titleMatch[2], ENT_QUOTES))
+            : '';
+
+        $label = $title !== ''
+            /* translators: %s: video title. */
+            ? sprintf(__('Play video: %s', 'plogins-reel'), $title)
+            : __('Play video', 'plogins-reel');
+
+        wp_enqueue_script(
+            'reel-video-facade',
+            REEL_URL . 'assets/js/video-facade.js',
+            [],
+            \Reel\VERSION,
+            ['in_footer' => true, 'strategy' => 'defer'],
+        );
+
+        return sprintf(
+            '<button type="button" class="reel-video-facade" data-reel-video-src="%1$s" data-reel-video-title="%2$s" aria-label="%3$s">%4$s<span class="reel-video-facade__play" aria-hidden="true"></span></button>',
+            esc_url(add_query_arg('autoplay', '1', $src)),
+            esc_attr($title),
+            esc_attr($label),
+            $poster !== '' ? sprintf('<img src="%s" alt="" width="480" height="360" loading="lazy" />', esc_url($poster)) : '',
+        );
+    }
+
+    /**
+     * Vimeo thumbnail URL from its oEmbed data. One server-side request per
+     * video, cached for a week (an hour when it fails). Named under the
+     * reel_video_ prefix so uninstall.php removes it with the embed cache.
+     */
+    private function vimeoPoster(string $id): string
+    {
+        $cacheKey = 'reel_video_poster_' . $id;
+        $cached   = get_transient($cacheKey);
+
+        if (is_string($cached)) {
+            return $cached;
+        }
+
+        $data   = _wp_oembed_get_object()->get_data('https://vimeo.com/' . $id);
+        $poster = is_object($data) && isset($data->thumbnail_url) ? esc_url_raw((string) $data->thumbnail_url) : '';
+
+        set_transient($cacheKey, $poster, $poster !== '' ? WEEK_IN_SECONDS : HOUR_IN_SECONDS);
+
+        return $poster;
     }
 
     /**
