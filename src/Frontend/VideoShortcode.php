@@ -131,7 +131,9 @@ final class VideoShortcode implements HasHooks
             return '';
         }
 
-        $videoHtml = $this->service->renderVideoHtml($product);
+        // The facade is applied after the cache: it enqueues its script, which
+        // must happen on every request, not only on the one that built the cache.
+        $videoHtml = $this->service->videoFacade($this->service->renderVideoHtml($product));
 
         if ($videoHtml === '') {
             return '';
