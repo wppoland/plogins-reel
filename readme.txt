@@ -142,6 +142,7 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 2. The accessible full-screen lightbox.
 3. A featured product video below the gallery.
 4. The Reel settings screen.
+5. A YouTube featured video below the gallery, shown as a poster with a play button until the shopper clicks it.
 
 == External Services ==
 
