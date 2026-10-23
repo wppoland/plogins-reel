@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.27
+Stable tag: 1.0.28
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -157,6 +157,10 @@ Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Tr
 
 == Changelog ==
 
+= 1.0.28 =
+* Fixed: with the video placed after the gallery, the YouTube poster sat too low in its frame and showed a black bar at the top. It now fills the frame.
+* Translation template carries the new play button labels and the plugin's own support link.
+
 = 1.0.27 =
 * New: two-finger pinch zoom on the gallery image on touch screens. One finger still scrolls the page and swipes the slider; a double tap or a slide change resets the zoom. On with hover zoom.
 * New: YouTube and Vimeo featured videos show a poster and a play button, and the player loads only when the shopper presses it. Nothing from the player is loaded for visitors who never play, YouTube plays from youtube-nocookie.com, and the poster fills the reserved 16:9 frame so nothing moves. With autoplay on, the player embeds directly as before.
@@ -253,6 +257,9 @@ Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Tr
 * Initial release: gallery hover zoom, accessible lightbox and featured product video.
 
 == Upgrade Notice ==
+
+= 1.0.28 =
+The video poster fills its frame after the gallery. Nothing to configure.
 
 = 1.0.27 =
 Pinch zoom on touch screens and click-to-play YouTube and Vimeo videos. Nothing to configure.
