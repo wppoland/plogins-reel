@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.28
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,12 +19,14 @@ Reel upgrades the WooCommerce single product gallery with product image zoom, an
   stays put. On touch screens, two fingers pinch the image to zoom; a double tap
   or moving to another slide puts it back, and one finger still scrolls and swipes.
 * **Accessible lightbox.** Click, or press Enter/Space, on any gallery image to
-  open it full screen. The lightbox is keyboard-operable: Tab stays on the close
-  button so focus can't slip behind the overlay, Escape closes it, and focus
-  returns to the image you opened. It's a fixed overlay that starts hidden, so it
+  open its full-size file full screen. Arrow buttons, the Left and Right keys or a
+  swipe step through every gallery image, with an "Image 2 of 5" counter read out
+  to screen readers. Tab stays inside the lightbox so focus can't slip behind the
+  overlay, Escape closes it, and focus returns to the image you opened. It's a fixed overlay that starts hidden, so it
   reserves no space until used.
 * **Featured video.** Show a per-product video, a self-hosted MP4/WebM file or a
-  YouTube/Vimeo (oEmbed) URL, after the gallery or before the product summary.
+  YouTube/Vimeo (oEmbed) URL, after the gallery, before the product summary, or
+  in the gallery itself as the last slide with a play thumbnail.
   The video sits in a 16:9 frame sized with `aspect-ratio`, so its space is held
   before it loads. YouTube and Vimeo show a poster and a play button; the player
   loads only when the shopper presses play, and YouTube plays from
@@ -129,7 +131,7 @@ reserves its space before loading.
 
 = Is the lightbox keyboard accessible? =
 
-Yes. Shoppers can open images with Enter or Space, close with Escape, and focus returns to the image that opened the lightbox.
+Yes. Shoppers can open images with Enter or Space, move between images with the arrow buttons or the Left and Right keys, close with Escape, and focus returns to the image that opened the lightbox.
 
 
 = Does this plugin work on WordPress Multisite? =
@@ -138,11 +140,12 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 
 == Screenshots ==
 
-1. Gallery hover zoom on a single product page.
-2. The accessible full-screen lightbox.
-3. A featured product video below the gallery.
-4. The Reel settings screen.
-5. A YouTube featured video below the gallery, shown as a poster with a play button until the shopper clicks it.
+1. The product video inside the gallery: its thumbnail carries a play glyph, and the main frame shows a poster that loads the player only on click.
+2. Gallery hover zoom on a single product page.
+3. The accessible full-screen lightbox.
+4. A featured product video below the gallery.
+5. The Reel settings screen.
+6. A YouTube featured video below the gallery, shown as a poster with a play button until the shopper clicks it.
 
 == External Services ==
 
@@ -157,6 +160,12 @@ YouTube and Vimeo videos start as a poster image. For YouTube the shopper's brow
 Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.0 =
+* New: video position "In the gallery". The video becomes the last gallery slide with a play glyph on its thumbnail; picking it shows the click-to-play poster, and the player loads only on click. Autoplay does not apply in this position.
+* New: the lightbox steps through all gallery images with arrow buttons, the Left and Right keys or a swipe, and announces "Image N of M".
+* Fixed: the lightbox showed the gallery-size image; it now opens the full-size file.
+* Fixed: on block themes, "Before the summary" printed the video above the breadcrumbs. It now sits in the gallery column, above the images.
 
 = 1.0.28 =
 * Fixed: with the video placed after the gallery, the YouTube poster sat too low in its frame and showed a black bar at the top. It now fills the frame.
@@ -258,6 +267,9 @@ Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Tr
 * Initial release: gallery hover zoom, accessible lightbox and featured product video.
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Lightbox navigation between images, full-size images in the lightbox, and a new "In the gallery" video position. Nothing to configure.
 
 = 1.0.28 =
 The video poster fills its frame after the gallery. Nothing to configure.

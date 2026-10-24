@@ -226,3 +226,53 @@
         transition: none;
     }
 }
+
+/* "In the gallery": the video is the last slide of the product gallery. The
+   frame keeps the 16:9 box reserved, so swapping to it does not shift layout. */
+.reel-gallery-video__embed {
+    position: relative;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 16 / 9;
+    background: var(--reel-screen, #0c0d10);
+}
+
+.reel-gallery-video__embed > *,
+.reel-gallery-video__embed iframe,
+.reel-gallery-video__embed video,
+.reel-gallery-video__embed .wp-video,
+.reel-gallery-video__embed .mejs-container {
+    inline-size: 100% !important;
+    block-size: 100%;
+}
+
+/* Play glyph on the video's slider thumbnail (always the last one), cropped
+   square like the image thumbnails next to it. */
+.woocommerce-product-gallery:has(.reel-gallery-video-slide) .flex-control-thumbs li:last-child {
+    position: relative;
+}
+
+.woocommerce-product-gallery:has(.reel-gallery-video-slide) .flex-control-thumbs li:last-child img {
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.woocommerce-product-gallery:has(.reel-gallery-video-slide) .flex-control-thumbs li:last-child::after {
+    content: "";
+    position: absolute;
+    inset: 50% auto auto 50%;
+    translate: -50% -50%;
+    inline-size: 0;
+    block-size: 0;
+    border-block: 0.5rem solid transparent;
+    border-inline-start: 0.8rem solid #fff;
+    margin-inline-start: 0.15rem;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.7));
+    pointer-events: none;
+}
+
+/* "Before the summary" on a block theme sits above the images in the gallery
+   block; keep it off the first image. */
+.wp-block-woocommerce-product-image-gallery > .reel-featured-video {
+    margin-block: 0 1rem;
+}
