@@ -27,6 +27,9 @@ final class ReelService implements HasHooks
     private const META_VIDEO_URL   = '_reel_video_url';
     private const META_VIDEO_TITLE = '_reel_video_title';
 
+    /** Dark tile used as the gallery thumbnail when a video has no poster. */
+    private const THUMB_FALLBACK = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3Crect width='4' height='3' fill='%230c0d10'/%3E%3C/svg%3E";
+
     private ?GalleryZoomEngine $zoom = null;
 
     private ?FeaturedVideoEngine $video = null;
@@ -93,6 +96,20 @@ final class ReelService implements HasHooks
         if ($this->video instanceof FeaturedVideoEngine) {
             $this->video->registerHooks();
             $registered = true;
+
+            // A block theme fires woocommerce_before_single_product_summary
+            // before the first block of the template, so "Before the summary"
+            // printed the video above the breadcrumbs. Put it inside the
+            // gallery block there, above the images, which is where the classic
+            // hook (priority 19, before the gallery at 20) places it.
+            if (function_exists('wp_is_block_theme') && wp_is_block_theme()) {
+                remove_action('woocommerce_before_single_product_summary', [$this->video, 'renderBeforeSummary'], 19);
+                add_filter('render_block_woocommerce/product-image-gallery', [$this, 'prependBeforeSummaryVideo']);
+            }
+
+            // "In the gallery": the video is the last gallery slide, so the
+            // slider gives it a thumbnail like any image.
+            add_action('woocommerce_product_thumbnails', [$this, 'renderGallerySlide'], 25);
         }
 
         if (! $registered) {
@@ -114,6 +131,59 @@ final class ReelService implements HasHooks
             add_filter('woocommerce_single_product_zoom_enabled', [$this, 'yieldNativeZoom'], 99);
             add_filter('woocommerce_single_product_photoswipe_enabled', [$this, 'yieldNativeLightbox'], 99);
         }
+    }
+
+    public function prependBeforeSummaryVideo(mixed $html): mixed
+    {
+        if (! is_string($html) || ! $this->video instanceof FeaturedVideoEngine) {
+            return $html;
+        }
+
+        ob_start();
+        $this->video->renderBeforeSummary();
+        $video = (string) ob_get_clean();
+
+        if ($video === '') {
+            return $html;
+        }
+
+        $placed = preg_replace_callback('/^\s*<div\b[^>]*>/', static fn (array $m): string => $m[0] . $video, $html, 1, $count);
+
+        return $count === 1 && is_string($placed) ? $placed : $video . $html;
+    }
+
+    /**
+     * The video as the last slide of the product gallery, for the "In the
+     * gallery" position. Always click to play: the slide is off screen until the
+     * shopper picks its thumbnail, so autoplay does not apply here.
+     */
+    public function renderGallerySlide(): void
+    {
+        global $product;
+
+        if (! $product instanceof \WC_Product || $this->videoSettings()['position'] !== 'in_gallery') {
+            return;
+        }
+
+        $html = $this->renderVideoHtml($product);
+
+        if ($html === '') {
+            return;
+        }
+
+        $html = $this->videoFacade($html);
+
+        // The facade poster doubles as the slider thumbnail; a self-hosted file
+        // has none, so it gets a dark tile and the CSS play glyph on top.
+        $poster = preg_match('/<img\b[^>]*\ssrc="([^"]+)"/i', $html, $m) === 1
+            ? html_entity_decode($m[1], ENT_QUOTES)
+            : self::THUMB_FALLBACK;
+
+        $this->renderTemplate('gallery-video', [
+            'video_html' => $html,
+            'thumb'      => $poster,
+            'label'      => $this->videoTitleFor($product),
+        ]);
     }
 
     public function yieldNativeZoom(mixed $enabled): mixed
@@ -141,6 +211,8 @@ final class ReelService implements HasHooks
         $extra = wp_json_encode([
             'disableZoomOnTouch' => (bool) ($settings['disable_zoom_on_touch'] ?? true),
             'lightboxCaption'    => (bool) ($settings['lightbox_caption'] ?? false),
+            /* translators: 1: position of the image shown in the lightbox, 2: number of images. */
+            'counterLabel'       => __('Image %1$d of %2$d', 'plogins-reel'),
         ]);
 
         if (! is_string($extra)) {
@@ -207,9 +279,13 @@ final class ReelService implements HasHooks
         $intro = trim((string) ($settings['video_intro'] ?? ''));
         $title = trim((string) ($settings['video_title'] ?? ''));
 
+        $position = (string) ($settings['video_position'] ?? 'after_gallery');
+
         $config = [
-            'position'       => (string) ($settings['video_position'] ?? 'after_gallery'),
-            'autoplay'       => (bool) ($settings['video_autoplay'] ?? false),
+            'position'       => $position,
+            // In the gallery the video waits off screen for a click, so it never
+            // autoplays there (and stays a click-to-play facade).
+            'autoplay'       => $position !== 'in_gallery' && (bool) ($settings['video_autoplay'] ?? false),
             'show_title'     => (bool) ($settings['video_show_title'] ?? true),
             'intro_text'     => $intro,
             'show_intro'     => $intro !== '',

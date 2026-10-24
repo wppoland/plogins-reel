@@ -281,12 +281,13 @@ final class Settings implements HasHooks
                             <div class="reel-field">
                                 <span class="reel-field__label">
                                     <label for="reel-video-position"><?php esc_html_e('Position', 'plogins-reel'); ?></label>
-                                    <?php echo wp_kses($this->help(__('Where the video appears: directly under the image gallery, or above the title/price summary column. Pick whichever fits your theme best.', 'plogins-reel'), 'reel-help-position'), $help_kses); ?>
+                                    <?php echo wp_kses($this->help(__('Where the video appears: directly under the image gallery, above the product images, or as the last slide of the gallery with its own play thumbnail. In the gallery the video always waits for a click and never autoplays.', 'plogins-reel'), 'reel-help-position'), $help_kses); ?>
                                 </span>
                                 <div class="reel-field__control">
                                     <select id="reel-video-position" name="<?php echo esc_attr($o); ?>[video_position]">
                                         <option value="after_gallery" <?php selected((string) $s['video_position'], 'after_gallery'); ?>><?php esc_html_e('After the gallery', 'plogins-reel'); ?></option>
                                         <option value="before_summary" <?php selected((string) $s['video_position'], 'before_summary'); ?>><?php esc_html_e('Before the summary', 'plogins-reel'); ?></option>
+                                        <option value="in_gallery" <?php selected((string) $s['video_position'], 'in_gallery'); ?>><?php esc_html_e('In the gallery', 'plogins-reel'); ?></option>
                                     </select>
                                 </div>
                             </div>
@@ -380,7 +381,7 @@ final class Settings implements HasHooks
         $scale = max(1.0, min(3.0, $scale));
 
         $position = isset($raw['video_position']) ? (string) $raw['video_position'] : 'after_gallery';
-        if (! in_array($position, ['after_gallery', 'before_summary'], true)) {
+        if (! in_array($position, ['after_gallery', 'before_summary', 'in_gallery'], true)) {
             $position = 'after_gallery';
         }
 
