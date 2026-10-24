@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plogins Reel for WooCommerce 0.2.1\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/reel\n"
-"POT-Creation-Date: 2026-09-26T04:48:57+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/plogins-reel\n"
+"POT-Creation-Date: 2026-10-23T19:39:00+00:00\n"
 "PO-Revision-Date: 2026-06-16T20:25:13+00:00\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
@@ -80,10 +80,6 @@ msgid ""
 msgstr ""
 
 #: src/Admin/ProUpsell.php:85
-msgid "Wkrótce"
-msgstr "Demnächst"
-
-#: src/Admin/ProUpsell.php:85
 msgid "Coming soon"
 msgstr "Demnächst"
 
@@ -96,10 +92,6 @@ msgstr "ab %1$s%2$d/Jahr"
 #: src/Admin/ProUpsell.php:100
 msgid "Upgrade to PRO"
 msgstr "Auf PRO upgraden"
-
-#: src/Admin/ProUpsell.php:101
-msgid "Powiadom mnie"
-msgstr "Benachrichtige mich"
 
 #: src/Admin/ProUpsell.php:101
 msgid "Get notified"
@@ -294,7 +286,7 @@ msgstr ""
 "z.B. „Bild im Vollbildmodus öffnen“. Lass das Feld leer, um die integrierte "
 "Standardeinstellung zu verwenden."
 
-#: src/Admin/Settings.php:244 src/Service/ReelService.php:52
+#: src/Admin/Settings.php:244 src/Service/ReelService.php:55
 msgid "Open image in full screen"
 msgstr "Bild im Vollbildmodus öffnen"
 
@@ -341,12 +333,10 @@ msgstr "Position"
 
 #: src/Admin/Settings.php:284
 msgid ""
-"Where the video appears: directly under the image gallery, or above the "
-"title/price summary column. Pick whichever fits your theme best."
+"Where the video appears: directly under the image gallery, above the gallery "
+"images, or as the last slide of the gallery with its own play thumbnail. In "
+"the gallery the video always waits for a click and never autoplays."
 msgstr ""
-"Wo das Video erscheint: direkt unter der Bildergalerie oder über der Spalte "
-"mit der Titel-/Preisübersicht. Wähle das aus, was am besten zu deinem Thema "
-"passt."
 
 #: src/Admin/Settings.php:288
 msgid "After the gallery"
@@ -356,11 +346,15 @@ msgstr "Nach der Galerie"
 msgid "Before the summary"
 msgstr "Vor der Zusammenfassung"
 
-#: src/Admin/Settings.php:296
+#: src/Admin/Settings.php:290
+msgid "In the gallery"
+msgstr ""
+
+#: src/Admin/Settings.php:297
 msgid "Autoplay"
 msgstr "Autoplay"
 
-#: src/Admin/Settings.php:297
+#: src/Admin/Settings.php:298
 msgid ""
 "Start the video automatically on page load. Browsers only allow this when "
 "the video is muted, so sound stays off until the shopper turns it on. Use "
@@ -370,15 +364,15 @@ msgstr ""
 "nur, wenn das Video stummgeschaltet ist, sodass der Ton ausgeschaltet "
 "bleibt, bis der Käufer ihn einschaltet. Sparsam verwenden, es kann ablenken."
 
-#: src/Admin/Settings.php:300
+#: src/Admin/Settings.php:301
 msgid "Play automatically (muted)"
 msgstr "Automatisch abspielen (stummgeschaltet)"
 
-#: src/Admin/Settings.php:306
+#: src/Admin/Settings.php:307
 msgid "Show heading"
 msgstr "Überschrift anzeigen"
 
-#: src/Admin/Settings.php:307
+#: src/Admin/Settings.php:308
 msgid ""
 "Display a heading above the video. Turn off for a cleaner, heading-free "
 "embed."
@@ -386,15 +380,15 @@ msgstr ""
 "Über dem Video eine Überschrift anzeigen. Schalte die Option aus, um eine "
 "sauberere, überschriftenfreie Einbettung zu erhalten."
 
-#: src/Admin/Settings.php:310
+#: src/Admin/Settings.php:311
 msgid "Show a heading above the video"
 msgstr "Über dem Video eine Überschrift anzeigen"
 
-#: src/Admin/Settings.php:316
+#: src/Admin/Settings.php:317
 msgid "Default heading"
 msgstr "Standardüberschrift"
 
-#: src/Admin/Settings.php:317
+#: src/Admin/Settings.php:318
 msgid ""
 "The heading used when a product has no video heading of its own. Leave empty "
 "to use the built-in \"Product video\" text."
@@ -403,16 +397,16 @@ msgstr ""
 "Videoüberschrift hat. Lass das Feld leer, um den integrierten Text "
 "„Produktvideo“ zu verwenden."
 
-#: src/Admin/Settings.php:320 src/Service/ReelService.php:69
-#: src/Service/ReelService.php:274
+#: src/Admin/Settings.php:321 src/Service/ReelService.php:72
+#: src/Service/ReelService.php:479
 msgid "Product video"
 msgstr "Produktvideo"
 
-#: src/Admin/Settings.php:326
+#: src/Admin/Settings.php:327
 msgid "Intro text"
 msgstr "Einleitungstext"
 
-#: src/Admin/Settings.php:327
+#: src/Admin/Settings.php:328
 msgid ""
 "An optional short paragraph shown under the heading, e.g. \"See it in action."
 "\" Leave empty to hide it."
@@ -420,15 +414,15 @@ msgstr ""
 "Ein optionaler kurzer Absatz, der unter der Überschrift angezeigt wird, z. "
 "B. „Sehe es in Aktion.“ Lass es leer, um es zu verbergen."
 
-#: src/Admin/Settings.php:330
+#: src/Admin/Settings.php:331
 msgid "See this product in action…"
 msgstr "Sehe dieses Produkt in Aktion ..."
 
-#: src/Admin/Settings.php:341
+#: src/Admin/Settings.php:342
 msgid "Place it anywhere"
 msgstr "Platziere es irgendwo"
 
-#: src/Admin/Settings.php:342
+#: src/Admin/Settings.php:343
 msgid ""
 "Beyond the automatic gallery position, drop the current product's video "
 "wherever you like."
@@ -436,11 +430,11 @@ msgstr ""
 "Über die automatische Galerieposition hinaus kannst du das Video des "
 "aktuellen Produkts an einer beliebigen Stelle ablegen."
 
-#: src/Admin/Settings.php:347
+#: src/Admin/Settings.php:348
 msgid "Shortcode"
 msgstr "Shortcode"
 
-#: src/Admin/Settings.php:351
+#: src/Admin/Settings.php:352
 msgid ""
 "Paste into any product description or page. Optional attributes: id=\"123\" "
 "to target a specific product, and title=\"hide\" to drop the heading."
@@ -449,7 +443,7 @@ msgstr ""
 "Attribute: id=\"123\", um auf ein bestimmtes Produkt abzuzielen, und "
 "title=\"hide\", um die Überschrift wegzulassen."
 
-#: src/Admin/Settings.php:358
+#: src/Admin/Settings.php:359
 msgid "Save changes"
 msgstr "Änderungen speichern"
 
@@ -467,6 +461,22 @@ msgid ""
 "the Reel tab in the product editor, then view the product page."
 msgstr ""
 
+#. translators: 1: position of the image shown in the lightbox, 2: number of images.
+#: src/Service/ReelService.php:215
+#, php-format
+msgid "Image %1$d of %2$d"
+msgstr ""
+
+#. translators: %s: video title.
+#: src/Service/ReelService.php:393
+#, php-format
+msgid "Play video: %s"
+msgstr ""
+
+#: src/Service/ReelService.php:394
+msgid "Play video"
+msgstr ""
+
 #: templates/featured-video.php:27
 msgid "Now playing"
 msgstr "Jetzt spielen"
@@ -478,6 +488,28 @@ msgstr "Produktbildbetrachter"
 #: templates/lightbox.php:29
 msgid "Close image viewer"
 msgstr "Bildbetrachter schließen"
+
+#: templates/lightbox.php:35
+msgid "Previous image"
+msgstr ""
+
+#: templates/lightbox.php:43
+msgid "Next image"
+msgstr ""
+
+#~ msgid "Wkrótce"
+#~ msgstr "Demnächst"
+
+#~ msgid "Powiadom mnie"
+#~ msgstr "Benachrichtige mich"
+
+#~ msgid ""
+#~ "Where the video appears: directly under the image gallery, or above the "
+#~ "title/price summary column. Pick whichever fits your theme best."
+#~ msgstr ""
+#~ "Wo das Video erscheint: direkt unter der Bildergalerie oder über der "
+#~ "Spalte mit der Titel-/Preisübersicht. Wähle das aus, was am besten zu "
+#~ "deinem Thema passt."
 
 #~ msgid "https://plogins.com/reel/"
 #~ msgstr "https://plogins.com/de/reel/"
