@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,19 +81,22 @@ developed in the open, so bug reports and pull requests are welcome there.
 
 == Reel Pro ==
 
-Reel Pro is a separate paid plugin that extends Reel:
+Reel Pro is a separate paid plugin that extends Reel.
 
-| Feature | Free | Pro |
-|:--- |:---:|:---:|
-| Hover zoom | Yes | Yes |
-| Accessible lightbox | Yes | Yes |
-| Featured video | Yes | Yes |
-| Reserved space | Yes | Yes |
-| No jQuery | Yes | Yes |
-| Per-variation gallery | - | Yes |
-| 360-degree spin | - | Yes |
-| Video autoplay rules | - | Yes |
-| CDN & lazy media | - | Yes |
+Included in Reel:
+
+* Hover zoom
+* Accessible lightbox
+* Featured video
+* Reserved space
+* No jQuery
+
+Reel Pro adds:
+
+* Per-variation gallery
+* 360-degree spin
+* Video autoplay rules
+* CDN & lazy media
 
 The free edition is not a trial and its features stay available without a time limit.
 
@@ -172,6 +175,10 @@ YouTube and Vimeo videos start as a poster image. For YouTube the shopper's brow
 Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.2 =
+* The Upgrade to PRO links open the pricing page in the admin's language where plogins.com has one, and tell plogins.com which plugin the visit came from (utm_source, utm_medium and utm_campaign in the link). Nothing is sent from your site.
+* Readme: the PRO section lists what the free plugin includes and what the paid edition adds as two lists, which WordPress.org can display (it does not display tables).
 
 = 1.1.1 =
 * Readme only: a PRO section with links to the paid edition.
