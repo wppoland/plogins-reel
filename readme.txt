@@ -81,12 +81,19 @@ developed in the open, so bug reports and pull requests are welcome there.
 
 == Reel Pro ==
 
-Reel Pro is a separate paid plugin that works on top of Reel. It adds:
+Reel Pro is a separate paid plugin that extends Reel:
 
-* Per-variation gallery
-* 360-degree spin
-* Video autoplay rules
-* CDN & lazy media
+| Feature | Free | Pro |
+|:--- |:---:|:---:|
+| Hover zoom | Yes | Yes |
+| Accessible lightbox | Yes | Yes |
+| Featured video | Yes | Yes |
+| Reserved space | Yes | Yes |
+| No jQuery | Yes | Yes |
+| Per-variation gallery | - | Yes |
+| 360-degree spin | - | Yes |
+| Video autoplay rules | - | Yes |
+| CDN & lazy media | - | Yes |
 
 The free edition is not a trial and its features stay available without a time limit.
 
