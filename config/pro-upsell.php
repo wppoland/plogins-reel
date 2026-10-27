@@ -12,6 +12,8 @@ defined('ABSPATH') || exit;
 return [
     'name'       => 'Reel Pro',
     'url'        => 'https://plogins.com/plogins-reel-pro/pricing/',
+    'campaign'   => 'plogins-reel',
+    'locales'    => ['pl', 'de', 'es'],
     'sellable'   => true,
     'price_from' => 19,
     'currency'   => 'EUR',
