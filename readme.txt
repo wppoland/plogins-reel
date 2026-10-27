@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,6 +57,7 @@ developed in the open, so bug reports and pull requests are welcome there.
 * **Plugin page**: [plogins.com/reel/](https://plogins.com/reel/)
 * **Source code**: [github.com/wppoland/plogins-reel](https://github.com/wppoland/plogins-reel)
 * **Bug reports and feature requests**: [github.com/wppoland/plogins-reel/issues](https://github.com/wppoland/plogins-reel/issues)
+* **Reel Pro**: [plogins.com/plogins-reel-pro/](https://plogins.com/plogins-reel-pro/)
 
 
 = Features =
@@ -78,16 +79,20 @@ developed in the open, so bug reports and pull requests are welcome there.
 * Fully translatable: ships the `plogins-reel.pot` template, with Polish, German and Spanish delivered by the WordPress.org language pack.
 * HPOS and cart/checkout blocks compatible.
 
-== Plogins Reel PRO ==
+== Reel Pro ==
 
-The free edition upgrades the WooCommerce gallery: zoom, lightbox and self-hosted video. **Plogins Reel PRO** adds richer video and per-variation media:
+Reel Pro is a separate paid plugin that works on top of Reel. It adds:
 
-* **Per-variation gallery** - a distinct image and video set that swaps in when the shopper selects a variation
-* **Video autoplay rules** - control when and how product videos autoplay
+* Per-variation gallery
+* 360-degree spin
+* Video autoplay rules
+* CDN & lazy media
 
-Everything in the free edition stays free and open. Plogins Reel PRO starts at 19 EUR per year, priced and charged in EUR.
+The free edition is not a trial and its features stay available without a time limit.
 
-Compare editions and pricing: [plogins.com/plogins-reel-pro/pricing/](https://plogins.com/plogins-reel-pro/pricing/)
+* **Reel Pro** - [plogins.com/plogins-reel-pro/](https://plogins.com/plogins-reel-pro/)
+* **Compare editions and pricing** - [plogins.com/plogins-reel-pro/pricing/](https://plogins.com/plogins-reel-pro/pricing/)
+* **PRO documentation** - [plogins.com/plogins-reel-pro/docs/](https://plogins.com/plogins-reel-pro/docs/)
 
 == Installation ==
 
@@ -160,6 +165,9 @@ YouTube and Vimeo videos start as a poster image. For YouTube the shopper's brow
 Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.1 =
+* Readme only: a PRO section with links to the paid edition.
 
 = 1.1.0 =
 * New: video position "In the gallery". The video becomes the last gallery slide with a play glyph on its thumbnail; picking it shows the click-to-play poster, and the player loads only on click. Autoplay does not apply in this position.
