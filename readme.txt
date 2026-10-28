@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,8 +53,8 @@ developed in the open, so bug reports and pull requests are welcome there.
 
 = Documentation and links =
 
-* **Documentation**: [plogins.com/reel/docs/](https://plogins.com/reel/docs/)
-* **Plugin page**: [plogins.com/reel/](https://plogins.com/reel/)
+* **Documentation**: [plogins.com/plogins-reel/docs/](https://plogins.com/plogins-reel/docs/)
+* **Plugin page**: [plogins.com/plogins-reel/](https://plogins.com/plogins-reel/)
 * **Source code**: [github.com/wppoland/plogins-reel](https://github.com/wppoland/plogins-reel)
 * **Bug reports and feature requests**: [github.com/wppoland/plogins-reel/issues](https://github.com/wppoland/plogins-reel/issues)
 * **Reel Pro**: [plogins.com/plogins-reel-pro/](https://plogins.com/plogins-reel-pro/)
@@ -175,6 +175,9 @@ YouTube and Vimeo videos start as a poster image. For YouTube the shopper's brow
 Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.3 =
+* Changed: links point at the current plogins.com address.
 
 = 1.1.2 =
 * The Upgrade to PRO links open the pricing page in the admin's language where plogins.com has one, and tell plogins.com which plugin the visit came from (utm_source, utm_medium and utm_campaign in the link). Nothing is sent from your site.
