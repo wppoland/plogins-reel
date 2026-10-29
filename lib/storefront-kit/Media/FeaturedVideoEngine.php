@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WPPoland\StorefrontKit\Media;
+namespace Reel\Vendor\StorefrontKit\Media;
 
 /**
  * Namespace-neutral product featured-video engine for the single product
@@ -16,7 +16,7 @@ namespace WPPoland\StorefrontKit\Media;
  *
  * All WooCommerce/text-domain/option/meta/asset specifics are
  * constructor-injected via closures, strings and arrays, exactly like
- * {@see \WPPoland\StorefrontKit\Badge\BadgeEngine}. Do NOT hard-code
+ * {@see \Reel\Vendor\StorefrontKit\Badge\BadgeEngine}. Do NOT hard-code
  * text-domains, option keys, meta keys or asset paths here.
  */
 final class FeaturedVideoEngine

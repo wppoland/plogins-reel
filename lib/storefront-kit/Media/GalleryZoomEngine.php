@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WPPoland\StorefrontKit\Media;
+namespace Reel\Vendor\StorefrontKit\Media;
 
 /**
  * Namespace-neutral gallery hover-zoom + lightbox engine for the single
@@ -15,7 +15,7 @@ namespace WPPoland\StorefrontKit\Media;
  *
  * All WooCommerce/text-domain/option/asset specifics are constructor-injected
  * via closures and strings, exactly like
- * {@see \WPPoland\StorefrontKit\Waitlist\WaitlistEngine}. Do NOT hard-code
+ * {@see \Reel\Vendor\StorefrontKit\Waitlist\WaitlistEngine}. Do NOT hard-code
  * text-domains, option keys or asset paths here.
  */
 final class GalleryZoomEngine

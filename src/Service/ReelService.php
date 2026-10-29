@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Reel\Service;
 
 use Reel\Contract\HasHooks;
-use WPPoland\StorefrontKit\Media\FeaturedVideoEngine;
-use WPPoland\StorefrontKit\Media\GalleryZoomEngine;
+use Reel\Vendor\StorefrontKit\Media\FeaturedVideoEngine;
+use Reel\Vendor\StorefrontKit\Media\GalleryZoomEngine;
 
 defined('ABSPATH') || exit;
 

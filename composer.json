@@ -16,7 +16,7 @@
     "autoload": {
         "psr-4": {
             "Reel\\": "src/",
-            "WPPoland\\StorefrontKit\\": "lib/storefront-kit/"
+            "Reel\\Vendor\\StorefrontKit\\": "lib/storefront-kit/"
         }
     },
     "scripts": {
