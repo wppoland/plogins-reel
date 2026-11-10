@@ -244,56 +244,74 @@ document.addEventListener('DOMContentLoaded', () => {
     pinchResets.push([img, reset]);
   };
 
-  document.querySelectorAll(REEL_GALLERY_IMAGES).forEach((img) => {
-    if (config.enableZoom && window.PointerEvent) {
-      setupPinch(img);
-    }
-
-    if (allowZoom) {
-      img.style.setProperty('--reel-gallery-zoom-scale', String(config.zoomScale || 1.45));
-      img.classList.add('reel-gallery-zoomable');
-    }
-
-    if (config.enableLightbox) {
-      // Make the image operable by keyboard, since a bare <img> is neither
-      // focusable nor activatable with Enter/Space.
-      img.classList.add('reel-gallery-lightbox-trigger');
-      if (!img.hasAttribute('tabindex')) {
-        img.setAttribute('tabindex', '0');
-      }
-      img.setAttribute('role', 'button');
-      if (config.triggerLabel && !img.getAttribute('aria-label')) {
-        img.setAttribute('aria-label', config.triggerLabel);
-      }
-
-      // The image sits inside a link to the full-size file. Without this the
-      // browser followed it and left the page behind the lightbox.
-      img.addEventListener('click', (event) => {
-        event.preventDefault();
-        openLightbox(img);
-      });
-      img.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
-          event.preventDefault();
-          openLightbox(img);
-        }
-      });
-    }
-  });
-
   // The slider marks the visible slide with a class; when that moves, a zoomed
   // image that is no longer on screen goes back to normal.
-  if (pinchResets.length && window.MutationObserver) {
-    const observer = new MutationObserver(() => {
-      pinchResets.forEach(([img, reset]) => {
-        const slide = img.closest('.woocommerce-product-gallery__image');
-        if (img.style.transform && slide && !slide.classList.contains('flex-active-slide')) {
-          reset();
-        }
-      });
+  const observer = window.MutationObserver ? new MutationObserver(() => {
+    pinchResets.forEach(([img, reset]) => {
+      const slide = img.closest('.woocommerce-product-gallery__image');
+      if (img.style.transform && slide && !slide.classList.contains('flex-active-slide')) {
+        reset();
+      }
     });
-    document.querySelectorAll('.woocommerce-product-gallery__image').forEach((slide) => {
-      observer.observe(slide, { attributes: true, attributeFilter: ['class'] });
+  }) : null;
+
+  // WooCommerce 11.1+ swaps the whole gallery for a variation's own one, so
+  // binding runs again on the new nodes; the flag keeps it to once per image.
+  const bindGallery = (root) => {
+    root.querySelectorAll(REEL_GALLERY_IMAGES).forEach((img) => {
+      if (img.dataset.reelBound) {
+        return;
+      }
+      img.dataset.reelBound = '1';
+
+      if (config.enableZoom && window.PointerEvent) {
+        setupPinch(img);
+      }
+
+      if (allowZoom) {
+        img.style.setProperty('--reel-gallery-zoom-scale', String(config.zoomScale || 1.45));
+        img.classList.add('reel-gallery-zoomable');
+      }
+
+      if (config.enableLightbox) {
+        // Make the image operable by keyboard, since a bare <img> is neither
+        // focusable nor activatable with Enter/Space.
+        img.classList.add('reel-gallery-lightbox-trigger');
+        if (!img.hasAttribute('tabindex')) {
+          img.setAttribute('tabindex', '0');
+        }
+        img.setAttribute('role', 'button');
+        if (config.triggerLabel && !img.getAttribute('aria-label')) {
+          img.setAttribute('aria-label', config.triggerLabel);
+        }
+
+        // The image sits inside a link to the full-size file. Without this the
+        // browser followed it and left the page behind the lightbox.
+        img.addEventListener('click', (event) => {
+          event.preventDefault();
+          openLightbox(img);
+        });
+        img.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+            event.preventDefault();
+            openLightbox(img);
+          }
+        });
+      }
+    });
+
+    if (pinchResets.length && observer) {
+      root.querySelectorAll('.woocommerce-product-gallery__image').forEach((slide) => {
+        observer.observe(slide, { attributes: true, attributeFilter: ['class'] });
+      });
+    }
+  };
+
+  bindGallery(document);
+  // Core fires this with jQuery only, after it re-inits a swapped gallery.
+  if (window.jQuery) {
+    window.jQuery(document.body).on('wc-product-gallery-after-init', (event, el) => {
+      bindGallery(el && el.querySelectorAll ? el : document);
     });
   }
 
