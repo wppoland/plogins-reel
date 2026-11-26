@@ -95,8 +95,10 @@
     inset-inline-end: clamp(0.75rem, 2vw, 1.25rem);
     display: grid;
     place-items: center;
+    box-sizing: border-box;
     inline-size: 44px;
     block-size: 44px;
+    padding: 0; /* themes pad every button, which turned the circle into an oval */
     border: 0;
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.4);
