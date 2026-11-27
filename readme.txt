@@ -93,7 +93,7 @@ Included in Reel:
 
 Reel Pro adds:
 
-* Per-variation gallery
+* Per-variation gallery (WooCommerce before 11.1; 11.1 and later have their own)
 * 360-degree spin
 * Video autoplay rules
 * CDN & lazy media
