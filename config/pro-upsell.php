@@ -18,13 +18,13 @@ return [
     'price_from' => 19,
     'currency'   => 'EUR',
     'lead'       => [
-        'en' => 'Per-variation galleries, 360° spin, autoplay rules and CDN lazy media ship in the current PRO release.',
-        'pl' => 'Wszystkie funkcje PRO, galeria per wariant, spin 360°, reguły autoplay i CDN lazy media, są dostępne w bieżącym wydaniu.',
+        'en' => '360° spin, autoplay rules, CDN lazy media and per-variation galleries (WooCommerce before 11.1) ship in the current PRO release.',
+        'pl' => 'Wszystkie funkcje PRO, spin 360°, reguły autoplay, CDN lazy media i galeria per wariant (WooCommerce przed 11.1), są dostępne w bieżącym wydaniu.',
     ],
     'features'   => [
         [
-            'en' => ['title' => 'Per-variation gallery', 'desc' => 'Assign gallery images from the media library to each variation. The storefront gallery swaps when a variation is selected and restores when cleared.'],
-            'pl' => ['title' => 'Galeria per wariant', 'desc' => 'Przypisz zestaw obrazów z biblioteki mediów do każdego wariantu. Galeria na froncie przełącza się przy wyborze wariantu i wraca po wyczyszczeniu.'],
+            'en' => ['title' => 'Per-variation gallery (WooCommerce before 11.1)', 'desc' => 'Assign gallery images from the media library to each variation. The storefront gallery swaps when a variation is selected and restores when cleared. WooCommerce 11.1 and later have their own variation gallery.'],
+            'pl' => ['title' => 'Galeria per wariant (WooCommerce przed 11.1)', 'desc' => 'Przypisz zestaw obrazów z biblioteki mediów do każdego wariantu. Galeria na froncie przełącza się przy wyborze wariantu i wraca po wyczyszczeniu. WooCommerce 11.1 i nowsze mają własną galerię wariantów.'],
         ],
         [
             'en' => ['title' => '360-degree spin', 'desc' => 'Ordered spin frames on the Reel tab; drag/swipe/keyboard viewer with reserved aspect ratio above the gallery.'],
