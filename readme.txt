@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.2
 Requires PHP: 8.1
-Stable tag: 1.1.7
+Stable tag: 1.1.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -175,6 +175,9 @@ YouTube and Vimeo videos start as a poster image. For YouTube the shopper's brow
 Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.8 =
+* The PRO card on the settings screen sells the per-variation gallery for WooCommerce before 11.1 only; 11.1 and later have their own.
 
 = 1.1.7 =
 * Fixed: on themes that pad every button (Storefront among them) the lightbox close button was an oval with the x off centre. It is a circle again.
