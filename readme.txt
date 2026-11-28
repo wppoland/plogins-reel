@@ -4,7 +4,7 @@ Tags: woocommerce, product gallery, product video, image zoom, lightbox
 Requires at least: 6.5
 Tested up to: 7.2
 Requires PHP: 8.1
-Stable tag: 1.1.8
+Stable tag: 1.1.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -175,6 +175,9 @@ YouTube and Vimeo videos start as a poster image. For YouTube the shopper's brow
 Plogins Reel is fully translatable and ships the `plogins-reel.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.9 =
+* The PRO notice on the settings screen describes each PRO feature the way the PRO plugin ships it.
 
 = 1.1.8 =
 * The PRO card on the settings screen sells the per-variation gallery for WooCommerce before 11.1 only; 11.1 and later have their own.

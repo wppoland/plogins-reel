@@ -23,8 +23,8 @@ return [
     ],
     'features'   => [
         [
-            'en' => ['title' => 'Per-variation gallery (WooCommerce before 11.1)', 'desc' => 'Assign gallery images from the media library to each variation. The storefront gallery swaps when a variation is selected and restores when cleared. WooCommerce 11.1 and later have their own variation gallery.'],
-            'pl' => ['title' => 'Galeria per wariant (WooCommerce przed 11.1)', 'desc' => 'Przypisz zestaw obrazów z biblioteki mediów do każdego wariantu. Galeria na froncie przełącza się przy wyborze wariantu i wraca po wyczyszczeniu. WooCommerce 11.1 i nowsze mają własną galerię wariantów.'],
+            'en' => ['title' => 'Per-variation gallery (WooCommerce before 11.1)', 'desc' => 'Assign gallery images from the media library to each variation; the main image swaps when the variation is chosen. From WooCommerce 11.1 its own variation gallery field does this, and images already mapped keep working.'],
+            'pl' => ['title' => 'Galeria per wariant (WooCommerce przed 11.1)', 'desc' => 'Przypisz obrazy z biblioteki mediów do każdego wariantu; główny obraz zmienia się po wyborze wariantu. Od WooCommerce 11.1 robi to własne pole galerii wariantu WooCommerce, a już przypisane obrazy działają dalej.'],
         ],
         [
             'en' => ['title' => '360-degree spin', 'desc' => 'Ordered spin frames on the Reel tab; drag/swipe/keyboard viewer with reserved aspect ratio above the gallery.'],
